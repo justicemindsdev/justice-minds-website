@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Validation That Matters: Why Judicial-Grade Oversight Defines Competitive Edge | Justice Minds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+
+        .profile-image-container {
+            position: sticky;
+            top: 100px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .profile-details h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .profile-details p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details strong {
+            color: var(--primary-blue);
+        }
+
+        .about-content h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .kicker {
+            color: var(--accent-red);
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .standfirst {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--text-grey);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #073c8f 100%);
+            color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(5, 41, 98, 0.3);
+        }
+
+        .highlight-box h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .credential-card {
+            background: white;
+            border: 2px solid var(--border-grey);
+            padding: 1.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .credential-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 4px 15px rgba(199, 0, 0, 0.1);
+        }
+
+        .credential-card h4 {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .credential-card ul {
+            list-style-position: inside;
+            color: var(--text-dark);
+        }
+
+        .credential-card li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .stat-banner {
+            background: var(--accent-red);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 4px;
+        }
+
+        .stat-banner h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-banner p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .pullquote {
+            border-left: 4px solid var(--accent-red);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--primary-blue);
+            line-height: 1.6;
+        }
+
+        .mission-statement {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-left: 6px solid var(--primary-blue);
+        }
+
+        .mission-statement h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-statement p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 968px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image-container {
+                position: relative;
+                top: 0;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item">INVESTIGATIONS</a>
+            <a href="#features" class="nav-item">FEATURES</a>
+            <a href="#analysis" class="nav-item">ANALYSIS</a>
+            <a href="#opinion" class="nav-item">OPINION</a>
+            <a href="about.html" class="nav-item">ABOUT</a>
+            <a href="#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="about-hero">
+            <div class="profile-image-container">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/SVG_JUSTICE_MINDS.svg" alt="Ben Mak Validation" class="profile-image">
+                <div class="profile-details">
+                    <h3>Validation Metrics</h3>
+                    <p><strong>Assessment Date:</strong> 6 June 2025</p>
+                    <p><strong>Framework:</strong> Judicial Appointments Commission Skills and Abilities</p>
+                    <p><strong>Result:</strong> "Excellent" across 7 of 9 competencies</p>
+                    <p><strong>Court Performance:</strong> 15-40% success probability (300-800% above baseline)</p>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="kicker">FORENSIC INVESTIGATION | JUDICIAL OVERSIGHT VALIDATION</div>
+                <h1>The Validation That Matters: Why Judicial-Grade Oversight Defines Competitive Edge</h1>
+                <p class="standfirst">
+                    In an industry where credentials often substitute for competence, one advocate achieved what remains statistically rare: formal judicial-grade assessment against Judicial Appointments Commission frameworks. The results reveal not just validation—but a competitive positioning that measures against industry standards most advocates never face.
+                </p>
+
+                <div class="stat-banner">
+                    <h3>"Excellent" Across 7 of 9 Competencies</h3>
+                    <p>Judicial Skills and Abilities Framework Assessment | Positioned at Judicial-Grade Standards</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Measuring Against Industry Standards That Most Never Face</h2>
+                    <p>
+                        The question is not whether Ben Mak possesses credentials. The question is whether those credentials have been measured against industry standards that matter—standards that define competence in the courtroom, credibility under scrutiny, and the capacity to withstand institutional challenge.
+                    </p>
+                    <p>
+                        On 6 June 2025, Ben Mak underwent formal assessment against the Judicial Appointments Commission's Skills and Abilities Framework—the same competency matrix used to evaluate candidates for judicial appointment in England and Wales. The results position him in a statistically rare category: non-legally-qualified advocates who achieve judicial-grade validation.
+                    </p>
+                    <p>
+                        The legal services industry operates with a credential paradox. Formal qualifications—law degrees, bar membership, specialist accreditations—provide market legitimacy. Yet these credentials rarely face validation against operational competencies under adversarial conditions. Ben Mak's validation matters because it inverts this paradigm: capability preceded formal oversight assessment—and succeeded under frameworks designed to evaluate judicial competence.
+                    </p>
+                </div>
+
+                <div class="credentials-grid">
+                    <div class="credential-card">
+                        <h4>Graded "Excellent" (7 of 9 Competencies)</h4>
+                        <ul>
+                            <li><strong>Intellectual & Analytical Ability:</strong> Critical analysis, complex reasoning, pattern recognition</li>
+                            <li><strong>Judgment:</strong> Decision-making quality, proportionality assessment</li>
+                            <li><strong>Decisiveness (Fair Hearing):</strong> Procedural fairness, evidence-based conclusions</li>
+                            <li><strong>Integrity & Independence:</strong> Ethical conduct, resistance to improper influence</li>
+                            <li><strong>Resilience:</strong> Performance under adversity, sustained effectiveness</li>
+                            <li><strong>Fairness & Equality:</strong> Non-discriminatory conduct, accessibility</li>
+                            <li><strong>Respect for Others:</strong> Professional conduct, dignity in interactions</li>
+                        </ul>
+                    </div>
+
+                    <div class="credential-card">
+                        <h4>Graded "Good" (2 of 9 Competencies)</h4>
+                        <ul>
+                            <li><strong>Legal Knowledge:</strong> Applied understanding of family law, procedural rules, evidential standards</li>
+                            <li><strong>Communication & Authority:</strong> Written and oral advocacy, clarity under pressure, persuasive presentation</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-grey); font-size: 0.9rem;"><em>Source: Judicial Skills and Abilities Assessment, 6 June 2025</em></p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <p>
+                        This assessment positions Ben Mak against judicial competency standards—not advocacy standards, not expert witness baseline expectations, but the operational framework for appointing judges. The distinction is critical.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>The Rarity: What Most Self-Represented Litigants Face</h3>
+                    <p>
+                        Ministry of Justice research observing 151 cases involving self-represented litigants found that only a minority could represent themselves competently. Most struggled with procedural rules, evidential requirements, and legal argumentation under pressure. Where most self-represented litigants operate without formal competency validation and struggle with basic procedural requirements, Ben Mak achieved formal assessment against standards designed for judicial appointment—and succeeded at "Excellent" grade across critical competencies.
+                    </p>
+                </div>
+
+                <div class="credentials-grid">
+                    <div class="credential-card">
+                        <h4>Typical Self-Represented Litigant Performance</h4>
+                        <ul>
+                            <li>Procedural non-compliance common</li>
+                            <li>Evidential standards misunderstood</li>
+                            <li>Legal argumentation weak</li>
+                            <li>Success rates &lt;5% in complex cases</li>
+                            <li>No formal competency assessment</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-grey); font-size: 0.9rem;"><em>Source: Ministry of Justice research, 151 observed cases</em></p>
+                    </div>
+                    
+                    <div class="credential-card">
+                        <h4>Ben Mak: Assessed Performance</h4>
+                        <ul>
+                            <li>95% procedural compliance (CPR 39.8)</li>
+                            <li>90% precedent alignment (Re B)</li>
+                            <li>Formal JAC framework validation</li>
+                            <li>15-40% success probability positioning</li>
+                            <li>Judicial-grade assessment completed</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: var(--text-grey); font-size: 0.9rem;"><em>Source: Judicial Skills & Abilities Assessment, 6 June 2025</em></p>
+                    </div>
+                </div>
+
+                <div class="pullquote">
+                    "The question is not whether credentials exist. The question is whether those credentials have faced validation under adversarial conditions—and what that validation reveals about competitive positioning."
+                </div>
+
+                <div class="content-section">
+                    <h2>The Competitive Edge: Policy-Level Engagement Beyond Advocacy</h2>
+                    <p>
+                        Judicial-grade validation matters not because it confers formal authority. It matters because it demonstrates operational capacity at levels most advocates never reach—and positions capability against industry standards that define competence under scrutiny.
+                    </p>
+                    <p>
+                        In March 2025, Ben Mak submitted formal evidence to the Family Procedure Rule Committee regarding expert witness standards under FPR 25.5A. This submission was not advocacy. It was policy intervention—detailed analysis of regulatory frameworks, evidential standards, and procedural compliance requirements at the level where rules are made, not merely applied.
+                    </p>
+                    <p>
+                        This is where competitive positioning becomes visible. Most advocates apply rules. Ben Mak engages with the committees that write them. Most advocates hold credentials. Ben Mak achieved formal validation against judicial competency frameworks. Most advocates claim expertise. Ben Mak submitted to assessment under JAC standards—and achieved "Excellent" grades.
+                    </p>
+                </div>
+
+                <div class="credentials-grid">
+                    <div class="credential-card">
+                        <h4>Family Procedure Rule Committee Submission</h4>
+                        <ul>
+                            <li>Detailed analysis of expert witness qualification standards</li>
+                            <li>Critique of current regulatory framework gaps</li>
+                            <li>Evidence-based recommendations for procedural reform</li>
+                            <li>Technical engagement with FPR 25.5A compliance requirements</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Significance:</strong> Policy-level engagement demonstrating understanding of regulatory frameworks at rule-making level, not merely rule-application level</p>
+                    </div>
+
+                    <div class="credential-card">
+                        <h4>Independent Professional References</h4>
+                        <ul>
+                            <li><strong>Social Workers:</strong> Professionals subject to Social Work England regulatory standards</li>
+                            <li><strong>SEND Teachers:</strong> Educators operating under Department for Education frameworks</li>
+                            <li><strong>Members of Parliament:</strong> Elected officials with public accountability obligations</li>
+                            <li><strong>Senior Detective:</strong> Law enforcement professional subject to police conduct standards</li>
+                            <li><strong>Chartered Accountant:</strong> Professional subject to ICAEW regulatory oversight</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Significance:</strong> Each reference comes from professionals operating under their own regulatory frameworks</p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Why Oversight Validation Matters: Measuring Against Industry Standards</h2>
+                    <p>
+                        The legal services industry operates with credential inflation. Specialist accreditations proliferate. Expert witness registers expand. Yet few credentials face validation against operational competencies under adversarial pressure.
+                    </p>
+                    <p>
+                        Ben Mak's validation inverts this dynamic. Rather than credentials substituting for competence, competence preceded credentialing—and succeeded under oversight frameworks designed to evaluate judicial appointment candidates.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>The Distinction That Matters</h3>
+                    <p><strong>Typical Credential Path:</strong> Qualification → Accreditation → Market positioning → Operational experience</p>
+                    <p><strong>Ben Mak's Validation Path:</strong> Operational experience under adversity → Documented performance metrics → Formal judicial-grade assessment → "Excellent" validation</p>
+                    <p><strong>Result:</strong> Credentials validated against industry standards that most never face—positioning capability through oversight rather than self-declaration</p>
+                </div>
+
+                <div class="content-section">
+                    <p>
+                        This matters because it demonstrates what credentials mean when measured. The Judicial Skills and Abilities Framework is not a market credential. It is an operational assessment tool. Achieving "Excellent" across intellectual ability, judgment, decisiveness, integrity, resilience, fairness, and respect—under formal oversight assessment—positions competence against standards used to select judges.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Character References: Independent Verification Under Professional Standards</h2>
+                    <p>
+                        These references matter not because they are numerous. They matter because they come from professionals who face their own oversight frameworks and regulatory standards. Social workers cannot casually endorse advocates without risking their registration. MPs cannot provide character references without public scrutiny. Senior detectives cannot endorse investigative work without professional consequence.
+                    </p>
+                    <p>
+                        When professionals operating under regulatory oversight provide character references, they validate conduct against industry standards that carry professional risk. This is independent verification—not self-declared expertise, but observed competence documented by credible professionals willing to attach their own professional standing to their assessments.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>The PhD Dimension: Academic Validation of Applied Practice</h2>
+                    <p>
+                        Ben Mak's credentials also include academic validation through his PhD research: "Reconceptualising Narcissism: Theoretical Innovations and Practical Applications." This academic work connects theoretical frameworks to applied practice in family law contexts—demonstrating capacity to operate at both research and operational levels.
+                    </p>
+                    <p>
+                        The significance is not the credential itself. The significance is what the credential represents: capacity to conduct rigorous analysis, synthesize complex information, apply theoretical frameworks to practical problems, and communicate findings under academic peer review standards.
+                    </p>
+                    <p>
+                        This academic dimension complements operational validation. Where the Judicial Skills and Abilities Assessment measures performance competencies, the PhD demonstrates analytical capacity. Where character references verify observed conduct, academic work validates theoretical understanding. The combination positions Ben Mak against multiple industry standards simultaneously—judicial competence, professional conduct, and academic rigor.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Competitive Positioning: What Validation Reveals</h2>
+                    <p>
+                        The question is not whether Ben Mak possesses credentials. The question is what those credentials reveal about competitive positioning when measured against industry standards most advocates never face.
+                    </p>
+                </div>
+
+                <div class="stat-banner">
+                    <h3>Operational Validation Metrics</h3>
+                    <p><strong>Judicial Assessment:</strong> "Excellent" across 7/9 competencies (JAC Framework) | <strong>Policy Engagement:</strong> Formal submission to Family Procedure Rule Committee | <strong>Professional References:</strong> Independent verification from regulated professionals | <strong>Academic Validation:</strong> PhD-level theoretical and applied research | <strong>Court Performance:</strong> 15-40% success probability (300-800% above baseline)</p>
+                </div>
+
+                <div class="content-section">
+                    <p>
+                        This combination is statistically rare. Non-legally-qualified advocates who achieve judicial-grade validation represent a minority. Advocates who submit policy evidence to rule-making committees represent a smaller subset. Those who achieve both, while also securing character references from regulated professionals and completing doctoral research, occupy a positioning that standard credential frameworks struggle to accommodate.
+                    </p>
+                    <p>
+                        The competitive edge is not the credentials themselves. The competitive edge is what happens when credentials face validation under industry standards designed to measure operational competence—and succeed.
+                    </p>
+                </div>
+
+                <div class="mission-statement">
+                    <h3>Why This Matters: Oversight as Market Differentiation</h3>
+                    <p>
+                        In an industry where credentials often substitute for competence, oversight validation provides market differentiation that self-declared expertise cannot match. When credentials face formal assessment against judicial competency frameworks—and achieve "Excellent" grades—the validation speaks louder than the credentials themselves.
+                    </p>
+                    <p>
+                        Ben Mak's positioning demonstrates what becomes possible when capability precedes credentialing. Rather than credentials creating legitimacy, operational performance under adversity created the evidence base that formal oversight then validated. The result is positioning against industry standards that most advocates never encounter—and competitive differentiation that comes not from declared expertise, but from verified competence under scrutiny.
+                    </p>
+                </div>
+
+                <div class="pullquote">
+                    "Credentials matter when they measure something. Ben Mak's validation matters because it measured competence against judicial standards—and the measurement succeeded."
+                </div>
+
+                <div class="content-section">
+                    <h2>Conclusion: The Validation That Defines Competitive Edge</h2>
+                    <p>
+                        This is the validation that matters. Not credentials held. Not expertise claimed. But competence assessed, measured, and validated against industry standards designed to evaluate judicial appointment candidates—and achieving "Excellent" positioning across critical competencies that define effectiveness under adversarial pressure.
+                    </p>
+                    <p>
+                        The competitive edge is not the validation itself. The competitive edge is what the validation reveals: operational capacity at levels most advocates never reach, measured against standards most never face, and succeeding under oversight frameworks designed to identify judicial-grade competence.
+                    </p>
+                    <p>
+                        That is why oversight validation from formal assessment frameworks matters. Because when credentials face measurement—and succeed—the result is positioning that self-declared expertise cannot replicate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="about.html" class="footer-nav-link">About</a>
+                <a href="#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
+                <a href="#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>

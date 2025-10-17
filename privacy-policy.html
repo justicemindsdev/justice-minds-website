@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Justice Minds Forensic Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .subtitle {
+            color: var(--text-grey);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem 0;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.35rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .lead-quote {
+            font-style: italic;
+            color: var(--text-grey);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .company-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover,
+        .footer-nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item">INVESTIGATIONS</a>
+            <a href="index.html#features" class="nav-item">FEATURES</a>
+            <a href="index.html#analysis" class="nav-item">ANALYSIS</a>
+            <a href="index.html#opinion" class="nav-item">OPINION</a>
+            <a href="index.html#about" class="nav-item">ABOUT</a>
+            <a href="index.html#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <a href="index.html" class="back-button">
+            <span>←</span>
+            <span>Back to Home</span>
+        </a>
+
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Justice Minds Forensic Intelligence Ltd</p>
+
+        <div class="lead-quote">
+            "You should know exactly what we capture, why we keep it, who sees it and how we protect it. Evidence without provenance is opinion; our work is built on provenance — timestamps, chain‑of‑custody and careful handling. 'Every chunk is separated. It's only kept in and within this. As soon as it leaves my domain, it doesn't work because I've encrypted it.' — Ben Mak, 2025-10-07 22:39:56."
+        </div>
+
+        <h2>Plain-English Summary</h2>
+        
+        <ul>
+            <li><strong>What we collect:</strong> Audio/video recordings, transcripts, speaker identifiers, timestamps, metadata, documents you provide.</li>
+            <li><strong>Why:</strong> To produce forensic, time‑stamped reports for legal, safeguarding and systemic audit purposes.</li>
+            <li><strong>How long:</strong> Default retention 5 years from case closure unless law or client instruction requires otherwise.</li>
+            <li><strong>Your rights:</strong> Access, rectification, restriction, portability, objection, and to complain to the ICO.</li>
+        </ul>
+
+        <h2>1. Controller & Contact</h2>
+        
+        <div class="company-details">
+            <ul style="list-style: none; padding-left: 0;">
+                <li><strong>Controller:</strong> Justice Minds Forensic Intelligence Ltd (Company Number: 16331423)</li>
+                <li><strong>ICO registration:</strong> ZB896365</li>
+                <li><strong>Data Protection Officer:</strong> Contact via our registered office for data subject requests</li>
+            </ul>
+        </div>
+
+        <h2>2. Types of Personal Data We Process</h2>
+        
+        <ul>
+            <li>Audio recordings and video recordings (time‑stamped)</li>
+            <li>Machine and human transcripts and their annotations</li>
+            <li>Speaker identifiers and role tags</li>
+            <li>Metadata (date/time, device ID, geolocation when provided, file hashes)</li>
+            <li>Documents provided by you (PDFs, images, emails)</li>
+            <li>Logs of access and processing steps</li>
+        </ul>
+
+        <h2>3. Lawful Bases for Processing</h2>
+        
+        <ul>
+            <li><strong>Consent:</strong> Where clients provide affirmative consent to recording and processing</li>
+            <li><strong>Contract performance:</strong> To carry out forensic services under an engagement</li>
+            <li><strong>Legitimate interests:</strong> Evidence preservation, better public services, safeguarding vulnerable people (balanced against privacy rights)</li>
+            <li><strong>Legal obligation:</strong> Where we are required to disclose by court order or statutory duty</li>
+        </ul>
+
+        <h2>4. Sensitive Data & Special Categories</h2>
+        
+        <p>We may process sensitive categories (health, criminal allegations) only when necessary for safeguarding or legal processes. Such processing is subject to enhanced safeguards and restricted access.</p>
+
+        <h2>5. How We Use Data</h2>
+        
+        <ul>
+            <li>Produce forensic reports, chronologies, and expert analyses</li>
+            <li>Corroborate findings with computational intelligence (pattern detection, word‑count metrics, speaker timing)</li>
+            <li>Facilitate client communications and lawful disclosures to courts, legal representatives and public bodies</li>
+            <li>Improve services using aggregated, anonymised metrics</li>
+        </ul>
+
+        <h2>6. Computational Intelligence (CI) and Analytics</h2>
+        
+        <div class="highlight-box">
+            <p><strong>What we do:</strong> We use CI to corroborate findings, not to replace human expert judgment.</p>
+            
+            <p><strong>Typical measurable outputs we present:</strong></p>
+            <ul>
+                <li>Word‑choice and frequency metrics (how often and in what context key words appear)</li>
+                <li>Speaker‑turn timing and pauses (relative timing between speakers, interruptions)</li>
+                <li>Pattern detection across meetings (recurring phrases, changes in language over time)</li>
+                <li>Transcript→statute mapping (automatic flagging of language that maps to statutory standards)</li>
+                <li>Confidence scores to indicate corroboration strength</li>
+            </ul>
+            
+            <p>We do not disclose proprietary algorithms or model internals. CI outputs are used as corroborative evidence and are accompanied by human expert interpretation before inclusion in a report.</p>
+        </div>
+
+        <h2>7. Sharing, Disclosure and Third Parties</h2>
+        
+        <p>We share data only where necessary and lawful:</p>
+        
+        <ul>
+            <li>Your authorised legal representatives and agents</li>
+            <li>Courts, tribunals and regulators when legally compelled</li>
+            <li>Third‑party processors (secure transcription services, encrypted storage providers) under Data Processing Agreements (DPAs)</li>
+        </ul>
+        
+        <p><strong>Cross‑border transfers:</strong> Where international transfer is necessary, appropriate safeguards (SCCs or other lawful mechanisms) are implemented.</p>
+
+        <h2>8. Security & Technical Safeguards</h2>
+        
+        <ul>
+            <li>Encryption at rest and in transit, role‑based access control, multi‑factor authentication for staff access</li>
+            <li>Segmented storage: evidentiary "chunks" isolated to reduce exposure</li>
+            <li>Audit logs and immutable timestamping for chain‑of‑custody verification</li>
+        </ul>
+
+        <h2>9. Retention & Deletion</h2>
+        
+        <p><strong>Default retention:</strong> 5 years from case closure, unless longer statutory retention or active litigation requires otherwise.</p>
+        
+        <p>On request, we will export or delete personal data subject to legal obligations and reasonable verification.</p>
+
+        <h2>10. Data Subject Rights & Requests</h2>
+        
+        <p><strong>Rights:</strong> Access, rectification, erasure, restriction, portability, objection and to withdraw consent (where processing is consent‑based).</p>
+        
+        <p><strong>Requests:</strong> Direct to our Data Protection Officer; verification required to protect confidentiality. We will respond within statutory timeframes.</p>
+        
+        <p><strong>Complaints:</strong> You may contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" style="color: var(--accent-red);">https://ico.org.uk</a>.</p>
+
+        <h2>11. Reasonable Adjustments & Vulnerable Users</h2>
+        
+        <p>We will make reasonable adjustments to our procedures for clients with disabilities: alternative formats, extended response times, accessible contact routes, and safeguarding‑led handling of disclosures.</p>
+
+        <h2>12. Minors</h2>
+        
+        <p>We do not knowingly process children's data except as required for safeguarding; parental/guardian consent will be obtained where appropriate.</p>
+
+        <h2>13. Cookies & Website Analytics</h2>
+        
+        <p>Our site uses non‑identifying analytics cookies; you may manage preferences via the cookie banner.</p>
+
+        <h2>14. Changes to This Policy</h2>
+        
+        <p>We may update this policy; material changes will be notified through the website or direct client communications.</p>
+
+        <h2>15. Contact & Data Protection Officer</h2>
+        
+        <p>For data protection inquiries, contact our Data Protection Officer through our registered office. For device support related to capture hardware please contact support@limitless.ai (device support only).</p>
+
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="index.html#about" class="footer-nav-link">About</a>
+                <a href="index.html#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link active">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
+                <a href="index.html#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="index.html#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>

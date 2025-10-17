@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Framework | Justice Minds Forensic Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .subtitle {
+            color: var(--text-grey);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem 0;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.35rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .lead-quote {
+            font-style: italic;
+            color: var(--text-grey);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .company-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover,
+        .footer-nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            color: var(--accent-red);
+            font-weight: 700;
+            cursor: help;
+            border-bottom: 2px dotted var(--accent-red);
+            transition: all 0.3s;
+        }
+
+        .tooltip:hover {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: left;
+            border-radius: 6px;
+            padding: 1rem;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -200px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--primary-blue) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip .tooltiptext a {
+            color: var(--guardian-highlight);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .tooltip .tooltiptext a:hover {
+            color: white;
+        }
+
+        .citations {
+            background: var(--bg-light);
+            border-top: 3px solid var(--primary-blue);
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .citations h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .citations ol {
+            margin-left: 1.5rem;
+        }
+
+        .citations li {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .citations a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+
+        .citations a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-container {
+                padding: 2rem 1rem;
+            }
+
+            .tooltip .tooltiptext {
+                width: 280px;
+                margin-left: -140px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item">INVESTIGATIONS</a>
+            <a href="index.html#features" class="nav-item">FEATURES</a>
+            <a href="index.html#analysis" class="nav-item">ANALYSIS</a>
+            <a href="index.html#opinion" class="nav-item">OPINION</a>
+            <a href="index.html#about" class="nav-item">ABOUT</a>
+            <a href="index.html#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <a href="index.html" class="back-button">
+            <span>←</span>
+            <span>Back to Home</span>
+        </a>
+
+        <h1>Legal Framework</h1>
+        <p class="subtitle">Justice Minds Forensic Intelligence Ltd</p>
+
+        <div class="lead-quote">
+            "We built Justice Minds because evidence should not be a memory; it should be a map. When the system fails the vulnerable, the data rarely lies — if it's captured, time‑stamped and handled with forensic discipline. I only operate on time stamps." — Ben Mak, 2025-09-23 19:47:38. This is how we turn conversations, meetings and documents into admissible, actionable records for audit, advocacy and legal remedy.
+        </div>
+
+        <h2>Writ of Confirmation & Identity</h2>
+        
+        <div class="company-details">
+            <p>Pursuant to the Companies Act 2006, Justice Minds Forensic Intelligence Ltd is a legally incorporated investigative entity operating within clearly defined UK SIC classifications.</p>
+            
+            <ul style="list-style: none; padding-left: 0;">
+                <li><strong>Registered name:</strong> Justice Minds Forensic Intelligence Ltd</li>
+                <li><strong>Company number:</strong> 16331423 (registered with Companies House 20 March 2025)</li>
+                <li><strong>ICO registration:</strong> ZB896365</li>
+                <li><strong>Department of Forensic Intelligence</strong></li>
+                <li><strong>Writ date:</strong> 26 March 2025</li>
+            </ul>
+        </div>
+
+        <h2>High‑Level Statutory Scope and SIC Classifications</h2>
+        
+        <p>We operate under the following primary UK SIC codes and lawful scopes:</p>
+        
+        <ul>
+            <li><strong>80300</strong> — Investigation activities</li>
+            <li><strong>70229</strong> — Management consultancy activities (non‑financial)</li>
+            <li><strong>74909</strong> — Other professional, scientific and technical activities</li>
+            <li><strong>62090</strong> — Other information technology service activities</li>
+        </ul>
+
+        <h2>Purpose, Mission and Promise</h2>
+        
+        <p><strong>Purpose:</strong> We provide forensic evidence preservation, timestamped reporting, multidisciplinary forensic analysis and advocacy to individuals, families, NGOs and public bodies.</p>
+        
+        <p><strong>Mission:</strong> We expose systemic failures and protect vulnerable people by translating recorded interactions and documentary evidence into time‑stamped, benchmarked reports aligned with legal standards.</p>
+        
+        <p><strong>Promise:</strong> We follow strict chain‑of‑custody, encryption and professional independence so our work is reliable, auditable and suitable for judicial or administrative use.</p>
+
+        <h2>Core Services</h2>
+        
+        <ul>
+            <li><strong>Evidence capture & preservation:</strong> Secure time‑stamped capture of audio/visual material, transcripts, metadata and attachments.</li>
+            <li><strong>Forensic reporting:</strong> Chronologies, benchmark matrices (law/policy mapping), verbatim excerpts with timestamps and professional opinion.</li>
+            <li><strong>Computational corroboration:</strong> Non‑intrusive analytics to detect patterns and produce metrics.</li>
+            <li><strong>Advocacy & advisory:</strong> Supporting clients to escalate to public bodies, ombuds (Housing Ombudsman, ICO), regulators, or to instruct lawyers for litigation.</li>
+        </ul>
+
+        <h2>Methodology & Evidentiary Approach</h2>
+        
+        <h3>Time‑stamp Principle</h3>
+        <p>All materials we accept or create are assigned an immutable timestamp and a documented chain of custody. We do not base conclusions on unaudited recollection; we anchor findings to recorded events and metadata.</p>
+        
+        <h3>Verbatim Quoting</h3>
+        <p>Where we quote a speaker verbatim, we include the exact quoted text and the timestamp. Example: "Every chunk is separated. It's only kept in and within this. As soon as it leaves my domain, it doesn't work because I've encrypted it." — Ben Mak, 2025-10-07 22:39:56.</p>
+        
+        <h3>Benchmark Mapping</h3>
+        <p>Findings are cross‑referenced to statutory and professional standards (e.g., Ministry of Justice guidance, Care Quality Commission, housing statutes) and presented in a standards‑matrix for clarity and judicial utility.</p>
+        
+        <h3>Independence and Systemic Focus</h3>
+        <p>We audit conduct against standards and highlight system-level failures rather than targeting individuals. "Even when describing institutional failures, I've been careful to focus on systemic issues rather than attacking individuals." — Ben Mak, 2025-09-24 20:36:19.</p>
+
+        <h3>Established Frameworks</h3>
+        <p>We use applicable established frameworks where relevant, including safeguarding protocols, <span class="tooltip"><span class="tooltiptext"><strong>PEACE Framework</strong><br><br><strong>P</strong>lanning and preparation<br><strong>E</strong>ngage and explain<br><strong>A</strong>ccount, clarify and challenge<br><strong>C</strong>losure<br><strong>E</strong>valuation<br><br>An investigative interviewing model used by UK police and investigative bodies to ensure ethical, thorough, and structured questioning.<br><br><a href="https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/" target="_blank">Learn more →</a></span>PEACE</span>, and <span class="tooltip"><span class="tooltiptext"><strong>MMO Framework</strong><br><br><strong>M</strong>eans: The ability or capability to commit the act<br><strong>M</strong>otive: The reason or incentive behind the act<br><strong>O</strong>pportunity: The circumstances that allow the act to occur<br><br>A forensic analysis framework used to assess the likelihood and circumstances of events, particularly in investigative and legal contexts.<br><br><a href="#citations">See citations for more information</a></span>MMO</span> (Means, Motive, Opportunity) frameworks with diligence and rigour for holistic multi-strategy approaches.</p>
+
+        <h2>Safeguards & Security</h2>
+        
+        <ul>
+            <li><strong>Chain of custody:</strong> Documented provenance for every file; access logs and restricted role-based controls.</li>
+            <li><strong>Encryption:</strong> Data encrypted at rest and in transit; segmented storage of evidentiary "chunks" to reduce risk.</li>
+            <li><strong>Access control:</strong> Only authorised personnel and client‑approved agents see case material; third parties sign NDAs and processing agreements.</li>
+            <li><strong>Auditability:</strong> All actions on evidence are auditable; we produce logs suitable for court scrutiny.</li>
+        </ul>
+
+        <h2>Limitations & Appropriate Uses</h2>
+        
+        <ul>
+            <li><strong>Not a substitute but rather a complement for competent legal representation:</strong> Our reports are multidisciplinary expert evidence based on factual findings. All diagnostic work and summaries are based on verifiable, examinable patterns and materials.</li>
+            <li><strong>Expert evidence foundation:</strong> Our reports are multidisciplinary expert evidence based on factual findings cross-triangulated through rigorous forensic analysis. Diagnostics and summaries are based on verifiable, examinable patterns and materials.</li>
+            <li><strong>Framework-based methodology:</strong> We use applicable established frameworks where relevant—safeguarding protocols, <span class="tooltip"><span class="tooltiptext"><strong>PEACE Framework</strong><br><br><strong>P</strong>lanning and preparation<br><strong>E</strong>ngage and explain<br><strong>A</strong>ccount, clarify and challenge<br><strong>C</strong>losure<br><strong>E</strong>valuation<br><br>An investigative interviewing model used by UK police and investigative bodies.<br><br><a href="https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/" target="_blank">Learn more →</a></span>PEACE</span>, and <span class="tooltip"><span class="tooltiptext"><strong>MMO Framework</strong><br><br><strong>M</strong>eans: The ability or capability to commit the act<br><strong>M</strong>otive: The reason or incentive behind the act<br><strong>O</strong>pportunity: The circumstances that allow the act to occur<br><br>A forensic analysis framework for assessing likelihood and circumstances of events.</span>MMO</span> frameworks—with diligence and rigour for holistic multi-strategy approaches.</li>
+            <li><strong>Legal counsel collaboration:</strong> Clients should seek and work with competent legal counsel. We can provide robust evidence-based additions to litigation strategy.</li>
+        </ul>
+
+        <h2>Lawful Recording Requirements</h2>
+        
+        <ul>
+            <li><strong>Consent and legal basis:</strong> Clients must confirm lawful basis for recordings and any required consents. Where recordings include third parties, ensure applicable consent or legal basis exists.</li>
+            <li><strong>Exceptions where notice is not viable:</strong> There are lawful bases when consent or notice of recording isn't viable, reasonable, or safe to provide—and robust understanding and ethical means should always be the pillar to guide our actions.</li>
+            <li><strong>No unlawful surveillance:</strong> No covert law-breaking advice or behaviour is tolerated. We will not assist or instruct in unlawful covert surveillance.</li>
+            <li><strong>Ethical compliance:</strong> We advise lawful, ethical evidence capture and compliance that honour best interest, the law, and the greater good.</li>
+        </ul>
+
+        <h2>Referral & Escalation</h2>
+        
+        <p>We will advise on statutory escalation routes (housing, safeguarding, ombuds, courts) and, where appropriate, recommend legal representatives or public bodies for referral.</p>
+
+        <h2>CI & Analytics Summary</h2>
+        
+        <div class="highlight-box">
+            <p>We use computational intelligence (CI) tools to corroborate and enhance forensic findings: pattern detection, word‑frequency and word‑choice metrics, speaker‑turn timing, and transcript→statute matching. Outputs are confidence‑scored and presented as corroborative evidence; methodologies and models remain proprietary to preserve evidential integrity and security.</p>
+        </div>
+
+        <h2>Regulatory Standing & Professional Notes</h2>
+        
+        <p>We operate in alignment with applicable UK law and regulatory expectations and hold ICO registration ZB896365. Our products and reports are designed to meet admissibility and tribunal standards; they are intended to aid investigations, judicial review, regulatory audits and public interest inquiries.</p>
+
+        <h2>Contact & Corrections</h2>
+        
+        <p>For information about this Legal Framework, company details, or to request an organisational correction, contact Justice Minds Forensic Intelligence Ltd at our registered office. Final legal queries and formal notices should be addressed to Justice Minds Forensic Intelligence Ltd.</p>
+
+        <div class="citations">
+            <h2>Citations & References</h2>
+            <ol>
+                <li><strong>Companies Act 2006</strong> — UK legislation governing company incorporation, registration, and obligations. Available at: <a href="https://www.legislation.gov.uk/ukpga/2006/46/contents" target="_blank">legislation.gov.uk/ukpga/2006/46</a></li>
+                
+                <li><strong>Data Protection Act 2018</strong> — UK implementation of GDPR and domestic data protection framework. Available at: <a href="https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted" target="_blank">legislation.gov.uk/ukpga/2018/12</a></li>
+                
+                <li><strong>PEACE Framework</strong> — College of Policing Authorised Professional Practice for Investigative Interviewing. Available at: <a href="https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/" target="_blank">college.police.uk/app-content/investigations/investigative-interviewing</a></li>
+                
+                <li><strong>UK Standard Industrial Classification (SIC) Codes</strong> — Office for National Statistics classification system for economic activities. Available at: <a href="https://www.gov.uk/government/publications/standard-industrial-classification-of-economic-activities-sic" target="_blank">gov.uk/sic</a></li>
+                
+                <li><strong>Information Commissioner's Office (ICO)</strong> — UK's independent authority for data protection and information rights. Registration ZB896365. Available at: <a href="https://ico.org.uk/" target="_blank">ico.org.uk</a></li>
+                
+                <li><strong>Criminal Procedure and Investigations Act 1996</strong> — Governing disclosure of evidence and investigation procedures. Available at: <a href="https://www.legislation.gov.uk/ukpga/1996/25/contents" target="_blank">legislation.gov.uk/ukpga/1996/25</a></li>
+                
+                <li><strong>MMO (Means, Motive, Opportunity) Framework</strong> — Forensic analysis methodology for assessing causation and likelihood in investigative contexts. Widely used in criminal investigation, fraud examination, and forensic accounting. See: Turvey, B.E. (2011). <em>Criminal Profiling: An Introduction to Behavioral Evidence Analysis</em> (4th ed.). Academic Press.</li>
+                
+                <li><strong>Civil Procedure Rules (CPR)</strong> — Rules governing civil litigation in England and Wales, particularly Part 35 on expert evidence. Available at: <a href="https://www.justice.gov.uk/courts/procedure-rules/civil" target="_blank">justice.gov.uk/courts/procedure-rules/civil</a></li>
+                
+                <li><strong>Ministry of Justice Guidance</strong> — Various guidelines on evidence handling, court procedures, and victim support. Available at: <a href="https://www.gov.uk/government/organisations/ministry-of-justice" target="_blank">gov.uk/ministry-of-justice</a></li>
+                
+                <li><strong>Regulation of Investigatory Powers Act 2000 (RIPA)</strong> — Governing lawful surveillance and covert investigation. Available at: <a href="https://www.legislation.gov.uk/ukpga/2000/23/contents" target="_blank">legislation.gov.uk/ukpga/2000/23</a></li>
+            </ol>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-grey);"><em>All citations current as of October 2025. For the most up-to-date versions of legislation and guidance, please consult the official sources linked above.</em></p>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="index.html#about" class="footer-nav-link">About</a>
+                <a href="index.html#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link active">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
+                <a href="index.html#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="index.html#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>

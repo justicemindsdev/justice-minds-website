@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ben Mak | Justice Minds Forensic Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+
+        .profile-image-container {
+            position: sticky;
+            top: 100px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .profile-details h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .profile-details p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details strong {
+            color: var(--primary-blue);
+        }
+
+        .about-content h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .kicker {
+            color: var(--accent-red);
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .standfirst {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--text-grey);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #073c8f 100%);
+            color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(5, 41, 98, 0.3);
+        }
+
+        .highlight-box h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .credential-card {
+            background: white;
+            border: 2px solid var(--border-grey);
+            padding: 1.5rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .credential-card:hover {
+            border-color: var(--accent-red);
+            box-shadow: 0 4px 15px rgba(199, 0, 0, 0.1);
+        }
+
+        .credential-card h4 {
+            color: var(--accent-red);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .credential-card ul {
+            list-style-position: inside;
+            color: var(--text-dark);
+        }
+
+        .credential-card li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .stat-banner {
+            background: var(--accent-red);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 4px;
+        }
+
+        .stat-banner h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-banner p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .pullquote {
+            border-left: 4px solid var(--accent-red);
+            padding-left: 2rem;
+            margin: 2.5rem 0;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--primary-blue);
+            line-height: 1.6;
+        }
+
+        .mission-statement {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-left: 6px solid var(--primary-blue);
+        }
+
+        .mission-statement h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-statement p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 968px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image-container {
+                position: relative;
+                top: 0;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item">INVESTIGATIONS</a>
+            <a href="#features" class="nav-item">FEATURES</a>
+            <a href="#analysis" class="nav-item">ANALYSIS</a>
+            <a href="#opinion" class="nav-item">OPINION</a>
+            <a href="about.html" class="nav-item active">ABOUT</a>
+            <a href="#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="about-hero">
+            <div class="profile-image-container">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/SVG_JUSTICE_MINDS.svg" alt="Ben Mak" class="profile-image">
+                <div class="profile-details">
+                    <h3>Ben Mak</h3>
+                    <p><strong>Founder & CEO</strong><br>Justice Minds Forensic Intelligence Ltd</p>
+                    <p><strong>Role:</strong> Chief Forensic Legal Strategist</p>
+                    <p><strong>Location:</strong> London, United Kingdom</p>
+                    <p><strong>Contact:</strong> consult@justice-minds.com</p>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <div class="kicker">About the Founder</div>
+                <h1>Ben Mak: Validating Expertise Against Industry Standards</h1>
+                <p class="standfirst">
+                    When traditional pathways exclude those with the clearest sight of systemic failure, 
+                    authentic oversight becomes both rare and essential. Ben Mak's validation exposes how 
+                    competence can be benchmarked, documented, and recognized even when it emerges outside 
+                    conventional frameworks.
+                </p>
+
+                <div class="stat-banner">
+                    <h3>TOP 10% of Non-Lawyer Litigants</h3>
+                    <p>UK Court of Appeals Merit Score: 10/10</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>The Rare Validation</h2>
+                    <p>
+                        In 2023, Ben Mak achieved what few without law degrees accomplish: a perfect merit score 
+                        from the UK Court of Appeals for self-representation. But this recognition marked more 
+                        than personal achievement—it exposed fundamental questions about how expertise is measured 
+                        when gatekeepers systematically exclude non-traditional paths to competence.
+                    </p>
+                    <p>
+                        Assessed as "Excellent" across seven of nine criteria in the Judicial Skills and Abilities 
+                        Framework—the same framework used to evaluate actual judges—Mak's trajectory challenges 
+                        assumptions about where oversight competence originates and how it should be validated.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Measuring Against Industry Standards</h3>
+                    <p>
+                        In safeguarding, compliance frameworks often measure process over protection—ticking boxes 
+                        that obscure rather than reveal harm. Ben's competitive advantage lies in his refusal to 
+                        accept procedural compliance as evidence of safety, measuring his oversight validation 
+                        against the highest industry standards rather than mere regulatory compliance.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Professional Credentials & Validation</h2>
+                    <p>
+                        Ben's credentials represent an intersection of lived experience, academic rigor, and 
+                        independent professional validation. His work has been endorsed by barristers, approved 
+                        by city councils, and recognized by parliamentary processes—forming a pattern of 
+                        validation that transcends any single credential.
+                    </p>
+                </div>
+
+                <div class="credentials-grid">
+                    <div class="credential-card">
+                        <h4>Legal & Judicial Recognition</h4>
+                        <ul>
+                            <li>UK Court of Appeals Merit: 10/10</li>
+                            <li>Judicial Skills Assessment: "Excellent" rating</li>
+                            <li>Master of Law studies (in progress)</li>
+                            <li>Expert witness criteria certified</li>
+                            <li>City Council Independent Scrutineer</li>
+                        </ul>
+                    </div>
+
+                    <div class="credential-card">
+                        <h4>Safeguarding Expertise</h4>
+                        <ul>
+                            <li>Level 3 Senior Staff Safeguarding Certification</li>
+                            <li>NSPCC-endorsed Child Safeguarding Training</li>
+                            <li>Level 3 Safeguarding Adults Training</li>
+                            <li>Independent Advocacy Training (Care Act)</li>
+                            <li>Children's S.E.N.D expertise demonstrated</li>
+                        </ul>
+                    </div>
+
+                    <div class="credential-card">
+                        <h4>Academic & Research</h4>
+                        <ul>
+                            <li>PhD paper: "Reconceptualising Narcissism"</li>
+                            <li>Autism legal initiative (barrister-accepted)</li>
+                            <li>Fashion Design BA (Womenswear Technology)</li>
+                            <li>University of Arts London Ambassador</li>
+                            <li>Liverpool Arts College Ambassador</li>
+                        </ul>
+                    </div>
+
+                    <div class="credential-card">
+                        <h4>Professional Endorsements</h4>
+                        <ul>
+                            <li>Parliamentary acknowledgment (MP Dan Carden)</li>
+                            <li>Senior detective endorsement</li>
+                            <li>Chartered accountant validation</li>
+                            <li>Legal professional endorsements</li>
+                            <li>Social worker character references (6-30 years)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pullquote">
+                    "Expertise is not created by license—it is demonstrated by outcome. Regulatory bodies can 
+                    safeguard standards but must not be used to exclude truth-bearing individuals who meet all 
+                    substantive benchmarks."
+                </div>
+
+                <div class="content-section">
+                    <h2>The Competitive Edge: Three Domains</h2>
+                    <p>
+                        Ben's oversight validation rests on three pillars that traditional mechanisms struggle 
+                        to replicate:
+                    </p>
+                    <p>
+                        <strong>1. Systems-Level Forensic Vision:</strong> The capacity to identify procedural 
+                        cascades before they reach crisis threshold. His Judicial Skills Assessment revealed 
+                        "exceptional foresight and strategic decision-making"—the ability to see harms 
+                        approaching before systems fail.
+                    </p>
+                    <p>
+                        <strong>2. Constitutional-Grade Legal Reasoning:</strong> Operating with legal knowledge 
+                        and analytical ability assessed as meeting judicial standards. His synthesis of Equality 
+                        Act provisions, Care Act requirements, and human rights frameworks demonstrates mastery 
+                        typically requiring decades of practice.
+                    </p>
+                    <p>
+                        <strong>3. Trauma-Informed Institutional Analysis:</strong> Oversight informed by direct 
+                        experience of institutional failure. Ben doesn't theorize about safeguarding gaps—he 
+                        documents them through lived evidence, policy submissions, and maintained "unwavering 
+                        commitment to ethical principles" despite systemic resistance.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Neurodivergent Analytical Capacity</h2>
+                    <p>
+                        Ben's autism diagnosis provides what he describes as "constant threat mode"—not as 
+                        dysfunction, but as heightened capacity to detect procedural violations before they 
+                        cascade into safeguarding failures. This represents pattern recognition operating at a 
+                        level that neurotypical processing often cannot access.
+                    </p>
+                    <p>
+                        Traditional safeguarding assessments privilege neurotypical patterns of performance—linear 
+                        written assessments, standardised formats, controlled presentations. This creates systemic 
+                        exclusion not based on incompetence, but on neurological variance in expression. Ben's 
+                        validation challenges these assumptions, demonstrating that competence transcends 
+                        conventional assessment pathways.
+                    </p>
+                </div>
+
+                <div class="mission-statement">
+                    <h3>The Mission: Justice Minds Forensic Intelligence</h3>
+                    <p>
+                        Founded to expose systemic failures in safeguarding and institutional accountability, 
+                        Justice Minds operates at the intersection of forensic analysis, legal advocacy, and 
+                        trauma-informed oversight. We challenge compliance frameworks that measure process over 
+                        protection, arguing that expertise must be validated by protective outcome rather than 
+                        procedural conformity.
+                    </p>
+                    <p>
+                        Our work demonstrates that when competence is measured against industry standards rather 
+                        than regulatory gatekeeping, truth-bearing voices can no longer be systematically excluded. 
+                        We advocate for "exceptional, lived-experience-based forensic contributors" to be recognized 
+                        within formal frameworks—not as a lowering of standards, but as an alignment of standards 
+                        with actual protection.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Why This Validation Matters</h2>
+                    <p>
+                        Ben's recognition matters not because it proves one person's competence, but because it 
+                        exposes how many others with similar capacity are being systematically excluded. When the 
+                        UK Court of Appeals awards top-tier merit recognition, when judicial assessment frameworks 
+                        rate someone "Excellent" in categories used to evaluate actual judges, when multiple 
+                        independent sectors validate analytical capacity across decades—that recognition means 
+                        something.
+                    </p>
+                    <p>
+                        It means the oversight matters. It means the validation is earned. And it means the 
+                        system's willingness to exclude such expertise on procedural grounds says more about its 
+                        own failures than about the competence being excluded.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Constitutional Imperative</h3>
+                    <p>
+                        "The justice system must be capable of hearing from its future judges, even when they 
+                        are not yet named as such." This principle drives Ben's submission to the Family Procedure 
+                        Rule Committee, arguing that excluding neurodivergent expertise from oversight mechanisms 
+                        violates Article 6 ECHR and contradicts the overriding objective of the Civil Procedure 
+                        Rules.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Character & Professional Relationships</h2>
+                    <p>
+                        Professional character statements spanning 6 to 30 years describe Ben as someone who "puts 
+                        the needs of others before his own" and is "forever finding ways to improve lives in new 
+                        and creative ways." A social worker with three decades of friendship writes: "He has always 
+                        been an optimist who speaks positivity and I value our friendship immensely."
+                    </p>
+                    <p>
+                        These endorsements come from mental health social workers, children's social workers, S.E.N.D 
+                        teachers, senior detectives, chartered accountants, and legal professionals—forming a 
+                        cross-sector validation that reveals capacity to synthesize insights from multiple domains 
+                        without being constrained by professional silos.
+                    </p>
+                </div>
+
+                <div class="stat-banner">
+                    <h3>The Rarity of Recognition</h3>
+                    <p>Assessed "Excellent" in 7 of 9 Judicial Skills Framework Criteria</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Moving Forward</h2>
+                    <p>
+                        The work continues: exposing institutional failures, challenging compliance frameworks that 
+                        prioritize procedure over protection, and advocating for recognition of expertise that 
+                        emerges outside traditional pathways. Justice Minds Forensic Intelligence operates on a 
+                        simple principle: measure oversight by its capacity to identify and prevent harm, not by 
+                        the credentials of those providing it.
+                    </p>
+                    <p>
+                        When competence can be benchmarked, documented, and independently validated across multiple 
+                        sectors and decades—when judicial frameworks themselves rate someone at standards required 
+                        for actual judges—then the question becomes not whether such expertise exists, but whether 
+                        systems are willing to recognize it when it appears in non-traditional forms.
+                    </p>
+                    <p>
+                        The answer to that question determines whether we measure oversight against industry 
+                        standards—or merely against our own gatekeeping preferences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="about.html" class="footer-nav-link">About</a>
+                <a href="#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+                <a href="#terms" class="footer-nav-link">Terms of Service</a>
+                <a href="#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+Organization,Contact Name,Sector,Email,Total Contacts (PDF),Total Email Count (CSV),Sent Emails,Received Emails,Email Threads,File Count,Sector Cluster,First Contact Date,Last Contact Date,Source
+University of Law,Multiple Contacts,Legal Education,various@law.ac.uk,25,115,40,75,13,32,Legal Education Providers,2021/04/07,2024/02/23,Both Sources
+Law Firm,Multiple Contacts,Legal Services,various,26,0,0,0,0,0,Legal Representation Firm,2021/04/07,2024/02/23,PDF Only
+Mental Health Services,Multiple Contacts,Healthcare,various@nhs.net,25,92,28,64,13,46,Mental Health / Therapy,2021/04/28,2024/02/16,Both Sources
+Parliament,Multiple MPs,Government,various.mp@parliament.uk,10,895,686,209,799,84,Parliamentary Representation,2021/05/18,2024/02/23,Both Sources
+Housing Services,Multiple Contacts,Property,various@knightfrank.com,20,0,0,0,0,0,Housing Services,2023/07/26,2024/02/13,PDF Only
+Advocacy Services,Multiple Contacts,Support,various,18,55,33,22,14,35,Advocacy,2021/08/11,2022/09/28,Both Sources
+Police,Multiple Officers,Law Enforcement,various.police.uk,10,37,16,21,9,17,Police,2022/06/10,2023/12/22,Both Sources
+Commercial Property,Multiple Contacts,Real Estate,various@avisonyoung.com,12,0,0,0,0,0,Commercial Property,2023/05/03,2023/12/22,PDF Only
+Healthcare & Therapy,Multiple Providers,Medical,various,9,94,28,66,17,13,Healthcare & Therapy,2021/04/28,2024/02/16,Both Sources
+Disability Support,Multiple Services,Support,various,9,0,0,0,0,0,Disability Services,2023/03/10,2024/02/11,PDF Only
+Mental Health Services,Multiple Providers,Mental Health,various,25,38,20,18,8,31,Mental Health,2021/09/28,2024/02/16,Both Sources
+Health and Social Care,Multiple Services,Healthcare,various,8,232,121,111,40,116,Care UK,2021/05/18,2023/07/18,Both Sources
+Survivors UK,Multiple Staff,Support,various@survivorsuk.org,7,115,40,75,13,32,Victim Support Services,2022/04/27,2024/01/15,Both Sources
+Government & Public Services,Multiple Bodies,Government,various,7,52,13,39,10,2,Government Services,2022/04/19,2024/02/16,Both Sources
+Council Services,Multiple Councils,Local Government,various@liverpool.gov.uk,5,49,26,23,17,13,Local Council Services,2021/08/20,2024/01/19,Both Sources
+Family Court,Multiple Courts,Judiciary,various@justice.gov.uk,3,0,0,0,0,0,Judicial Family Services,2024/02/06,2024/02/16,PDF Only
+Financial Services,Multiple Providers,Finance,various,7,0,0,0,0,0,Financial Services,2023/06/09,2023/08/30,PDF Only
+DWP,Multiple Officers,Welfare,various@dwp.gov.uk,5,0,0,0,0,0,Welfare Services,2023/05/08,2023/09/27,PDF Only
+Press & Media,Multiple Outlets,Media,various,5,0,0,0,0,0,Press Services,2023/04/11,2024/02/07,PDF Only
+BBC,Multiple Staff,Broadcasting,various@bbc.co.uk,2,0,0,0,0,0,Public Broadcasting,2023/04/11,2023/11/28,PDF Only
+Family Support,Multiple Services,Social Services,various,3,230,121,109,38,116,Family Support Services,2021/05/18,2023/12/29,Both Sources
+Adult Social Care,Multiple Services,Social Care,various,3,52,13,39,10,2,Adult Care Services,2022/04/19,2024/01/19,Both Sources
+Childrens Social Care,Multiple Services,Child Welfare,various@liverpool.gov.uk,4,27,14,13,3,5,Child Welfare Services,2021/05/18,2022/09/28,Both Sources
+Kinship Care,Services,Family Support,various,1,0,0,0,0,0,Kinship Care Services,2024/02/16,2024/02/16,PDF Only
+GP Services,Multiple Practices,Primary Care,various@nhs.net,3,94,28,66,17,13,Primary Health Care,2022/01/11,2024/02/13,Both Sources
+Childrens Hospital,Hospital,Pediatric Care,various@alderhey.nhs.uk,2,31,16,15,12,18,Childrens Hospital,2021/05/25,2022/09/28,Both Sources
+Educational Services,Multiple Providers,Education,various,4,11,10,1,6,3,Education,2021/04/28,2023/08/17,Both Sources
+Google Services,Google,Technology,various@google.com,2,0,0,0,0,0,Digital Services,2024/02/05,2024/02/11,PDF Only
+Crisis Services,Support,Emergency,various,1,0,0,0,0,0,Crisis Intervention,2023/11/28,2023/11/28,PDF Only
+Companies House,Registry,Corporate,enquiries@companieshouse.gov.uk,1,0,0,0,0,0,Corporate Registration,2023/12/22,2023/12/22,PDF Only
+Bereavement Services,Support,Grief,various,1,0,0,0,0,0,Grief Support Services,2023/11/03,2023/11/03,PDF Only
+Homeless Support,Services,Housing,various,1,0,0,0,0,0,Homelessness Services,2023/12/22,2023/12/22,PDF Only
+Bank Services,Multiple Banks,Banking,various,2,0,0,0,0,0,Banking Services,2023/08/31,2023/08/31,PDF Only
+Nursery Services,Childcare,Early Years,various,1,0,0,0,0,0,Preschool Education,2023/12/22,2023/12/22,PDF Only
+Pension Services,Providers,Retirement,various,1,0,0,0,0,0,Retirement Planning,2023/11/17,2023/11/17,PDF Only
+HR Services,Consultants,Human Resources,various,1,0,0,0,0,0,Human Resources,2023/02/09,2023/12/29,PDF Only
+Therapy Services,Therapists,Mental Health,various,2,21,9,12,7,7,Mental Health Services,2021/11/04,2024/02/07,Both Sources
+Landlord Services,Property,Housing,various,2,0,0,0,0,0,Landlord,2023/11/16,2023/11/16,PDF Only
+Data Access Services,Information,Data,various,2,0,0,0,0,0,Information Services,2023/11/16,2023/11/16,PDF Only
+CAB Services,Citizens Advice,Advice,various@westminstercab.org.uk,1,4,2,2,4,0,Advisory Services,2022/04/28,2023/05/24,Both Sources
+Complaint Services,Multiple,Administrative,various,2,0,0,0,0,0,Customer Service,2023/12/14,2023/12/15,PDF Only
+Customer Service,Various,Support,various,2,8,2,6,3,1,Customer Service,2022/03/14,2022/03/24,Both Sources
+MP Assistant Services,Support,Parliamentary,various@parliament.uk,3,28,17,11,5,21,Parliamentary Support,2021/09/21,2023/12/29,Both Sources
+Mayor Services,Council,Leadership,various@liverpool.gov.uk,2,0,0,0,0,0,Municipal Leadership,2022/11/14,2023/12/22,PDF Only
+Councillor Services,Council,Local Government,various@liverpool.gov.uk,2,0,0,0,0,0,Local Government Officials,2022/11/14,2023/11/17,Both Sources
+Support Worker Services,Various,Social Support,various,3,0,0,0,0,0,Social Support Services,2022/11/14,2023/12/29,PDF Only
+Liverpool Council,Multiple Departments,Local Authority,various@liverpool.gov.uk,5,49,26,23,17,13,Local Council Services,2021/08/20,2024/01/19,Both Sources
+NHS Trusts,Multiple Trusts,Healthcare,various@nhs.net,25,94,28,66,17,13,NHS,2021/04/28,2024/02/16,Both Sources
+Westminster Council,Departments,Local Authority,various@westminster.gov.uk,2,52,13,39,10,2,Local Council Services,2022/04/19,2024/01/19,Both Sources
+Brighton & Hove Council,Departments,Local Authority,various@brighton-hove.gov.uk,2,0,0,0,0,0,Local Council Services,2023/05/23,2023/12/22,Both Sources
+Torus Housing,Staff,Housing Association,various@torus.co.uk,5,28,16,12,6,12,Housing Services,2021/07/08,2023/11/16,Both Sources
+Mary Seacolehouse,Staff,Advocacy,various@maryseacolehouse.com,6,79,45,34,14,63,Advocacy,2021/08/11,2022/11/14,Both Sources
+Justice Ministry,Various,Government,various@justice.gov.uk,3,0,0,0,0,0,Judicial Services,2024/02/06,2024/02/16,PDF Only
+Sussex Police,Officers,Police,various@sussex.police.uk,4,25,14,11,7,3,Police,2022/06/10,2023/12/22,Both Sources
+Merseyside Police,Officers,Police,various@merseyside.police.uk,3,37,16,21,9,17,Police,2022/07/12,2023/01/03,Both Sources
+Exceptional Individuals,Staff,Disability Support,various@exceptionalindividuals.com,6,0,0,0,0,0,Disability Services,2022/09/12,2023/09/13,PDF Only
+
+SUMMARY STATISTICS
+Total Unique Organizations (PDF),277,,,,,,,,,,,
+Total Organizations with Email Data (CSV),93,,,,,,,,,,,
+Total Combined Unique Entities,320+,,,,,,,,,,,
+Total Emails Tracked (CSV),4892,2847,2045,,,,,,,,
+Date Range PDF,2022-06-01 to 2024-02-23,,,,,,,,,,,
+Date Range CSV,2021-04-07 to 2022-10-03,,,,,,,,,,,
+Combined Date Range,2021-04-07 to 2024-02-23,,,,,,,,,,,
+PDF Contact Period (Years),3,,,,,,,,,,,
+CSV Email Period (Years),1.5,,,,,,,,,,,
+
+SECTOR BREAKDOWN (PDF Appearances)
+Legal Education Providers,25,,,,,,,,,,,
+Legal Representation Firm,26,,,,,,,,,,,
+Mental Health Services,25,,,,,,,,,,,
+Parliamentary Representation,10,,,,,,,,,,,
+Housing Services,20,,,,,,,,,,,
+Advocacy,18,,,,,,,,,,,
+Police,10,,,,,,,,,,,
+Commercial Property,12,,,,,,,,,,,
+Healthcare & Therapy,9,,,,,,,,,,,
+NHS,1,,,,,,,,,,,
+Disability Services,9,,,,,,,,,,,
+Health and Social Care,8,,,,,,,,,,,
+Victim Support Services,7,,,,,,,,,,,
+Government & Public Services,7,,,,,,,,,,,
+Financial Services,7,,,,,,,,,,,
+DWP,5,,,,,,,,,,,
+Press Services,5,,,,,,,,,,,
+Local Council Services,5,,,,,,,,,,,
+Family Court,3,,,,,,,,,,,
+Family Support Services,3,,,,,,,,,,,
+Adult Care Services,3,,,,,,,,,,,
+Primary Health Care,3,,,,,,,,,,,
+Childrens Social Care,4,,,,,,,,,,,
+Education,4,,,,,,,,,,,
+BBC,2,,,,,,,,,,,
+Media,10,,,,,,,,,,,
+Childrens Hospital,2,,,,,,,,,,,
+Google,2,,,,,,,,,,,

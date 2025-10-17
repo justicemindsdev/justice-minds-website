@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Justice Minds Forensic Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            background: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .subtitle {
+            color: var(--text-grey);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem 0;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.35rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .lead-quote {
+            font-style: italic;
+            color: var(--text-grey);
+            border-left: 4px solid var(--accent-red);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .company-details {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover,
+        .footer-nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item">INVESTIGATIONS</a>
+            <a href="index.html#features" class="nav-item">FEATURES</a>
+            <a href="index.html#analysis" class="nav-item">ANALYSIS</a>
+            <a href="index.html#opinion" class="nav-item">OPINION</a>
+            <a href="index.html#about" class="nav-item">ABOUT</a>
+            <a href="index.html#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <a href="index.html" class="back-button">
+            <span>←</span>
+            <span>Back to Home</span>
+        </a>
+
+        <h1>Terms of Service</h1>
+        <p class="subtitle">Justice Minds Forensic Intelligence Ltd</p>
+
+        <div class="lead-quote">
+            "Rules are not a box to trap truth — they are the rails that take truth to the court. Know the rules before you hand us your evidence. We will protect it, analyse it, and stand behind our reports. If you ask us to do something unlawful, we will refuse. If you want forensic rigour, you'll get it."
+        </div>
+
+        <h2>Plain-English Summary</h2>
+        
+        <p>These Terms set out how Justice Minds provides services, client obligations, payment and liability rules, data handling responsibilities, IP ownership and dispute resolution.</p>
+        
+        <ul>
+            <li><strong>Governing law:</strong> England & Wales</li>
+            <li><strong>Liability cap:</strong> Greater of fees paid for the service or £100,000</li>
+        </ul>
+
+        <h2>1. Definitions and Interpretation</h2>
+        
+        <ul>
+            <li><strong>"Justice Minds", "we", "us":</strong> Justice Minds Forensic Intelligence Ltd (Company number: 16331423)</li>
+            <li><strong>"Client", "you":</strong> The person or entity commissioning services</li>
+            <li><strong>"Services":</strong> Forensic evidence capture, preservation, computational corroboration, reporting and advisory activity as set out in an engagement letter</li>
+            <li><strong>"Engagement Letter":</strong> The written agreement specifying scope, fees, timelines and deliverables</li>
+        </ul>
+
+        <h2>2. Formation of Contract</h2>
+        
+        <p>A contract forms when both parties sign the Engagement Letter or when the Client pays an invoice representing acceptance of the Engagement Letter.</p>
+
+        <h2>3. Scope & Performance</h2>
+        
+        <p>We will perform Services with reasonable skill and care using our methodology (time‑stamps, chain of custody, CI corroboration and expert analysis).</p>
+        
+        <p>Any change in scope will be agreed in writing and may affect fees and timelines.</p>
+
+        <h2>4. Client Obligations</h2>
+        
+        <ul>
+            <li>You warrant that you have lawful authority to provide recordings or to instruct us to process them. You will obtain necessary consents where required.</li>
+            <li>You will provide accurate information and co‑operate with reasonable requests for documentation.</li>
+            <li>You will not instruct us to assist in unlawful recording, surveillance or privacy breaches.</li>
+        </ul>
+
+        <h2>5. Fees, Invoicing and Suspension</h2>
+        
+        <p>Fees as specified in the Engagement Letter. Payment terms: 30 days from invoice date unless agreed otherwise.</p>
+        
+        <p>If invoices are overdue we may suspend work until payment or satisfactory security is provided.</p>
+        
+        <p><strong>Reasonable adjustments:</strong> Vulnerable clients may request payment plans; we will consider such requests in good faith.</p>
+
+        <h2>6. Confidentiality & Data Protection</h2>
+        
+        <p>We will keep client materials confidential except for lawful disclosures or where you authorise sharing.</p>
+        
+        <p>All staff and contractors are bound by NDA and data protection obligations.</p>
+        
+        <p>Our data handling practices are set out in the <a href="privacy-policy.html" style="color: var(--accent-red);">Privacy Policy</a>.</p>
+
+        <h2>7. Intellectual Property</h2>
+        
+        <p>Justice Minds retains IP in its methodologies, software, tools and anonymised aggregated outputs.</p>
+        
+        <p>Clients are granted a non‑exclusive licence to use delivered reports for legal proceedings and authorised purposes. If assignment of IP is requested, terms will be separately negotiated.</p>
+
+        <h2>8. Warranties & Disclaimers</h2>
+        
+        <p>We warrant our Services will be delivered with reasonable care and skill. We do not guarantee litigation outcomes.</p>
+        
+        <p>All reports are expert opinion based on available materials and our professional assessment.</p>
+
+        <h2>9. Limitation of Liability</h2>
+        
+        <div class="highlight-box">
+            <p>Subject to mandatory statutory rights, Justice Minds' aggregate liability for direct losses arising from negligence, breach of contract or other civil wrong is limited to the greater of:</p>
+            <ul>
+                <li>(a) the fees actually paid by the Client for the relevant Services; or</li>
+                <li>(b) £100,000</li>
+            </ul>
+            <p>We are not liable for indirect or consequential losses (loss of profits, loss of business, reputation damage) except where such exclusion is not permitted by law.</p>
+        </div>
+
+        <h2>10. Indemnity</h2>
+        
+        <p>You indemnify Justice Minds against claims arising from your unlawful instructions, breach of third‑party rights, failure to obtain consents, or misuse of delivered materials.</p>
+
+        <h2>11. Termination</h2>
+        
+        <p>Either party may terminate per the Engagement Letter. On termination we will preserve case files for the retention period and comply with data requests consistent with legal obligations.</p>
+        
+        <p>Outstanding fees remain payable on termination.</p>
+
+        <h2>12. Dispute Resolution & Governing Law</h2>
+        
+        <p><strong>Law:</strong> England & Wales</p>
+        
+        <p><strong>Disputes:</strong> Negotiation, mediation, then litigation in England & Wales courts if required.</p>
+
+        <h2>13. Use of CI Outputs, Transparency & Trade Secret Protection</h2>
+        
+        <p>CI outputs are provided as corroborative evidence, accompanied by human expert interpretation. We disclose measurable metrics (word frequency, speaker‑turn timing, pattern detection, transcript→statute mapping and confidence scores) but protect proprietary algorithms, model architectures and training data as trade secrets.</p>
+        
+        <p>Clients may request a non‑technical explanation of CI outputs; technical disclosure may be subject to a protective order in litigation to preserve confidentiality and evidentiary integrity.</p>
+
+        <h2>14. Accessibility, Complaints & Corrections</h2>
+        
+        <p><strong>Complaints:</strong> Submit through our contact channels. We acknowledge within 5 working days and aim to resolve within 30 days.</p>
+        
+        <p><strong>For device or product support:</strong> support@limitless.ai</p>
+        
+        <p><strong>Data subject requests:</strong> Submit to our Data Protection Officer</p>
+
+        <h2>15. Public Interest Disclosures and Reporting</h2>
+        
+        <p>Where required by law or public interest (imminent risk of harm), Justice Minds may disclose material to appropriate authorities; we will notify Clients unless prohibited by law.</p>
+
+        <h2>16. Entire Agreement & Severability</h2>
+        
+        <p>These Terms and the Engagement Letter constitute the entire agreement. If any provision is unenforceable, the remainder remains in force.</p>
+
+        <h2>Signatures & Formal Acceptance</h2>
+        
+        <p>These Terms are accepted by signature on the Engagement Letter or by payment of an invoice issued under the Engagement Letter.</p>
+
+    </div>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="index.html#about" class="footer-nav-link">About</a>
+                <a href="index.html#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-nav-link active">Terms of Service</a>
+                <a href="index.html#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="index.html#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>

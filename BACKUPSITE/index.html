@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice Minds Forensic Intelligence | Exposing Systemic Exploitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header-hero-image {
+            width: 100%;
+            background: var(--primary-blue);
+        }
+
+        .hero-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--primary-blue);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            max-width: 100%;
+        }
+
+        .nav-item {
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border-grey);
+        }
+
+        .nav-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-content a {
+            padding: 1rem 0;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-content a:hover,
+        .nav-content a.active {
+            border-bottom-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .hero-section {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border-grey);
+        }
+
+        .hero-article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .hero-content h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-kicker {
+            color: var(--accent-red);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-standfirst {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--text-grey);
+            margin: 1.5rem 0;
+        }
+
+        .hero-meta {
+            font-size: 0.9rem;
+            color: var(--text-grey);
+            margin-top: 1rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .article-card {
+            border-bottom: 1px solid var(--border-grey);
+            padding-bottom: 1.5rem;
+        }
+
+        .article-card h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            line-height: 1.3;
+            margin: 1rem 0;
+        }
+
+        .article-card h2 a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .article-card h2 a:hover {
+            color: var(--accent-red);
+        }
+
+        .article-kicker {
+            color: var(--accent-red);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .article-excerpt {
+            color: var(--text-grey);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: var(--accent-red);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .section-header {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            margin: 3rem 0 2rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid var(--primary-blue);
+        }
+
+        .footer {
+            background: var(--primary-blue);
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-nav-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .footer-nav-link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-full-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-red);
+            color: white;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #a00000;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 968px) {
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .footer-nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            .hero-article {
+                grid-template-columns: 1fr;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-hero-image">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-bar">
+            <a href="index.html" class="nav-item active">INVESTIGATIONS</a>
+            <a href="#features" class="nav-item">FEATURES</a>
+            <a href="#analysis" class="nav-item">ANALYSIS</a>
+            <a href="#opinion" class="nav-item">OPINION</a>
+            <a href="#about" class="nav-item">ABOUT</a>
+            <a href="#services" class="nav-item">SERVICES</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-article">
+                <div class="hero-content">
+                    <div class="hero-kicker">INVESTIGATION</div>
+                    <h1>The Silent Exploitation: How UK Hospitality Traps International Workers</h1>
+                    <p class="hero-standfirst">
+                        Six Hilton hotels. Hundreds of Indian workers. The same pattern of exploitation. 
+                        A forensic investigation reveals how Britain's hospitality industry has created 
+                        a modern form of workplace servitude—and why no one is stopping it.
+                    </p>
+                    <div class="hero-meta">
+                        <strong>By Ben Mak</strong>, Forensic Investigator | 
+                        Parliamentary Acknowledged Investigation | 
+                        ICO Certified Analysis
+                    </div>
+                    <a href="investigation-hilton.html" class="btn-primary" style="margin-top: 1.5rem;">Read Full Investigation</a>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800" alt="Hotel lobby" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-header">Latest Investigations</h2>
+
+        <div class="article-grid">
+            <article class="article-card">
+                <div class="article-kicker">FORENSIC ANALYSIS</div>
+                <h2><a href="visa-trap.html">The Visa Sponsorship Trap</a></h2>
+                <p class="article-excerpt">
+                    "Work harder and we'll sponsor you." The promise echoes through kitchens, 
+                    reception desks, and housekeeping corridors. But after 18 months of unpaid 
+                    overtime and missed breaks, the sponsorship never comes. A forensic data 
+                    analysis reveals the systematic pattern.
+                </p>
+                <a href="visa-trap.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">HUMAN STORY</div>
+                <h2><a href="shubham-story.html">When Promise Becomes Debt</a></h2>
+                <p class="article-excerpt">
+                    Shubham arrived in the UK with a Master's degree and £50,000 in student debt. 
+                    His family celebrated—until they saw what "international opportunity" actually 
+                    meant. This is the story of how Britain's education system profits from dreams 
+                    it never intends to fulfill.
+                </p>
+                <a href="shubham-story.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">LEGAL FRAMEWORK</div>
+                <h2><a href="article-3.html">Article 3 Protections: The Unused Weapon</a></h2>
+                <p class="article-excerpt">
+                    International workers are protected under Article 3 of the European Convention 
+                    on Human Rights from degrading treatment. Yet these protections remain virtually 
+                    unknown—and deliberately obscured. Our legal analysis shows how and why.
+                </p>
+                <a href="article-3.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">INVESTIGATION</div>
+                <h2><a href="ragging-file.html">The Ragging File: When Stakeholders Turn</a></h2>
+                <p class="article-excerpt">
+                    Documents reveal how UK stakeholders' attitudes toward international workers 
+                    shifted dramatically once they learned a key figure had departed. The evidence 
+                    shows a calculated pattern of behavioral change designed to manufacture failure.
+                </p>
+                <a href="ragging-file.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">DATA ANALYSIS</div>
+                <h2><a href="cognitive-patterns.html">Measuring Psychological Harm</a></h2>
+                <p class="article-excerpt">
+                    Using forensic linguistic analysis, we measured 261 instances of cognitive 
+                    deflection in post-exploitation interviews—up from 81 pre-incident. 
+                    This is what systematic psychological damage looks like in data.
+                </p>
+                <a href="cognitive-patterns.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">OPINION</div>
+                <h2><a href="opinion-system.html">"The System Needs Small": Why Nothing Changes</a></h2>
+                <p class="article-excerpt">
+                    The exploitation isn't a bug—it's the feature. The system depends on keeping 
+                    international workers small, silent, and scared. An essay on why confrontation 
+                    isn't disruption; it's survival.
+                </p>
+                <a href="opinion-system.html" class="read-more">Read more →</a>
+            </article>
+        </div>
+
+        <h2 class="section-header" id="features">Featured Stories</h2>
+
+        <div class="article-grid">
+            <article class="article-card">
+                <div class="article-kicker">PERSONAL TESTIMONY</div>
+                <h2><a href="krishna-story.html">The Day Krishna Left: A Case Study in Abandonment</a></h2>
+                <p class="article-excerpt">
+                    February. No warning. No explanation. Just silence. When Krishna and Kaustub 
+                    withdrew from their commitments, they left behind more than unfinished work—they 
+                    left evidence of how the system manufactures failure for international students.
+                </p>
+                <a href="krishna-story.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">INVESTIGATION</div>
+                <h2><a href="amex-fraud.html">£12,000 Stolen: When Your Manager's Email Isn't Your Manager</a></h2>
+                <p class="article-excerpt">
+                    A forensic investigation into workplace fraud reveals how vulnerable workers 
+                    become perfect targets. The case file includes timestamp analysis, behavioral 
+                    pattern recognition, and the recorded laughter of a manager who failed to protect 
+                    his employee.
+                </p>
+                <a href="amex-fraud.html" class="read-more">Read more →</a>
+            </article>
+
+            <article class="article-card">
+                <div class="article-kicker">ANALYSIS</div>
+                <h2><a href="generational-trauma.html">Breaking Generational Patterns</a></h2>
+                <p class="article-excerpt">
+                    "Get a good education. Get a job. Get treated like shit. Don't get sponsorship. 
+                    Go back home." The cycle repeats across generations. Why? Because no one has the 
+                    courage to demand better. An analysis of cultural conditioning and systemic 
+                    exploitation.
+                </p>
+                <a href="generational-trauma.html" class="read-more">Read more →</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <div class="footer-nav-bar">
+                <a href="#about" class="footer-nav-link">About</a>
+                <a href="#contact" class="footer-nav-link">Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+                <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
+                <a href="#submit-evidence" class="footer-nav-link">Submit Evidence</a>
+                <a href="legal-framework.html" class="footer-nav-link">Legal Framework</a>
+                <a href="#media" class="footer-nav-link">Media Inquiries</a>
+            </div>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+    </footer>
+</body>
+</html>
