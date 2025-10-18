@@ -6,6 +6,15 @@
     <title>Breaking Free: When Cultural Love Becomes Cultural Debt | Justice Minds</title>
     <meta name="description" content="Understanding the invisible chains of cultural conditioning and how to transform survival tactics into professional power.">
     
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Breaking Free: When Cultural Love Becomes Cultural Debt">
+    <meta property="og:description" content="Understanding the invisible chains of cultural conditioning and how to transform survival tactics into professional power.">
+    <meta property="og:image" content="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/duohearts.png">
+    <meta property="og:url" content="https://justice-minds-website.vercel.app/cultural-conditioning-freedom">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/duohearts.png">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +68,7 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             padding: 0;
             margin: 0;
         }
@@ -143,7 +152,7 @@
             display: block;
             background: var(--bg-light);
             border: 2px solid var(--border-grey);
-            padding: 2rem;
+            padding: 1rem;
             text-align: center;
             color: var(--text-grey);
             font-style: italic;
@@ -383,32 +392,40 @@
         }
 
         .footer-nav {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: var(--primary-blue);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1.5rem 0;
+            border-bottom: 4px solid var(--accent-red);
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .footer-nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 0;
+            flex-wrap: nowrap;
             padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav li {
+            margin: 0;
         }
 
         .footer-nav a {
-            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            padding: 1rem 2.5rem;
+            color: white;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
         }
 
         .footer-nav a:hover {
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
         }
 
         .footer-image {
@@ -417,9 +434,16 @@
         }
 
         @media (max-width: 968px) {
+            .main-nav ul {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
             .main-nav a {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.85rem;
+                padding: 0.75rem 1rem;
+                font-size: 0.75rem;
+                white-space: nowrap;
             }
 
             .article-title {
@@ -439,9 +463,28 @@
                 width: 250px;
             }
 
+            .footer-nav ul {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
             .footer-nav a {
+                padding: 0.75rem 1rem;
                 font-size: 0.75rem;
-                padding: 0.5rem 1rem;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-nav a {
+                padding: 0.75rem 0.75rem;
+                font-size: 0.7rem;
+            }
+
+            .footer-nav a {
+                padding: 0.75rem 0.75rem;
+                font-size: 0.7rem;
             }
         }
     </style>
@@ -474,6 +517,10 @@
             </div>
 
             <div class="article-content">
+                <div class="article-image" style="margin-bottom: 2rem;">
+                    <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/duohearts.png" alt="Breaking free from cultural conditioning - transformation and empowerment" style="width: 100%; height: auto; border: none; padding: 0; background: transparent;">
+                </div>
+
                 <p>There's a word in Hindi that doesn't translate cleanly into English. It means both "<span class="hindi-word">shy<span class="hindi-popup"><span class="hindi-script">शर्म</span><span class="hindi-transliteration">sharm</span></span></span>" and "<span class="hindi-word">ashamed<span class="hindi-popup"><span class="hindi-script">शर्म</span><span class="hindi-transliteration">sharm</span></span></span>"—the same word for both feelings. Think about that for a moment. In English, shyness is a personality trait. Shame is a moral judgment. But when the language you grow up speaking conflates the two, your brain learns something dangerous: <strong>feeling nervous and feeling worthless become the same thing.</strong></p>
 
                 <p>This isn't just a linguistic curiosity. It's one of thousands of invisible chains that shape how immigrants—particularly those from South Asian cultures—navigate Western professional environments. And most people carrying these chains don't even know they're there.</p>
@@ -483,10 +530,13 @@
                 <h2>The Architecture of Emotional Debt</h2>
 
                 <div class="article-video">
-                    <video controls>
+                    <video controls poster="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/anita/emotional_debt.png">
                         <source src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/emotional_debt.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+                    <div style="text-align: center; margin-top: 0.5rem; font-style: italic; color: var(--text-grey); font-size: 0.9rem;">
+                        The Architecture of Emotional Debt
+                    </div>
                 </div>
 
                 <p>Dr. Harriet Lerner, clinical psychologist and author of <em>The Dance of Anger</em>, describes what she calls "emotional debt systems" in families—where love becomes transactional, and children are raised to believe they owe their existence to their parents' sacrifice.<a href="#ref1" class="citation">[1]<span class="citation-popup">"In many cultural systems, children are taught that autonomy equals betrayal. The family operates as an emotional economy where independence must be 'purchased' through guilt."</span></a></p>
