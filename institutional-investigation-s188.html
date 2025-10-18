@@ -6,6 +6,17 @@
     <title>Investigation Report: Section 188 Housing Act 1996 Breach | Justice Minds Forensic Intelligence</title>
     <meta name="description" content="Forensic investigation into Westminster City Council's systematic breach of Section 188 Housing Act 1996 statutory duty. Evidence-based findings of fact.">
     
+    <!-- CRITICAL: Block page rendering until password validation -->
+    <style>
+        /* Immediate lock - applied before any other styles load */
+        html, body {
+            overflow: hidden !important;
+            position: fixed !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +43,10 @@
             line-height: 1.6;
             color: var(--text-dark);
             background: white;
+            overflow: hidden !important;
+            position: fixed !important;
+            width: 100% !important;
+            height: 100% !important;
         }
 
         .header {
@@ -1718,26 +1733,35 @@
     </footer>
 
     <script>
-        // Password protection
+        // Password protection - runs IMMEDIATELY, blocking all content
         function checkPassword() {
-            const input = document.getElementById('passwordInput').value;
+            const input = document.getElementById('passwordInput');
             const correctPassword = 'w2m025#';
             const errorDiv = document.getElementById('passwordError');
             
-            if (input === correctPassword) {
+            if (input && input.value === correctPassword) {
+                // Unlock the page
                 document.getElementById('passwordOverlay').style.display = 'none';
+                document.documentElement.style.overflow = 'auto';
+                document.documentElement.style.position = 'static';
                 document.body.style.overflow = 'auto';
+                document.body.style.position = 'static';
             } else {
-                errorDiv.classList.add('show');
-                document.getElementById('passwordInput').value = '';
+                if (errorDiv) errorDiv.classList.add('show');
+                if (input) input.value = '';
                 setTimeout(() => {
-                    errorDiv.classList.remove('show');
+                    if (errorDiv) errorDiv.classList.remove('show');
                 }, 3000);
             }
         }
 
-        // Prevent scrolling while password overlay is active
-        document.body.style.overflow = 'hidden';
+        // Auto-focus on password input when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.getElementById('passwordInput');
+            if (input) {
+                setTimeout(() => input.focus(), 100);
+            }
+        });
 
         function toggleViolation(id) {
             const header = document.querySelector(`#violation-${id}`).previousElementSibling;
