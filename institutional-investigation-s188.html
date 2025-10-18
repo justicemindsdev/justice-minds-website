@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Report: Section 188 Housing Act 1996 Breach | Justice Minds Forensic Intelligence</title>
+    <meta name="description" content="Forensic investigation into Westminster City Council's systematic breach of Section 188 Housing Act 1996 statutory duty. Evidence-based findings of fact.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: white;
+        }
+
+        .header {
+            background-color: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .main-nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-blue);
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-nav li {
+            margin: 0;
+        }
+
+        .main-nav a {
+            display: block;
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: var(--accent-red);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .report-header {
+            background: var(--bg-light);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .report-classification {
+            color: var(--accent-red);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .report-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .report-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-grey);
+        }
+
+        .report-meta-item {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .report-meta-label {
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .executive-summary {
+            background: #fff5f5;
+            border-left: 4px solid var(--accent-red);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .executive-summary h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-red);
+        }
+
+        .key-finding {
+            background: white;
+            border: 2px solid var(--accent-red);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-weight: 600;
+        }
+
+        .content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            margin: 3rem 0 1.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 4px solid var(--primary-blue);
+            color: var(--text-dark);
+        }
+
+        .content h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--primary-blue);
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Violation Toggle Styles */
+        .violation-accordion {
+            margin: 2rem 0;
+        }
+
+        .violation-item {
+            background: white;
+            border: 2px solid var(--border-grey);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .violation-item:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(5, 41, 98, 0.1);
+        }
+
+        .violation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            cursor: pointer;
+            background: var(--bg-light);
+            transition: background 0.3s ease;
+        }
+
+        .violation-header:hover {
+            background: #e8e8e8;
+        }
+
+        .violation-header.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .violation-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .violation-rank {
+            background: var(--accent-red);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .violation-header.active .violation-rank {
+            background: white;
+            color: var(--accent-red);
+        }
+
+        .violation-info {
+            flex: 1;
+        }
+
+        .violation-officer {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .violation-date {
+            font-size: 0.9rem;
+            color: var(--text-grey);
+        }
+
+        .violation-header.active .violation-date {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .violation-strength {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            color: var(--accent-red);
+        }
+
+        .violation-header.active .violation-strength {
+            color: white;
+        }
+
+        .strength-badge {
+            background: var(--accent-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .violation-header.active .strength-badge {
+            background: white;
+            color: var(--accent-red);
+        }
+
+        .toggle-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .violation-header.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .violation-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .violation-content.active {
+            max-height: 3000px;
+        }
+
+        .violation-details {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .detail-section {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-grey);
+        }
+
+        .detail-section:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-text {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .quote-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary-blue);
+            padding: 0.75rem 1rem;
+            font-style: italic;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .response-box {
+            background: #fff5f5;
+            border-left: 4px solid var(--accent-red);
+            padding: 0.75rem 1rem;
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .indefensible-box {
+            background: var(--accent-red);
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .audio-player {
+            background: var(--primary-blue);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .play-button {
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .play-button:hover {
+            background: #a00000;
+            transform: translateY(-2px);
+        }
+
+        .audio-info {
+            flex: 1;
+            color: white;
+        }
+
+        .audio-title {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .audio-timestamp {
+            font-size: 1rem;
+            font-weight: bold;
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .legislation-link {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .legislation-link:hover {
+            background: #073c8f;
+            transform: translateY(-2px);
+        }
+
+        .causation-box {
+            background: #f0f8ff;
+            border: 2px solid var(--primary-blue);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .causation-label {
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            background-color: var(--primary-blue);
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .footer-nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: white;
+        }
+
+        .footer-image {
+            width: 100%;
+            display: block;
+        }
+
+        /* Password Overlay Styles */
+        #passwordOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/both_web_phone.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .password-modal {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .password-modal h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .password-modal p {
+            color: var(--text-grey);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-grey);
+            border-radius: 4px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .password-submit {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .password-submit:hover {
+            background: #a00000;
+            transform: translateY(-2px);
+        }
+
+        .password-error {
+            color: var(--accent-red);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .password-error.show {
+            display: block;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        @media (max-width: 968px) {
+            .main-nav a {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .report-title {
+                font-size: 2rem;
+            }
+
+            .report-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .violation-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .violation-title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .audio-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .password-modal {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Password Protection Overlay -->
+    <div id="passwordOverlay">
+        <div class="password-modal">
+            <h2>Protected Content</h2>
+            <p>This investigation report contains sensitive evidence and requires password access.</p>
+            <input 
+                type="password" 
+                id="passwordInput" 
+                class="password-input" 
+                placeholder="Enter password"
+                onkeypress="if(event.key === 'Enter') checkPassword()"
+            >
+            <button onclick="checkPassword()" class="password-submit">Access Report</button>
+            <div id="passwordError" class="password-error">Incorrect password. Please try again.</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence">
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="investigation-hilton.html">Investigations</a></li>
+            <li><a href="institutional-investigation-s188.html" class="active">Institutional</a></li>
+            <li><a href="legal-framework.html">Legal Framework</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="report-header">
+            <div class="report-classification">Forensic Investigation Report • Evidence-Based Findings</div>
+            <h1 class="report-title">Investigation into Section 188 Housing Act 1996 Breach: Westminster City Council</h1>
+            <div class="report-meta">
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Case Reference:</span>
+                    <span>WCC/S188/2024-001</span>
+                </div>
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Investigation Period:</span>
+                    <span>November 2024 - October 2025</span>
+                </div>
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Lead Investigator:</span>
+                    <span>Justice Minds Forensic Intelligence Limited</span>
+                </div>
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Evidence Items:</span>
+                    <span>286+ documented communications</span>
+                </div>
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Report Date:</span>
+                    <span>17 October 2025</span>
+                </div>
+                <div class="report-meta-item">
+                    <span class="report-meta-label">Classification:</span>
+                    <span>Public Record</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>This forensic investigation documents Westminster City Council's systematic breach of Section 188 Housing Act 1996 statutory duty to provide interim emergency accommodation. The investigation analyzed 286 documented communications across 10 months, involving multiple officers and contracted agencies.</p>
+            
+            <div class="key-finding">
+                <strong>Primary Finding:</strong> Every documented contact demonstrates clear acknowledgment of homelessness crisis under Section 188 "reason to believe" threshold. Despite comprehensive institutional knowledge spanning three departments, no emergency interim housing was provided at any point during the 10-month period under investigation.
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Critical Evidence: 15 Irrefutable Violations</h2>
+            <p>The following violations are presented in order of legal strength and evidential clarity. Each violation includes audio recordings, verbatim quotes, contextual analysis, and legal framework references. Click each violation to expand full details.</p>
+
+            <div class="violation-accordion">
+                <!-- Violation 1 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(1)">
+                        <div class="violation-title">
+                            <div class="violation-rank">1</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Roger Mushett (Westminster Social Services)</div>
+                                <div class="violation-date">18 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 IRREFUTABLE</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-1">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "Yeah, of course. And I'm very sure that. Well, I'm not sure I'm certain. Section 188 of the Housing Act. If there's reason to believe someone might be homeless, then emergency interim..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Exactly. So you're confirming you know the law requires emergency interim accommodation if there's reason to believe someone is homeless?
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Senior Westminster officer EXPLICITLY confirms knowledge of Section 188 duty, states he is CERTAIN (not just aware), yet NO emergency housing ever provided. Direct admission of statutory duty.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Deliberate breach with full knowledge</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's deliberate failure to act on Section 188 despite Roger's CERTAIN knowledge, Ben would have been housed immediately
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/3ab95f37-bf55-4325-82bd-98ebd078745b?t=30000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 00:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 2 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(2)">
+                        <div class="violation-title">
+                            <div class="violation-rank">2</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Roger Mushett (Westminster Social Services)</div>
+                                <div class="violation-date">22 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 MANDATORY DUTY</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-2">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...about what under your strategy duty you are supposed to be informed about. So section 188 of the Housing act is like, if you have reason to believe that someone is homeless, then you have to..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You HAVE TO - that's what I've been telling you for months. This is a mandatory duty, not discretionary.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Roger uses the phrase 'you HAVE TO' - confirming it's a mandatory duty, not discretionary. Confirms 'reason to believe' threshold. Yet 9+ months of homelessness.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Mandatory duty acknowledged but ignored</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster treating mandatory duty as optional despite knowing it's required ('have to'), Ben would have been housed
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/e863f9ae-d65e-4ca9-bba7-67ee380fb7f1?t=2231000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 37:11</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 3 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(3)">
+                        <div class="violation-title">
+                            <div class="violation-rank">3</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Marilyn Modeste (Westminster Social Services)</div>
+                                <div class="violation-date">7 November 2024</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 PRESENT TENSE</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-3">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...the meantime, I will send you the address so that you can go and know that you're homeless on the base. You're homeless today. Okay."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You're confirming I'm homeless today, so Section 188 interim duty is triggered right now, correct?
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Marilyn states 'You're homeless TODAY' in present tense. Direct acknowledgment of current homelessness triggers immediate Section 188 duty. Day 1 of documented 10-month breach.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - 'Homeless today' acknowledgment without interim housing</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Marilyn's admission of 'homeless today' being ignored, Ben would have received interim accommodation on 7 November 2024
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/maralyn-12-34?t=763000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 12:43</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 4 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(4)">
+                        <div class="violation-title">
+                            <div class="violation-rank">4</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Westminster Housing Solutions (Salen)</div>
+                                <div class="violation-date">29 August 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 PROCEDURAL ADMISSION</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-4">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "You need to complete a new homeless application. Now, you did say that you are homeless today, right? Yeah. Yes. All right. We're also now just going to complete a homeless emergency accommodation form..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Yes, I've been homeless for nine months. And you're acknowledging I'm homeless today. So why hasn't emergency accommodation been provided?
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Officer confirms 'homeless today', says they will complete emergency accommodation form, yet NO accommodation ever provided. Form completion is admission of duty.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Emergency form completed but no housing provided</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster completing emergency forms without providing actual accommodation, Ben would have been housed in August 2025
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/1309bddd-fb22-4398-9c12-2a3ff36a377a?t=1917000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 31:57</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 5 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(5)">
+                        <div class="violation-title">
+                            <div class="violation-rank">5</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Westminster Housing Solutions</div>
+                                <div class="violation-date">29 August 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 DURATION ADMITTED</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-5">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...you can present at the passage for them to help you. Are you homeless today? Do you need emergency accommodation today? I've been homeless for nine months. Yes."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    I've been homeless for NINE MONTHS. That's nine months of Section 188 breach. I need emergency accommodation now.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Direct question 'Are you homeless today?' + Ben's response 'nine months' + Officer's 'Yes' = Triple confirmation. 9-month breach acknowledged by Westminster.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - 9-month prolonged breach admitted</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR 9 months of Section 188 breach, Ben would not have suffered prolonged homelessness reaching Article 3 threshold
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/1309bddd-fb22-4398-9c12-2a3ff36a377a?t=553000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 09:13</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 6 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(6)">
+                        <div class="violation-title">
+                            <div class="violation-rank">6</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Westminster Housing Solutions</div>
+                                <div class="violation-date">3 October 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 ADMITS UNLAWFUL</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-6">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...months. Does the client have a homeless application? The client has a homeless application but it was closed as the client was unable to get ID because of their homelessness. And I believe that it's unlawful..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You're acknowledging it's UNLAWFUL. You created a Catch-22 where I can't get ID because I'm homeless, but you need ID to house me. That's disability discrimination.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Westminster officer admits closure is 'UNLAWFUL'. Cannot require ID for interim duty. Created discriminatory barrier. Officer's own words condemn Westminster.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Equality Act 2010 + Section 188 - Discriminatory barrier + unlawful closure admitted</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/2010/15/section/15" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's unlawful ID barrier (which they admit is unlawful), Ben would have accessed housing support
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/cef3a43e-6d2e-47df-a468-fe1889388cb4?t=3205000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 53:25</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 7 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(7)">
+                        <div class="violation-title">
+                            <div class="violation-rank">7</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Westminster Housing Solutions</div>
+                                <div class="violation-date">3 October 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 SCALE OF BREACH</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-7">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...was also sent to 286 calls with recordings and transcripts where homelessness was approved as reasonable to believe homeless today. So 286 call records have been now submitted..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Exactly. 286 documented instances of you having 'reason to believe' I was homeless. That's 286 Section 188 breaches.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Westminster admits receiving evidence of 286 calls proving 'reason to believe homeless today'. This is overwhelming evidence they cannot dispute.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - 286 instances of 'reason to believe' documented</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster ignoring 286 documented contacts showing reason to believe, Ben would have received interim housing
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/cef3a43e-6d2e-47df-a468-fe1889388cb4?t=3463000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 57:43</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 8 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(8)">
+                        <div class="violation-title">
+                            <div class="violation-rank">8</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Jade Ferguson (Integrity Care - Westminster Contracted)</div>
+                                <div class="violation-date">30 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 THIRD-PARTY ADMISSION</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-8">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...three weeks with a meeting on the 22nd of September. So that is shocking. Section 188 of the Homeless act is if there is reason to believe from one of homeless we provide insulin care housing..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You're saying it's SHOCKING. You acknowledge Section 188 requires housing if there's reason to believe. Yet you haven't provided it.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Contracted care provider admits Section 188 duty and calls situation 'shocking', yet Westminster (who contracts them) provides no housing. Admission of duty breach.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Contracted provider confirms duty but Westminster doesn't fulfill</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's failure to instruct contracted provider to fulfill Section 188, Ben would have received care housing
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/2b4a4988-c7e9-4ad2-90bc-fd053c3f75db?t=794000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 13:14</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 9 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(9)">
+                        <div class="violation-title">
+                            <div class="violation-rank">9</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Jade Ferguson (Integrity Care)</div>
+                                <div class="violation-date">26 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 TIMELINE CONFIRMED</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-9">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "Okay, that's fine. So you're aware of being homeless for nine months? That's correct. Since November..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Yes, nine months. That's nine months where Westminster had reason to believe and did nothing.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Jade confirms awareness of 9-month homelessness timeline (Nov 2024 - Sep 2025). Contracted provider knows, Westminster knows, no action taken.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 + Article 3 ECHR - 9-month prolonged breach with knowledge</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR 9 months deliberate inaction despite knowledge, Ben would not have reached Article 3 inhuman treatment threshold
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/b11921cb-7719-4f3e-a775-4c86d28e3c6f?t=510000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 08:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 10 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(10)">
+                        <div class="violation-title">
+                            <div class="violation-rank">10</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">St John (The Passage Homelessness Centre)</div>
+                                <div class="violation-date">14 October 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 INDEPENDENT EXPERT</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-10">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...said that. That you can stay in a hostel. So that's going to fall into section 188, which is reason to believe you're homeless today. Which duty falls on Westminster."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Thank you for confirming. Section 188 duty falls on Westminster to provide accommodation when there's reason to believe I'm homeless today.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    INDEPENDENT professional from homelessness charity confirms Section 188 duty falls on Westminster. Third-party expert corroboration destroys any Westminster defense.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Independent expert confirms Westminster duty</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster ignoring their Section 188 duty (confirmed by independent homelessness expert), Ben would be housed
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/b02b892c-392e-4f48-9cae-bd8632fa8ffd?t=918000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 15:18</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 11 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(11)">
+                        <div class="violation-title">
+                            <div class="violation-rank">11</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">St John (The Passage - Independent)</div>
+                                <div class="violation-date">14 October 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 DUAL STATUTORY BREACH</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-11">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...and he is a vulnerable adult. So there's a safeguarding duty there and under section 188 if you there's reason to believe someone's homeless, the council have a duty to provide housing because..."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You're confirming two duties: safeguarding duty as vulnerable adult, AND Section 188 housing duty. Westminster breached both.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Independent expert confirms DUAL duties: (1) Safeguarding as vulnerable adult (2) Section 188 housing. Westminster breached both simultaneously.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Care Act 2014 Section 42 + Section 188 Housing Act 1996 - Dual duty breach</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/42" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's dual breach of safeguarding AND housing duties, vulnerable adult would not have been left on streets
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/b02b892c-392e-4f48-9cae-bd8632fa8ffd?t=951000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 15:51</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 12 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(12)">
+                        <div class="violation-title">
+                            <div class="violation-rank">12</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Dr. Newton Medical Centre (GP)</div>
+                                <div class="violation-date">16 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 MEDICAL EVIDENCE</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-12">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...he's been made redundant, is trying to get interim emergency housing, is currently homeless. This has impacted him quite a lot. There's no family in London."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    Doctor, can you confirm this homelessness has caused PTSD and is impacting my mental health?
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    MEDICAL PROFESSIONAL confirms homelessness, seeking interim emergency housing, impact on health, no support network. Medical evidence of harm from Westminster's breach.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Article 3 ECHR - Medical evidence of suffering caused by state inaction</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1998/42/schedule/1/part/I/chapter/2" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's failure to provide housing, Ben would not have developed PTSD and mental health deterioration (medically documented)
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/219fb1a7-b692-4c80-a4d8-ad6f9c68c079?t=30000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 00:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 13 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(13)">
+                        <div class="violation-title">
+                            <div class="violation-rank">13</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Jade Ferguson (Integrity Care)</div>
+                                <div class="violation-date">24 December 2024</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 CHRISTMAS ABANDONMENT</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-13">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    [Contact made on Christmas Eve at 15:39 while Ben homeless]
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    It's Christmas Eve and I'm homeless. Westminster knows I'm homeless, you're contracted by Westminster, yet I have nowhere to go for Christmas.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Contact made Christmas Eve (24 Dec 2024) proving Westminster aware of homelessness during most dangerous period (winter, holidays). Left vulnerable person on streets at Christmas.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Article 3 ECHR + Care Act 2014 - Vulnerable adult abandoned at Christmas</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1998/42/schedule/1/part/I/chapter/2" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster's abandonment at Christmas despite knowledge, Ben would not have suffered inhuman treatment during vulnerable holiday period
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/jade-ferguson-24-dec-2024?t=939000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 15:39</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 14 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(14)">
+                        <div class="violation-title">
+                            <div class="violation-rank">14</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Malak (Westminster Housing Solutions)</div>
+                                <div class="violation-date">29 August 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">10/10 OWN NOTES CONDEMN</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-14">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    "...applicant advised that he was in the High Court. He was misdirected by the courts...Social workers advised him to move on despite not having his belongings specifically stated. Joanne and Marilyn is the name. They advised that the applicant needs to move on, that we can't change the path. And both social workers closed the applicant's case, leaving him on the street on Christmas."
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    You're documenting that Joanne and Marilyn closed my case at Christmas, leaving me on the street. That's in your own case notes.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Westminster's own case notes document social workers closing case at Christmas leaving Ben on streets. Cannot dispute their own written records.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Care Act 2014 Section 42 + Article 3 ECHR - Safeguarding failure documented in own notes</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/2014/23/section/42" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster social workers closing case at Christmas (documented in Westminster's own notes), Ben would not have been abandoned
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/2a1c2321-827f-4764-894e-ed5e51ef6a8e?t=2069000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 34:29</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Violation 15 -->
+                <div class="violation-item">
+                    <div class="violation-header" onclick="toggleViolation(15)">
+                        <div class="violation-title">
+                            <div class="violation-rank">15</div>
+                            <div class="violation-info">
+                                <div class="violation-officer">Roger Mushett (Westminster Social Services)</div>
+                                <div class="violation-date">26 September 2025</div>
+                            </div>
+                        </div>
+                        <div class="violation-strength">
+                            <span class="strength-badge">9/10 SETTLEMENT ADMISSION</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                    </div>
+                    <div class="violation-content" id="violation-15">
+                        <div class="violation-details">
+                            <div class="detail-section">
+                                <div class="detail-label">Officer Statement</div>
+                                <div class="quote-box">
+                                    [£5,000 emergency payment offered at 12:01pm, Formal Notice sent demanding payment by 5pm same day]
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Ben's Response</div>
+                                <div class="response-box">
+                                    This £5,000 offer is Westminster admitting liability. You're trying to settle because you know you've breached Section 188 for 9 months.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Why This is Indefensible</div>
+                                <div class="indefensible-box">
+                                    Westminster offered £5,000 settlement on 26 September 2025 after receiving formal notice. Settlement offer is admission of liability and breach. Cannot deny wrongdoing after offering payment.
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">Violation</div>
+                                <div class="detail-text">
+                                    <strong>Section 188 Housing Act 1996 - Implied admission through settlement offer</strong>
+                                    <br>
+                                    <a href="https://www.legislation.gov.uk/ukpga/1996/52/section/188" target="_blank" class="legislation-link">View Legislation →</a>
+                                </div>
+                            </div>
+
+                            <div class="detail-section">
+                                <div class="detail-label">But-For Causation</div>
+                                <div class="causation-box">
+                                    <div class="causation-label">Legal Test:</div>
+                                    BUT FOR Westminster knowing they breached Section 188 (hence settlement offer), they would have denied all allegations
+                                </div>
+                            </div>
+
+                            <div class="audio-player">
+                                <div class="audio-controls">
+                                    <button class="play-button" onclick="playAudio('https://grain.com/share/recording/formal-notice-26-sep-2025?t=721000')">▶ PLAY AUDIO</button>
+                                    <div class="audio-info">
+                                        <div class="audio-timestamp">⏱ 12:01</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="investigation-hilton.html">Investigations</a></li>
+                <li><a href="legal-framework.html">Legal Framework</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-image">
+    </footer>
+
+    <script>
+        // Password protection
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            const correctPassword = 'w2m025#';
+            const errorDiv = document.getElementById('passwordError');
+            
+            if (input === correctPassword) {
+                document.getElementById('passwordOverlay').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            } else {
+                errorDiv.classList.add('show');
+                document.getElementById('passwordInput').value = '';
+                setTimeout(() => {
+                    errorDiv.classList.remove('show');
+                }, 3000);
+            }
+        }
+
+        // Prevent scrolling while password overlay is active
+        document.body.style.overflow = 'hidden';
+
+        function toggleViolation(id) {
+            const header = document.querySelector(`#violation-${id}`).previousElementSibling;
+            const content = document.getElementById(`violation-${id}`);
+            
+            // Toggle active class on header
+            header.classList.toggle('active');
+            
+            // Toggle active class on content
+            content.classList.toggle('active');
+        }
+
+        function playAudio(url) {
+            // Open Grain recording in new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
