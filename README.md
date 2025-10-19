@@ -2,24 +2,119 @@
 
 A Guardian-style investigative journalism website exposing systemic exploitation of international workers in the UK.
 
-## 🏗️ Project Structure
+## 📁 Optimized Project Structure
 
 ```
 justice-minds-website/
-├── index.html                          # Homepage with all article cards
-├── investigation-hilton.html           # Main Hilton investigation article
-├── shubham-story.html                 # Shubham's personal story
-├── assets/                            # Static assets
-│   ├── images/                        # Image assets
-│   │   └── logos/                     # Brand logos (SVG)
-│   └── css/                           # Stylesheet files (if separated)
-├── articles/                          # Additional article pages (future)
-│   ├── visa-trap.html
-│   ├── article-3.html
-│   ├── ragging-file.html
-│   └── cognitive-patterns.html
-└── README.md                          # This file
+├── public/                              # Public-facing website (deploy this)
+│   ├── index.html                       # Homepage
+│   ├── about.html
+│   ├── privacy-policy.html
+│   ├── terms-of-service.html
+│   ├── template-content-page.html
+│   │
+│   ├── assets/                          # All static assets
+│   │   ├── css/                         # Stylesheets (to be extracted)
+│   │   ├── js/                          # JavaScript
+│   │   ├── images/                      # Images
+│   │   │   ├── logos/
+│   │   │   ├── heroes/
+│   │   │   └── icons/
+│   │   └── svg/                         # SVG assets
+│   │       ├── FINAL_JUSTICE_HERO.svg
+│   │       ├── both_web_phone.svg
+│   │       ├── Password_desktop.svg
+│   │       ├── mobile_password.svg
+│   │       └── emotional_debt.png
+│   │
+│   ├── investigations/                   # Investigation articles
+│   │   ├── article-hilton-investigation.html
+│   │   ├── court-appeal-investigation.html
+│   │   └── institutional-investigation-s188.html
+│   │
+│   ├── articles/                        # Opinion & analysis articles
+│   │   ├── cultural-conditioning-freedom.html
+│   │   ├── cultural-exploitation-indian-workers.html
+│   │   ├── measuring-competence-beyond-exams.html
+│   │   └── the-one-person-principle.html
+│   │
+│   ├── stories/                         # Personal testimonies
+│   │   ├── shubham-story.html
+│   │   └── shubham-sick-brother.html
+│   │
+│   └── legal/                           # Legal framework pages
+│       ├── legal-framework.html
+│       └── ben-oversight-validation.html
+│
+├── evidence/                            # Forensic evidence (NOT deployed)
+│   ├── audio/
+│   │   └── section188-violations/
+│   │       ├── violation-01/
+│   │       ├── violation-02/
+│   │       └── ...
+│   │
+│   └── court-statistics/                # Court data and analysis
+│       ├── data/                        # CSV files
+│       ├── documents/                   # PDF evidence
+│       ├── reports/                     # HTML reports
+│       └── images/                      # Charts and screenshots
+│
+├── tools/                               # Automation scripts
+│   ├── audio-processing/
+│   │   ├── download_audio.py
+│   │   ├── extract_grain_transcripts.py
+│   │   ├── organize_violations.py
+│   │   ├── reorganize_existing_audio.py
+│   │   └── create_dual_structure.py
+│   │
+│   ├── validation/
+│   │   ├── validate-website-links.js
+│   │   └── install-link-checker.sh
+│   │
+│   └── deployment/
+│       └── setup-env.sh
+│
+├── docs/                                # Documentation
+│   ├── DEPLOYMENT_GUIDE.md
+│   ├── WEBSITE_LAUNCH_CHECKLIST.md
+│   ├── WEBSITE_VALIDATION_PLAN.md
+│   └── VALIDATION_RESULTS_SUMMARY.md
+│
+├── archive/                             # Old versions/backups
+│   └── backup-site/
+│
+├── .gitignore                           # Git ignore rules
+├── CNAME                                # Custom domain config
+├── vercel.json                          # Vercel deployment config
+├── package.json                         # Node dependencies
+├── RESTRUCTURE_PLAN.md                  # Restructure documentation
+└── README.md                            # This file
 ```
+
+## 🎯 Structure Benefits
+
+### 1. Clear Separation
+- **public/** = Everything deployed to production (the actual website)
+- **evidence/** = Sensitive forensic materials (NOT deployed, in .gitignore)
+- **tools/** = Automation and development scripts
+- **docs/** = Project documentation
+- **archive/** = Old versions for reference
+
+### 2. Better Organization
+- HTML files grouped by content type (investigations, articles, stories, legal)
+- Assets properly organized (CSS, JS, images, SVG)
+- Evidence categorized by type (audio, court stats)
+- Scripts organized by function (audio processing, validation, deployment)
+
+### 3. Security
+- Evidence folder clearly marked and ignored by git
+- Sensitive data separated from public content
+- Temporary files excluded from version control
+
+### 4. Scalability
+- Room to grow within each category
+- Clear place for new content types
+- Easy to understand for new team members
 
 ## 🎨 Design System
 
@@ -41,52 +136,26 @@ justice-minds-website/
   - Body text: 1.125rem
   - Metadata: 0.95rem
 
-## 📰 Article Components
+## 🚀 Deployment
 
-### Standard Elements
-1. **Article Kicker** - Red uppercase label (INVESTIGATION, HUMAN STORY, etc.)
-2. **Title** - Large serif headline
-3. **Standfirst** - Grey introductory paragraph
-4. **Metadata** - Author, date, reading time
-5. **Body Text** - Main article content
-6. **Pullquotes** - Centered, emphasized quotes
-7. **Evidence Boxes** - Yellow background, forensic findings
-8. **Data Points** - Grey background, statistics
-9. **References** - Academic citations with superscript numbers
+### Vercel (Recommended)
+The site is configured for Vercel deployment. Simply connect your repository and Vercel will automatically deploy from the repository root. The `vercel.json` configuration handles URL routing.
 
-### Reference System
-- Inline citations use superscript: `<sup>[1]</sup>`
-- Full references at article end with:
-  - Academic sources
-  - Government documents
-  - Clinical frameworks
-  - Legal statutes
-  - Active hyperlinks where available
+### Local Testing
+```bash
+# Simply open the public/index.html file in your browser
+open public/index.html
 
-## 🏢 Company Credentials
+# Or use a local server
+cd public
+python -m http.server 8000
+# Visit http://localhost:8000
+```
 
-**Justice Minds Forensic Intelligence Ltd**
-- Company Number: 16331423
-- ICO Certified: ZB896365
-- Status: Parliamentary Acknowledged Investigative Body
-- Founded: 2023
+### Build Process
+No build process required - this is a static HTML/CSS website.
 
-## 📝 Article List
-
-### Published
-1. ✅ **The Silent Exploitation** - Hilton investigation (18 min read)
-2. ✅ **When Promise Becomes Debt** - Shubham's story (12 min read)
-
-### Planned
-3. 🔜 **The Visa Sponsorship Trap** - Forensic analysis
-4. 🔜 **Article 3 Protections** - Legal framework
-5. 🔜 **The Ragging File** - Stakeholder investigation
-6. 🔜 **Measuring Psychological Harm** - Data analysis
-7. 🔜 **"The System Needs Small"** - Opinion piece
-8. 🔜 **The Day Krishna Left** - Personal testimony
-9. 🔜 **£12,000 Stolen** - Fraud investigation
-
-## 🎯 Content Guidelines
+## 📝 Content Guidelines
 
 ### Writing Style
 - **Forensic precision**: Use specific data, timestamps, recordings
@@ -104,17 +173,44 @@ justice-minds-website/
 6. Path forward
 7. References
 
-## 🚀 Deployment
+## 🛠️ Development Tools
 
-### Local Testing
-Simply open `index.html` in any modern browser.
+### Audio Processing
+Tools for extracting and organizing forensic audio evidence:
+```bash
+cd tools/audio-processing
+python download_audio.py          # Download from Grain API
+python extract_grain_transcripts.py  # Extract transcripts
+python organize_violations.py     # Organize by violation type
+```
 
-### Requirements
-- No build process needed
-- Pure HTML/CSS
-- External fonts from Google Fonts
-- SVG logos hosted on Supabase
-- Responsive design (mobile-ready)
+### Link Validation
+```bash
+cd tools/validation
+./install-link-checker.sh         # Install dependencies
+node validate-website-links.js    # Check all links
+```
+
+### Environment Setup
+```bash
+cd tools/deployment
+./setup-env.sh                    # Set up development environment
+```
+
+## 🏢 Company Information
+
+**Justice Minds Forensic Intelligence Ltd**
+- Company Number: 16331423
+- ICO Certified: ZB896365
+- Status: Parliamentary Acknowledged Investigative Body
+- Founded: 2023
+
+## 📱 Responsive Design
+
+### Breakpoints
+- **Desktop**: 1280px max-width container
+- **Tablet**: < 968px - Single column layouts
+- **Mobile**: < 768px - Reduced font sizes, stacked grids
 
 ### Browser Support
 - Chrome/Edge (latest)
@@ -122,39 +218,40 @@ Simply open `index.html` in any modern browser.
 - Safari (latest)
 - Mobile browsers
 
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1280px max-width container
-- **Tablet**: < 968px - Single column layouts
-- **Mobile**: < 768px - Reduced font sizes, stacked grids
-
 ## 🔗 External Assets
 
 ### Logos (SVG)
-- Header: `https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/JUSTICE%20MINDS%20FORENSIC%20INTELLIGENCE%20(Website).svg`
-- Footer: `https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/Creative%20Business%20Presentation%20(510%20x%20218%20mm).svg`
+- Header: Hosted on Supabase storage
+- Footer: Hosted on Supabase storage
 
 ### Fonts
 - Google Fonts: Libre Baskerville, Source Sans Pro
 
-### Images
-- Unsplash API for stock photography
+## 🔒 Security Notes
 
-## 🛠️ Future Enhancements
+- **Evidence folder** is excluded from git via `.gitignore`
+- Temporary MP4 files are not tracked
+- No sensitive credentials in version control
+- All API keys should be in environment variables
 
-### Phase 2
-- [ ] Separate CSS into external stylesheets
-- [ ] Add search functionality
-- [ ] Create archive/category pages
-- [ ] Newsletter signup form
-- [ ] Social media sharing
+## 📚 Documentation
 
-### Phase 3
-- [ ] Contact form with backend
-- [ ] Evidence submission portal
-- [ ] Interactive data visualizations
-- [ ] Case tracker dashboard
-- [ ] Multi-language support
+- **DEPLOYMENT_GUIDE.md**: Detailed deployment instructions
+- **WEBSITE_LAUNCH_CHECKLIST.md**: Pre-launch checklist
+- **WEBSITE_VALIDATION_PLAN.md**: Testing and validation plan
+- **VALIDATION_RESULTS_SUMMARY.md**: Latest validation results
+- **RESTRUCTURE_PLAN.md**: Details on the folder reorganization
+
+## 🔄 Recent Changes
+
+### Latest Restructure (October 2025)
+- ✅ Organized all HTML files into logical subdirectories
+- ✅ Created proper assets structure
+- ✅ Separated evidence from public content
+- ✅ Moved scripts to tools directory
+- ✅ Consolidated documentation
+- ✅ Updated .gitignore for security
+- ✅ Archived old backup site
 
 ## 📄 License
 
@@ -163,12 +260,11 @@ Simply open `index.html` in any modern browser.
 ## 📧 Contact
 
 For press inquiries, evidence submission, or legal consultation:
-- **Website**: [Current domain]
 - **Company No**: 16331423
 - **ICO**: ZB896365
 
 ---
 
-**Built with**: HTML5, CSS3, Love, and a commitment to exposing systemic injustice.
+**Built with**: HTML5, CSS3, and a commitment to exposing systemic injustice.
 
 **Last Updated**: October 2025
