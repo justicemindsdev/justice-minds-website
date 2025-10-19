@@ -1,0 +1,337 @@
+{
+  "timestamp": "2025-10-18T17:37:45.838Z",
+  "summary": {
+    "totalLinks": 224,
+    "validLinks": 181,
+    "brokenLinksCount": 0,
+    "externalLinksCount": 43,
+    "styleIssuesCount": 16
+  },
+  "brokenLinks": [],
+  "externalLinks": [
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/statistical_positioning_summary.csv",
+      "text": "[Source]"
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/mail.com%20-%20Fw_%20Re_%20CA-2024-001268%20URGENT%20EXTENSION%20OF%20TIME%2012th%20OCTOBER%202024.pdf",
+      "text": "[Court Correspondence]"
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/statistical_positioning_summary.csv",
+      "text": "[Full Analysis]"
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/re_b_legal_impact_analysis.csv",
+      "text": "[Legal Impact Analysis]"
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/comprehensive_obstruction_metrics.csv",
+      "text": "[Obstruction Metrics]"
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "href": "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/COURT_OF_APPEAL/comprehensive_obstruction_metrics.csv",
+      "text": "[Complete Data]"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://www.harpercollins.com/products/the-dance-of-anger-harriet-lerner",
+      "text": "https://www.harpercollins.com/products/the-dance-of-anger-harriet-lerner"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://psycnet.apa.org/record/2017-02830-001",
+      "text": "https://psycnet.apa.org/record/2017-02830-001"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://psycnet.apa.org/record/1996-00161-001",
+      "text": "https://psycnet.apa.org/record/1996-00161-001"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://www.universitiesuk.ac.uk/what-we-do/policy-and-research/publications/economic-impact-international-students",
+      "text": "https://www.universitiesuk.ac.uk/what-we-do/policy-and-research/publications/economic-impact-international-students"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://www.simonandschuster.com.au/books/Holding-On/Ranjana-Srivastava/9781925972016",
+      "text": "https://www.simonandschuster.com.au/books/Holding-On/Ranjana-Srivastava/9781925972016"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://www.simonandschuster.com/books/Good-Anxiety/Wendy-Suzuki/9781982157340",
+      "text": "https://www.simonandschuster.com/books/Good-Anxiety/Wendy-Suzuki/9781982157340"
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "href": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/",
+      "text": "https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2010/15/section/15",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2014/23/section/42",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1998/42/schedule/1/part/I/chapter/2",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1998/42/schedule/1/part/I/chapter/2",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2014/23/section/42",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/52/section/188",
+      "text": "View Legislation →"
+    },
+    {
+      "file": "investigation-hilton.html",
+      "href": "https://www.ilo.org/global/topics/forced-labour/lang--en/index.htm",
+      "text": "https://www.ilo.org/global/topics/forced-labour/"
+    },
+    {
+      "file": "investigation-hilton.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/18/section/13A",
+      "text": "https://www.legislation.gov.uk/ukpga/1996/18/"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/",
+      "text": "Learn more →"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/",
+      "text": "Learn more →"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2006/46/contents",
+      "text": "legislation.gov.uk/ukpga/2006/46"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted",
+      "text": "legislation.gov.uk/ukpga/2018/12"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.app.college.police.uk/app-content/investigations/investigative-interviewing/",
+      "text": "college.police.uk/app-content/investigations/investigative-interviewing"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.gov.uk/government/publications/standard-industrial-classification-of-economic-activities-sic",
+      "text": "gov.uk/sic"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://ico.org.uk/",
+      "text": "ico.org.uk"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.legislation.gov.uk/ukpga/1996/25/contents",
+      "text": "legislation.gov.uk/ukpga/1996/25"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.justice.gov.uk/courts/procedure-rules/civil",
+      "text": "justice.gov.uk/courts/procedure-rules/civil"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.gov.uk/government/organisations/ministry-of-justice",
+      "text": "gov.uk/ministry-of-justice"
+    },
+    {
+      "file": "legal-framework.html",
+      "href": "https://www.legislation.gov.uk/ukpga/2000/23/contents",
+      "text": "legislation.gov.uk/ukpga/2000/23"
+    },
+    {
+      "file": "privacy-policy.html",
+      "href": "https://ico.org.uk",
+      "text": "https://ico.org.uk"
+    },
+    {
+      "file": "shubham-story.html",
+      "href": "https://www.universitiesuk.ac.uk/what-we-do/policy-and-research/publications",
+      "text": "https://www.universitiesuk.ac.uk/"
+    }
+  ],
+  "styleIssues": [
+    {
+      "file": "index.html",
+      "issues": [
+        "Missing header hero image",
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "about.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "article-hilton-investigation.html",
+      "issues": [
+        "Missing footer image",
+        "Missing Libre Baskerville font",
+        "Missing Source Sans Pro font",
+        "Missing primary-blue CSS variable",
+        "Missing accent-red CSS variable"
+      ]
+    },
+    {
+      "file": "ben-oversight-validation.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "court-appeal-investigation.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "cultural-conditioning-freedom.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "cultural-exploitation-indian-workers.html",
+      "issues": [
+        "Missing header hero image",
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "institutional-investigation-s188.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "investigation-hilton.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "legal-framework.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "measuring-competence-beyond-exams.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "privacy-policy.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "shubham-sick-brother.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "shubham-story.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "terms-of-service.html",
+      "issues": [
+        "Missing footer image"
+      ]
+    },
+    {
+      "file": "the-one-person-principle.html",
+      "issues": [
+        "Missing header hero image",
+        "Missing footer image",
+        "Missing Libre Baskerville font",
+        "Missing Source Sans Pro font",
+        "Missing primary-blue CSS variable",
+        "Missing accent-red CSS variable"
+      ]
+    }
+  ]
+}
