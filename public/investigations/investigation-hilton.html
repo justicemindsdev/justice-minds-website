@@ -380,6 +380,75 @@
     </style>
 </head>
 <body>
+    <!-- Password Protection Overlay -->
+    <div id="passwordOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 41, 98, 0.98); z-index: 9999; display: flex; justify-content: center; align-items: center;">
+        <div style="background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); max-width: 500px; width: 90%;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                <h2 style="font-family: 'Libre Baskerville', serif; color: var(--primary-blue); margin-bottom: 0.5rem;">Protected Investigation</h2>
+                <p style="color: var(--text-grey); font-size: 0.95rem;">This investigation is password protected</p>
+            </div>
+            <form id="passwordForm" onsubmit="checkPassword(event)">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    placeholder="Enter password" 
+                    style="width: 100%; padding: 1rem; font-size: 1.1rem; border: 2px solid var(--border-grey); border-radius: 4px; margin-bottom: 1rem; font-family: 'Source Sans Pro', sans-serif;"
+                    autofocus
+                >
+                <button 
+                    type="submit" 
+                    style="width: 100%; padding: 1rem; background: var(--primary-blue); color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.3s;"
+                    onmouseover="this.style.background='var(--accent-red)'" 
+                    onmouseout="this.style.background='var(--primary-blue)'"
+                >
+                    UNLOCK INVESTIGATION
+                </button>
+                <p id="errorMessage" style="color: var(--accent-red); font-size: 0.9rem; margin-top: 1rem; text-align: center; display: none;">
+                    Incorrect password. Please try again.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Check if already authenticated in this session
+        if (sessionStorage.getItem('investigationAuth') === 'true') {
+            document.getElementById('passwordOverlay').style.display = 'none';
+        }
+
+        function checkPassword(event) {
+            event.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+            const correctPassword = '681508';
+            
+            if (password === correctPassword) {
+                sessionStorage.setItem('investigationAuth', 'true');
+                document.getElementById('passwordOverlay').style.display = 'none';
+            } else {
+                const errorMsg = document.getElementById('errorMessage');
+                errorMsg.style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+                
+                // Shake animation for error
+                const form = document.getElementById('passwordForm');
+                form.style.animation = 'shake 0.5s';
+                setTimeout(() => { form.style.animation = ''; }, 500);
+            }
+        }
+
+        // Add shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-10px); }
+                75% { transform: translateX(10px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
     <header class="header">
         <div class="header-hero-image">
             <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN.svg" alt="Justice Minds Forensic Intelligence" class="hero-full-image">
