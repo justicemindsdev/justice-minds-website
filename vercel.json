@@ -1,15 +1,9 @@
 {
   "public": true,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "buildCommand": null,
   "outputDirectory": "public",
-  "rewrites": [
-    {
-      "source": "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|assets|articles|investigations|legal|stories).*)",
-      "destination": "/$1.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
