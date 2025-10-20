@@ -6,11 +6,7 @@
   "outputDirectory": "public",
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!api|_next/static|_next/image|favicon.ico|robots.txt|assets|articles|investigations|legal|stories).*)",
       "destination": "/$1.html"
     }
   ],
