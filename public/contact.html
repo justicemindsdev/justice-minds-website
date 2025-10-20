@@ -167,6 +167,61 @@
             transform: translateY(0);
         }
 
+        .contact-info {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .contact-info h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 0.5rem;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-blue);
+        }
+
+        .linkedin-profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .linkedin-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-blue);
+        }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -345,6 +400,26 @@
             .typewriter-container {
                 margin-bottom: 2rem;
             }
+
+            .contact-info {
+                padding: 1.5rem 1rem;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .linkedin-profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .linkedin-avatar {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         /* Form validation styles */
@@ -411,6 +486,43 @@
             </div>
 
             <div class="screen-parting"></div>
+
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+442080643475" style="color: var(--primary-blue); text-decoration: none;">+44 2080 643 475</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:authority@legaldueprocess.com" style="color: var(--primary-blue); text-decoration: none;">authority@legaldueprocess.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Profile Section -->
+                <div class="linkedin-profile">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQGJWzC8SnR3DQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720106766394?e=1762387200&v=beta&t=bvkzCIbtVqqFZyhAIgXgPVZMzmcjij46ggWzZxsOCYU"
+                         alt="LinkedIn Profile"
+                         class="linkedin-avatar">
+                    <div>
+                        <strong>Connect with us on LinkedIn</strong><br>
+                        <a href="https://www.linkedin.com/in/your-profile" target="_blank" style="color: var(--primary-blue); text-decoration: none;">View Professional Profile</a>
+                    </div>
+                </div>
+            </div>
 
             <div class="contact-form-container" id="contactForm">
                 <form id="enquiryForm">
