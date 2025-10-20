@@ -356,13 +356,22 @@
 
         @media (max-width: 968px) {
             .nav-bar {
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content: center;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+            .nav-bar::-webkit-scrollbar {
+                display: none;
             }
 
             .nav-item {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.85rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+                flex-shrink: 0;
             }
 
             .footer-nav-link {
@@ -482,7 +491,7 @@
                 <a href="#media" class="footer-nav-link">Media Inquiries</a>
             </div>
         </nav>
-        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/FINAL_JUSTICE_GUARDIAN_FOORTER.svg" alt="Justice Minds Footer" class="footer-full-image">
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/Creative%20Business%20Presentation%20(510%20x%20218%20mm).svg" alt="Justice Minds Footer" class="footer-full-image">
     </footer>
 
     <script>
