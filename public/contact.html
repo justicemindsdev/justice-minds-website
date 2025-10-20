@@ -54,6 +54,8 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             border-bottom: 4px solid var(--accent-red);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            overflow: hidden;
         }
 
         .nav-bar {
@@ -62,6 +64,8 @@
             align-items: center;
             gap: 0;
             max-width: 100%;
+            width: max-content;
+            min-width: 100%;
         }
 
         .nav-item {
@@ -220,6 +224,12 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--primary-blue);
+        }
+
+        .linkedin-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
 
         .form-group {
