@@ -10,9 +10,15 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600"
+          "value": "public, max-age=300"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/gov-uk",
+      "destination": "/gov-uk.html"
     }
   ]
 }
