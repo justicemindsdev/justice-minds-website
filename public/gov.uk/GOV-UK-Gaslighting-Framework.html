@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Rights Act & Gaslighting Framework</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #1d4f8a, #2563eb);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .header .subtitle {
+            margin: 8px 0 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-tab {
+            background: #e9ecef;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .nav-tab:hover {
+            background: #dee2e6;
+        }
+        .nav-tab.active {
+            background: #1d4f8a;
+            color: white;
+        }
+
+        /* Content Sections */
+        .section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .section-header {
+            background: #1d4f8a;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        .section-header:hover {
+            background: #1a4480;
+        }
+        .section-header::after {
+            content: "▼";
+            transition: transform 0.3s;
+        }
+        .section-header.active::after {
+            transform: rotate(180deg);
+        }
+        .section-content {
+            display: none;
+            padding: 20px;
+        }
+        .section-content.show {
+            display: block;
+        }
+
+        /* Legal References */
+        .legal-box {
+            background: #f8f9fa;
+            border-left: 4px solid #1d4f8a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Highlighted Terms */
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .trigger {
+            background: #f8d7da;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #721c24;
+        }
+
+        /* Status Boxes */
+        .warning {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        /* Lists */
+        .evidence-list {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        .evidence-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Cross References */
+        .cross-ref {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1d4f8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                justify-content: flex-start;
+            }
+            .nav-tab {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HERO JUSTICE MINDS FORENSIC INTELLIGENCE Ltd</h1>
+        <div class="subtitle">Human Rights Act Framework: Gaslighting & Procedural Harassment</div>
+        <div class="subtitle">Company No. 16331423 | ICO Certified ZB896365</div>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showSection('article2')">Article 2</button>
+        <button class="nav-tab" onclick="showSection('article3')">Article 3</button>
+        <button class="nav-tab" onclick="showSection('gaslighting')">Gaslighting</button>
+        <button class="nav-tab" onclick="showSection('procedural')">Procedural</button>
+        <button class="nav-tab" onclick="showSection('keywords')">Keywords</button>
+    </div>
+
+    <!-- ARTICLE 2 -->
+    <div id="article2" class="section">
+        <div class="section-header" onclick="toggleSection('article2')">
+            <span>Article 2: Right to Life</span>
+        </div>
+        <div class="section-content">
+            <div class="legal-box">
+                <strong>Human Rights Act 1998, Article 2:</strong><br/>
+                "Everyone's right to life shall be protected by law. No one shall be deprived of his life intentionally save in the execution of a sentence of a court following his conviction of a crime for which this penalty is provided by law."
+            </div>
+
+            <h3>Gaslighting Leading to Article 2 Violations</h3>
+            <div class="cross-ref">
+                When <span class="highlight">institutional gaslighting</span> causes <span class="trigger">severe psychological distress</span> resulting in <span class="trigger">self-harm</span>, <span class="trigger">suicidal ideation</span>, or <span class="trigger">life-threatening conditions</span>.
+            </div>
+
+            <h4>Professional Gaslighting Indicators:</h4>
+            <ul>
+                <li><span class="trigger">Medical dismissal</span> of <span class="trigger">life-threatening symptoms</span></li>
+                <li><span class="trigger">Institutional indifference</span> to <span class="highlight">mental health crises</span></li>
+                <li><span class="trigger">Systemic neglect</span> leading to dangerous situations</li>
+            </ul>
+
+            <div class="evidence-list">
+                <strong>Key Phrases:</strong>
+                <ul>
+                    <li>"<span class="highlight">You're overreacting</span>" - dismissing <span class="trigger">life-threatening symptoms</span></li>
+                    <li>"<span class="highlight">It's all in your head</span>" - denying <span class="trigger">serious medical concerns</span></li>
+                    <li>"<span class="highlight">No one else has these problems</span>" - isolating during <span class="trigger">crisis situations</span></li>
+                </ul>
+            </div>
+
+            <div class="success">Legal Remedy: Judicial review available when institutional gaslighting contributes to life-threatening situations</div>
+        </div>
+    </div>
+
+    <!-- ARTICLE 3 -->
+    <div id="article3" class="section" style="display: none;">
+        <div class="section-header" onclick="toggleSection('article3')">
+            <span>Article 3: Prohibition of Torture</span>
+        </div>
+        <div class="section-content">
+            <div class="legal-box">
+                <strong>Human Rights Act 1998, Article 3:</strong><br/>
+                "No one shall be subjected to torture or to inhuman or degrading treatment or punishment."
+            </div>
+
+            <h3>Gaslighting as Inhuman Treatment</h3>
+            <div class="cross-ref">
+                <span class="highlight">Procedural harassment</span> through <span class="highlight">systematic gaslighting</span> constitutes <span class="trigger">inhuman or degrading treatment</span> when causing <span class="trigger">severe psychological suffering</span>.
+            </div>
+
+            <h4>Professional Gaslighting Tactics:</h4>
+            <ul>
+                <li><span class="trigger">Deliberate misinformation</span> causing confusion and distress</li>
+                <li><span class="trigger">Systemic denial</span> of legitimate needs</li>
+                <li><span class="trigger">Professional dismissal</span> creating dependency</li>
+            </ul>
+
+            <div class="evidence-list">
+                <strong>Key Phrases:</strong>
+                <ul>
+                    <li>"<span class="highlight">That never happened</span>" - denying documented events</li>
+                    <li>"<span class="highlight">You're not capable of understanding</span>" - professional superiority</li>
+                    <li>"<span class="highlight">You're being too sensitive</span>" - dismissing concerns</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>Threshold:</strong> Treatment must reach minimum severity level considering duration, vulnerability, intent, and effects.
+            </div>
+        </div>
+    </div>
+
+    <!-- GASLIGHTING -->
+    <div id="gaslighting" class="section" style="display: none;">
+        <div class="section-header" onclick="toggleSection('gaslighting')">
+            <span>Gaslighting: Psychological Manipulation</span>
+        </div>
+        <div class="section-content">
+            <div class="legal-box">
+                <strong>Definition:</strong> Form of psychological manipulation making someone question their sanity, perception of reality, memories, or judgment through persistent denial, misdirection, contradiction, and lying.
+            </div>
+
+            <h3>Legal Implications</h3>
+            <div class="cross-ref">
+                <span class="highlight">Systematic gaslighting</span> by professionals may constitute <span class="trigger">inhuman treatment</span> under Article 3 or contribute to <span class="trigger">life-threatening situations</span> under Article 2.
+            </div>
+
+            <h4>Healthcare Gaslighting:</h4>
+            <ul>
+                <li>"<span class="highlight">You're imagining the pain</span>" - denying physical symptoms</li>
+                <li>"<span class="highlight">You're being dramatic</span>" - minimizing concerns</li>
+                <li>"<span class="highlight">Have you considered therapy?</span>" - deflecting from medical issues</li>
+            </ul>
+
+            <div class="success">Strategy: Document interactions, seek second opinions, maintain external support networks</div>
+        </div>
+    </div>
+
+    <!-- PROCEDURAL HARASSMENT -->
+    <div id="procedural" class="section" style="display: none;">
+        <div class="section-header" onclick="toggleSection('procedural')">
+            <span>Procedural Harassment: Institutional Abuse</span>
+        </div>
+        <div class="section-content">
+            <div class="legal-box">
+                <strong>Definition:</strong> Misuse of institutional processes to harass, intimidate, or cause psychological harm, potentially violating Articles 2 and 3 of the Human Rights Act.
+            </div>
+
+            <h3>Key Characteristics:</h3>
+            <ul>
+                <li><span class="trigger">Repetitive unnecessary procedures</span> designed to exhaust</li>
+                <li><span class="trigger">Deliberate delays</span> with false explanations</li>
+                <li><span class="trigger">Inconsistent information</span> from officials</li>
+                <li><span class="trigger">Circular referrals</span> without resolution</li>
+            </ul>
+
+            <div class="evidence-list">
+                <strong>Gaslighting Elements:</strong>
+                <ul>
+                    <li>"<span class="highlight">We never received your complaint</span>" - despite evidence</li>
+                    <li>"<span class="highlight">You're misunderstanding the process</span>" - despite clear guidance</li>
+                    <li>"<span class="highlight">That's not our department</span>" - avoiding responsibility</li>
+                </ul>
+            </div>
+
+            <div class="warning">
+                <strong>Article 2 Violation:</strong> When creating <span class="trigger">life-threatening delays</span> in essential services
+            </div>
+            <div class="warning">
+                <strong>Article 3 Violation:</strong> When causing <span class="trigger">severe psychological suffering</span> through <span class="highlight">systematic gaslighting</span>
+            </div>
+
+            <div class="success">Legal Remedies: Judicial review, ombudsman complaints, human rights challenges</div>
+        </div>
+    </div>
+
+    <!-- KEYWORDS -->
+    <div id="keywords" class="section" style="display: none;">
+        <div class="section-header" onclick="toggleSection('keywords')">
+            <span>Trigger Word Index & Cross-References</span>
+        </div>
+        <div class="section-content">
+            <h3>Article 2 (Right to Life) Triggers:</h3>
+            <div class="legal-box">
+                <ul>
+                    <li><span class="trigger">Life-threatening</span> conditions → Article 2 violation</li>
+                    <li><span class="trigger">Suicide</span> ideation → Article 2 violation</li>
+                    <li><span class="trigger">Self-harm</span> resulting from gaslighting → Article 2 violation</li>
+                    <li><span class="trigger">Medical dismissal</span> of serious symptoms → Article 2 violation</li>
+                </ul>
+            </div>
+
+            <h3>Article 3 (Torture) Triggers:</h3>
+            <div class="legal-box">
+                <ul>
+                    <li><span class="trigger">Inhuman treatment</span> through gaslighting → Article 3 violation</li>
+                    <li><span class="trigger">Psychological harm</span> from institutional abuse → Article 3 violation</li>
+                    <li><span class="trigger">Reality denial</span> by authority figures → Article 3 violation</li>
+                </ul>
+            </div>
+
+            <h3>Gaslighting Triggers:</h3>
+            <div class="legal-box">
+                <ul>
+                    <li><span class="highlight">Reality denial</span>: "That never happened"</li>
+                    <li><span class="highlight">Memory manipulation</span>: "You're remembering it wrong"</li>
+                    <li><span class="highlight">Competence undermining</span>: "You don't understand"</li>
+                </ul>
+            </div>
+
+            <h3>Procedural Harassment Triggers:</h3>
+            <div class="legal-box">
+                <ul>
+                    <li><span class="trigger">Systemic abuse</span> through institutional processes</li>
+                    <li><span class="trigger">Bureaucratic manipulation</span> to avoid accountability</li>
+                    <li><span class="trigger">Documentation tampering</span> or convenient loss</li>
+                </ul>
+            </div>
+
+            <div class="cross-ref">
+                <strong>Multiple Violations:</strong>
+                <ul>
+                    <li><span class="highlight">Medical gaslighting</span> + <span class="trigger">life-threatening symptoms</span> = Article 2 + Article 3</li>
+                    <li><span class="highlight">Procedural harassment</span> + <span class="trigger">psychological harm</span> = Article 3 violation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        HERO JUSTICE MINDS FORENSIC INTELLIGENCE Ltd | Company Number 16331423<br/>
+        ICO Certified ZB896365 | Professional Framework for Legal and Medical Applications<br/>
+        © 2025 HERO JUSTICE MINDS FORENSIC INTELLIGENCE Ltd. All rights reserved.
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId).querySelector('.section-content');
+            const header = document.getElementById(sectionId).querySelector('.section-header');
+
+            content.classList.toggle('show');
+            header.classList.toggle('active');
+        }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Update nav tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Show Article 2 by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('article2');
+        });
+    </script>
+</body>
+</html>

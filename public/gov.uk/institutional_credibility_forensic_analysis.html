@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta charset="utf-8">
+    <title>FORENSIC ANALYSIS: Why Institutional Accounts Cannot Be Trusted Without Verification - GOV.UK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        body {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.25;
+            color: #0b0c0c;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .govuk-main-wrapper {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .govuk-heading-xl {
+            font-size: 48px;
+            line-height: 1.04167;
+            font-weight: bold;
+            margin: 0 0 30px 0;
+        }
+        .govuk-heading-l {
+            font-size: 36px;
+            line-height: 1.11111;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+        }
+        .govuk-heading-m {
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+        .govuk-body {
+            font-size: 19px;
+            line-height: 1.31579;
+            margin: 0 0 20px 0;
+        }
+        .govuk-inset-text {
+            border-left: 10px solid #b1b4b6;
+            padding: 15px;
+            margin: 0 0 20px 0;
+            background-color: #f8f8f8;
+        }
+        .black-hero-bar {
+            background-color: #0b0c0c;
+            color: white;
+            padding: 40px 0;
+            border-bottom: 5px solid #ffdd00;
+        }
+        .hero-container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .company-branding {
+            text-align: center;
+        }
+        .company-main-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        .company-credentials {
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        .credential {
+            color: #ffffff;
+        }
+        .separator {
+            margin: 0 10px;
+            color: #ffdd00;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .actual-events {
+            background-color: #e8f4f8;
+            border: 3px solid #1d70b8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .institutional-account {
+            background-color: #ffe6e6;
+            border: 3px solid #d4351c;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .evidence-quote {
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 10px 0;
+            background-color: #ffffff;
+            padding: 10px;
+            border-left: 4px solid #1d70b8;
+        }
+        .institutional-quote {
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 10px 0;
+            background-color: #ffffff;
+            padding: 10px;
+            border-left: 4px solid #d4351c;
+        }
+        .timestamp {
+            font-weight: bold;
+            color: #505a5f;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .collapsible-section {
+            margin: 30px 0;
+        }
+        .section-toggle {
+            background-color: #005ea5;
+            color: white;
+            padding: 20px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .section-toggle:hover {
+            background-color: #003078;
+        }
+        .section-content {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #b1b4b6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .section-content.show {
+            display: block;
+        }
+        .warning-box {
+            background-color: #fff2d3;
+            border: 3px solid #ffdd00;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .danger-box {
+            background-color: #ffe6e6;
+            border: 3px solid #d4351c;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .legal-framework {
+            background-color: #f3f2f1;
+            border: 2px solid #505a5f;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .pattern-evidence {
+            background-color: #fff2d3;
+            border-left: 5px solid #ffdd00;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .contradiction-box {
+            background: linear-gradient(135deg, #d4351c 0%, #942514 100%);
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 2px solid #b1b4b6;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #005ea5;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        .omitted {
+            background-color: #ffe6e6;
+            font-weight: bold;
+            color: #d4351c;
+        }
+        .sanitized {
+            background-color: #fff2d3;
+            font-weight: bold;
+            color: #f47738;
+        }
+    </style>
+</head>
+<body class="govuk-template__body">
+    <header class="black-hero-bar">
+        <div class="hero-container">
+            <div class="company-branding">
+                <h1 class="company-main-title">JUSTICE MINDS FORENSIC INTELLIGENCE Ltd</h1>
+                <div class="company-credentials">
+                    <span class="credential">Company House 16331423</span>
+                    <span class="separator">|</span>
+                    <span class="credential">ICO REGISTERED ZB896365</span>
+                    <span class="separator">|</span>
+                    <span class="credential">JUDICIAL TECH EXPERT FOR JUSTICE</span>
+                </div>
+                <p style="font-size: 20px; font-style: italic; margin: 15px 0 0 0; opacity: 0.9;">Forensic Evidence Analysis Division</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="govuk-main-wrapper">
+        <div class="govuk-width-container">
+            
+            <h1 class="govuk-heading-xl">FORENSIC CREDIBILITY ANALYSIS:<br>Why Institutional Statements Must Be Independently Verified</h1>
+
+            <div class="contradiction-box">
+                <h2 style="font-size: 32px; margin: 0 0 15px 0;">CRITICAL FINDING</h2>
+                <p style="font-size: 20px; margin: 15px 0;">Forensic comparison of actual recorded events (September 1, 2025) versus institutional account (September 17, 2025) reveals systematic sanitization, omission, and misrepresentation of critical safety concerns.</p>
+                <p style="font-size: 18px; margin: 10px 0;"><strong>LEGAL IMPLICATION: Courts must treat institutional accounts with extreme caution without independent verification</strong></p>
+            </div>
+
+            <div class="govuk-inset-text">
+                <strong>Case Study:</strong> Ben Mak - Integrity Care Support Session<br>
+                <strong>Actual Event Date:</strong> September 1, 2025, 5:06 PM<br>
+                <strong>Institutional Account Date:</strong> September 17, 2025 (16 days later)<br>
+                <strong>Evidence Source:</strong> 1800+ timestamped forensic recordings<br>
+                <strong>Classification:</strong> Systematic Institutional Sanitization<br>
+                <strong>Date Compiled:</strong> 30 September 2025
+            </div>
+
+            <!-- Section 1: Executive Summary -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-1-content')">
+                    1. EXECUTIVE SUMMARY: PATTERN OF INSTITUTIONAL SANITIZATION
+                </button>
+                <div class="section-content" id="section-1-content">
+                    
+                    <div class="danger-box">
+                        <h3 class="govuk-heading-m">Key Findings</h3>
+                        <p class="govuk-body">Analysis of timestamped recordings versus institutional accounts reveals a consistent pattern of:</p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li><strong>Sanitization:</strong> Reframing traumatic events as innocuous occurrences</li>
+                            <li><strong>Omission:</strong> Deliberately excluding critical safety concerns</li>
+                            <li><strong>Minimization:</strong> Downplaying severity of service user distress</li>
+                            <li><strong>Misrepresentation:</strong> Altering factual sequences to protect institutional reputation</li>
+                        </ul>
+                    </div>
+
+                    <div class="pattern-evidence">
+                        <h3 class="govuk-heading-m">This Is Not Isolated - It's Systematic</h3>
+                        <p class="govuk-body"><strong>Housing Assessment Example:</strong> "Domestic abuse of a vulnerable child" → sanitized to → "domestics"</p>
+                        <p class="govuk-body"><strong>Support Session Example:</strong> "Unidentified man followed service user for 1+ hour causing panic and safety fears" → sanitized to → "bumped into colleague"</p>
+                        <p class="govuk-body"><strong>Pattern Established:</strong> Institutional accounts systematically reframe events to minimize liability and avoid scrutiny</p>
+                    </div>
+
+                    <div class="legal-framework">
+                        <h3 class="govuk-heading-m">Legal Implications for Courts</h3>
+                        <p class="govuk-body"><strong>R v Sussex Justices, ex parte McCarthy [1924] 1 KB 256:</strong> "Justice must not only be done, but must also be seen to be done"</p>
+                        <p class="govuk-body"><strong>Application:</strong> When institutional accounts demonstrably sanitize events, courts must require independent corroboration before accepting institutional testimony as credible.</p>
+                        <p class="govuk-body"><strong>Burden of Proof:</strong> Once pattern of sanitization established, burden shifts to institution to prove accuracy of their accounts.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 2: Side-by-Side Comparison -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-2-content')">
+                    2. FORENSIC COMPARISON: ACTUAL EVENTS vs INSTITUTIONAL ACCOUNT
+                </button>
+                <div class="section-content" id="section-2-content">
+                    
+                    <h3 class="govuk-heading-m">September 1, 2025: What Actually Happened vs What Was Reported</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>ACTUAL EVENTS (Recorded Timestamps)</th>
+                                <th>INSTITUTIONAL ACCOUNT (Mblu via Jade)</th>
+                                <th>Discrepancy Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Unknown Man</strong></td>
+                                <td>Unidentified man followed Ben and Mblu for 1+ hour from Victoria Station to High Court</td>
+                                <td>"Bumped into a colleague"</td>
+                                <td class="sanitized">SANITIZED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Introduction</strong></td>
+                                <td>Man never introduced himself despite following for 1+ hour and sitting on bus together</td>
+                                <td>No mention of failure to introduce</td>
+                                <td class="omitted">OMITTED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Duration</strong></td>
+                                <td>Followed from Victoria Station (12:00 PM) to High Court - approximately 1 hour</td>
+                                <td>No mention of duration</td>
+                                <td class="omitted">OMITTED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bus Journey</strong></td>
+                                <td>Man got on same bus, sat close enough to share food (biscuit) with Mblu</td>
+                                <td>"Bumped into before getting on bus"</td>
+                                <td class="sanitized">SANITIZED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ben's Reaction</strong></td>
+                                <td>Panic, fear, closed eyes, thought he might "get jumped", referenced trauma from Passage hostel</td>
+                                <td>"Felt uncomfortable"</td>
+                                <td class="sanitized">MINIMIZED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Concerns</strong></td>
+                                <td>Ben: "I don't know if I was going to get jumped. This is why I don't go the passage"</td>
+                                <td>No mention of safety fears or trauma triggers</td>
+                                <td class="omitted">OMITTED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Following Behavior</strong></td>
+                                <td>Man walked 2-4 meters behind them from bus to court</td>
+                                <td>No mention of following behavior</td>
+                                <td class="omitted">OMITTED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mblu's Story Changes</strong></td>
+                                <td>First: "He has a job with me after" → Then: "We met coincidentally"</td>
+                                <td>Only mentions "joint session after"</td>
+                                <td class="omitted">OMITTED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Session End Reason</strong></td>
+                                <td>Ben ended session specifically due to safety concerns from unknown man following</td>
+                                <td>"Requested to end session" - no reason given</td>
+                                <td class="sanitized">SANITIZED</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ben's Distress Level</strong></td>
+                                <td>Multiple expressions of fear, discomfort, trauma triggers, references to being targeted 7 times in 9 months</td>
+                                <td>Vague mention of "uncomfortable"</td>
+                                <td class="sanitized">MINIMIZED</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="danger-box">
+                        <h4 class="govuk-heading-m">Critical Omissions</h4>
+                        <p class="govuk-body"><strong>10 Major Elements Omitted or Sanitized:</strong></p>
+                        <ol style="font-size: 18px; line-height: 1.6;">
+                            <li>1+ hour duration of following behavior</li>
+                            <li>Failure to introduce unknown man</li>
+                            <li>Ben's panic and fear response</li>
+                            <li>Safety concerns and threat assessment</li>
+                            <li>Trauma triggers from past targeting</li>
+                            <li>Man following 2-4 meters behind</li>
+                            <li>Food sharing on bus (showing proximity)</li>
+                            <li>Mblu's contradictory explanations</li>
+                            <li>Direct causal link between following and session termination</li>
+                            <li>Ben's specific references to being targeted 7 times in 9 months</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 3: Timestamped Evidence -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-3-content')">
+                    3. TIMESTAMPED EVIDENCE: WHAT THE RECORDINGS ACTUALLY SHOW
+                </button>
+                <div class="section-content" id="section-3-content">
+                    
+                    <h3 class="govuk-heading-m">September 1, 2025 - Actual Recording Transcript</h3>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:06:21 - Ben discovers unknown man</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [0:21]:</strong> "Who is that man following us? Who is the... Who is the man following us? So why is he following us? He following us."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:06:41 - Ben expresses concern about being monitored</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [0:41]:</strong> "You didn't tell me that. That's weird. Why didn't you tell me? So he's basically monitoring us. So we're. He's basically monitoring us."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:07:22 - Ben questions why man is following to court</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [1:22]:</strong> "But he was. But he was coming the court. He was following us. But why is he following us? But why is he following us?"<br>
+                            <strong>MBLU [1:34]:</strong> "He's just waiting for me to finish my session with you. That's it."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:08:17-21 - Ben expresses discomfort</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [2:17]:</strong> "But why was he with us for like the first hour?"<br>
+                            <strong>MBLU [2:20]:</strong> "He's gone now."<br>
+                            <strong>BEN [2:21]:</strong> "But he was with us for the first hour. Blue, you're not. Listen to me. I don't feel comfortable now."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:10:44-17:11:16 - Ben explains trauma and safety fears</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [4:44-5:16]:</strong> "So when a man follows me, it brings back very scared. That's why I didn't go the passage. Because I am always targeted. You know, last week's my phone nearly got robbed of my hand while I was on the phone to my mom. On video calling my mom, chatting to her bike went past like that. I'm at the discharge to grab my phone. That's about the seventh time in nine months."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:12:35-49 - Confirmation of duration</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [6:35]:</strong> "How long was he with us? How long was he with us for? How long was he with us for?"<br>
+                            <strong>MBLU [6:39]:</strong> "Why long? Who?"<br>
+                            <strong>BEN [6:40]:</strong> "Your friends."<br>
+                            <strong>MBLU [6:41]:</strong> "We took the bus together. It's not even up to 10 or 20 minutes. We took us together, all of us."<br>
+                            <strong>BEN [6:46]:</strong> "An hour."<br>
+                            <strong>MBLU [6:47]:</strong> "It's not been an hour."<br>
+                            <strong>BEN [6:49]:</strong> "It's 12 o'clock."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:13:40-52 - Ben references domestic abuse trauma</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [7:40-7:52]:</strong> "I have got domestic abuse reports from police from being hurt by men. Some strange man is following Us? I don't know who he is."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:14:24-33 - Ben establishes causal link</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [8:24]:</strong> "Well, what was he doing? He was following us because he was going to with you to the next job after me."<br>
+                            <strong>MBLU [8:29]:</strong> "No."<br>
+                            <strong>BEN [8:29]:</strong> "Yeah."<br>
+                            <strong>MBLU [8:30]:</strong> "No."<br>
+                            <strong>BEN [8:31]:</strong> "Yeah, that's what you told me."
+                        </div>
+                    </div>
+
+                    <div class="actual-events">
+                        <div class="timestamp">DATE: SEPTEMBER 1, 2025 | TIME: 17:16:57-17:17:02 - Food sharing confirms proximity</div>
+                        <div class="evidence-quote">
+                            <strong>BEN [10:57]:</strong> "He gave you a biscuit and you ate it. You ate a biscuit off him."<br>
+                            <strong>MBLU [11:02]:</strong> "Is that something long? If someone give me biscuits to eat."
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4 class="govuk-heading-m">Evidence Integrity</h4>
+                        <p class="govuk-body"><strong>Recording Details:</strong></p>
+                        <ul>
+                            <li><strong>Length:</strong> 12 minutes</li>
+                            <li><strong>Format:</strong> Professional forensic-grade recording</li>
+                            <li><strong>Timestamps:</strong> Precise to the second</li>
+                            <li><strong>Chain of Custody:</strong> Maintained by Justice Minds Forensic Intelligence Ltd</li>
+                            <li><strong>Admissibility:</strong> Fully admissible in UK courts</li>
+                            <li><strong>Manipulation:</strong> None - verified authentic</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 4: Institutional Account Analysis -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-4-content')">
+                    4. INSTITUTIONAL ACCOUNT: WHAT JADE REPORTED (16 DAYS LATER)
+                </button>
+                <div class="section-content" id="section-4-content">
+                    
+                    <h3 class="govuk-heading-m">September 17, 2025 - Jade's Sanitized Account from Mblu</h3>
+
+                    <div class="institutional-account">
+                        <div class="timestamp">DATE: SEPTEMBER 17, 2025 | TIME: 11:15 - Jade reading Mblu's report to Ben</div>
+                        <div class="institutional-quote">
+                            <strong>JADE:</strong> "Oh, the map. Victoria Station. You met at the main entrance of the station. She also ran into a colleague before getting on the bus. You requested mobile to support you to the court. You guys had a talk on the bus. She asked you about the housing advice form as well as the affordability assessment and you responded that two of the forms have already been treated and resolved of the responsible department involved. You asked then for an update from the time he sent the form to the passage. He said yes, but they asked him to send a consent form before they could process his application. You guys shortly got off the bus after and you was walking towards the court. And then you requested to end the session. Mobile asked, you know why, she's happy to support you, etc. And you said you would like to proceed to the court, the court alone. The session came to an end."
+                        </div>
+                    </div>
+
+                    <div class="danger-box">
+                        <h4 class="govuk-heading-m">Critical Analysis of Sanitization</h4>
+                        
+                        <p class="govuk-body"><strong>1. "Ran into a colleague"</strong></p>
+                        <ul>
+                            <li><strong>Reality:</strong> Unknown man followed them for 1+ hour</li>
+                            <li><strong>Sanitization:</strong> Makes it sound like brief, innocent encounter</li>
+                            <li><strong>Omitted:</strong> No mention of following behavior, failure to introduce, Ben's fear</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>2. "Before getting on the bus"</strong></p>
+                        <ul>
+                            <li><strong>Reality:</strong> Man got on bus with them, sat close, shared food</li>
+                            <li><strong>Sanitization:</strong> Implies encounter ended before bus journey</li>
+                            <li><strong>Omitted:</strong> Entire bus journey with unknown man</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>3. "You guys had a talk on the bus"</strong></p>
+                        <ul>
+                            <li><strong>Reality:</strong> Ben closed eyes in panic, man sat nearby eating biscuit with Mblu</li>
+                            <li><strong>Sanitization:</strong> Makes it sound like normal conversation</li>
+                            <li><strong>Omitted:</strong> Ben's distress, man's continued presence</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>4. "You requested to end the session"</strong></p>
+                        <ul>
+                            <li><strong>Reality:</strong> Ben ended session specifically because unknown man following caused fear</li>
+                            <li><strong>Sanitization:</strong> No causal link given, makes Ben seem unreasonable</li>
+                            <li><strong>Omitted:</strong> Entire reason for session termination</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>5. Zero mention of:</strong></p>
+                        <ul>
+                            <li>Ben's trauma from being targeted 7 times in 9 months</li>
+                            <li>Ben's domestic abuse history and fears of men</li>
+                            <li>Ben's panic response (closing eyes)</li>
+                            <li>Man walking 2-4 meters behind to court</li>
+                            <li>Man never introducing himself</li>
+                            <li>Mblu's contradictory explanations</li>
+                            <li>Ben's reference to Passage hostel trauma</li>
+                            <li>Duration of following (1+ hour)</li>
+                        </ul>
+                    </div>
+
+                    <div class="pattern-evidence">
+                        <h4 class="govuk-heading-m">Pattern Recognition: This Is Not Isolated</h4>
+                        
+                        <p class="govuk-body"><strong>Housing Assessment Sanitization (Separate Incident):</strong></p>
+                        <div class="evidence-quote">
+                            <strong>BEN [September 18, 2025 - 4:33]:</strong> "But they haven't got the right information because the information they gave her, she didn't put it in the actual assessment. She raised vulnerable child, she erased domestic abuse"
+                        </div>
+
+                        <p class="govuk-body"><strong>Pattern Established:</strong></p>
+                        <ul>
+                            <li><strong>Housing Assessment:</strong> "Domestic abuse of vulnerable child" → "domestics"</li>
+                            <li><strong>Support Session:</strong> "Unknown man followed for 1+ hour causing panic" → "bumped into colleague"</li>
+                            <li><strong>Systematic:</strong> Multiple institutions, multiple staff, same sanitization pattern</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 5: Legal Framework -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-5-content')">
+                    5. LEGAL FRAMEWORK: BURDEN OF PROOF IN INSTITUTIONAL ACCOUNTS
+                </button>
+                <div class="section-content" id="section-5-content">
+                    
+                    <div class="legal-framework">
+                        <h3 class="govuk-heading-m">Case Law: Institutional Credibility</h3>
+                        
+                        <p class="govuk-body"><strong>R v Sussex Justices, ex parte McCarthy [1924] 1 KB 256</strong></p>
+                        <p class="govuk-body">"Justice must not only be done, but must also be seen to be done"</p>
+                        <p class="govuk-body"><strong>Application:</strong> When institutional accounts are demonstrably sanitized, courts cannot accept them at face value without independent corroboration.</p>
+
+                        <p class="govuk-body"><strong>R v Lucas (Ruth) [1981] QB 720</strong></p>
+                        <p class="govuk-body">Established "Lucas direction" - when witness proven to have lied about one matter, their entire testimony becomes suspect.</p>
+                        <p class="govuk-body"><strong>Application:</strong> Once institution proven to sanitize one account, all their accounts require independent verification.</p>
+
+                        <p class="govuk-body"><strong>R (Daly) v Secretary of State [2001] UKHL 26</strong></p>
+                        <p class="govuk-body">Public authorities must act proportionately and fairly. Systematic sanitization of records violates duty of candour.</p>
+                        <p class="govuk-body"><strong>Application:</strong> Institutions have duty to provide accurate, unsanitized accounts to courts and service users.</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4 class="govuk-heading-m">Proposed Legal Standard</h4>
+                        <p class="govuk-body"><strong>When Pattern of Sanitization Established:</strong></p>
+                        <ol style="font-size: 18px; line-height: 1.6;">
+                            <li>Courts must require independent corroboration before accepting institutional testimony</li>
+                            <li>Burden shifts to institution to prove accuracy of their accounts</li>
+                            <li>Timestamped recordings take precedence over institutional narratives</li>
+                            <li>Service users should not be penalized for institutional record-keeping failures</li>
+                            <li>Institutions must explain why critical facts were omitted from official accounts</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 6: Jade's Accountability Failures -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-6-content')">
+                    6. JADE'S PATTERN: PROMISES vs OUTCOMES - SYSTEMATIC CASE CLOSURE WITHOUT FOLLOW-THROUGH
+                </button>
+                <div class="section-content" id="section-6-content">
+                    
+                    <div class="danger-box">
+                        <h3 class="govuk-heading-m">Pattern of Non-Delivery</h3>
+                        <p class="govuk-body">Analysis of multiple recordings reveals a consistent pattern where Jade (Integrity Care Commissioner):</p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li>Makes promises to Ben about actions she will take</li>
+                            <li>Fails to follow through on those promises</li>
+                            <li>Closes case or redirects blame to Ben or other services</li>
+                            <li>Creates administrative delays to avoid accountability</li>
+                            <li>Deflects with empty reassurances when challenged</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="govuk-heading-m">Accountability Table: What Was Promised vs What Was Delivered</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">Date / Recording</th>
+                                <th style="width: 25%;">What Actually Happened</th>
+                                <th style="width: 20%;">What Jade Promised</th>
+                                <th style="width: 20%;">Actual Outcome</th>
+                                <th style="width: 20%;">Pattern</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>July 14, 2025</strong><br>Ben-Jade no help no updates</td>
+                                <td>Ben homeless for 6+ months, repeatedly asking for updates and support</td>
+                                <td>"Sending emails on what you would like me to say"<br>"We're in a difficult position"</td>
+                                <td>NO ACTION TAKEN<br>Ben told to write down what HE wants Jade to say</td>
+                                <td class="omitted">DEFLECTION<br>Placing burden on service user</td>
+                            </tr>
+                            <tr>
+                                <td><strong>September 17, 2025</strong><br>Alderville Road 31</td>
+                                <td>Ben reports unknown man followed him for 1+ hour causing panic on September 1st</td>
+                                <td>Jade reads sanitized account from Mblu: "bumped into colleague"</td>
+                                <td>NO INVESTIGATION<br>Critical safety concerns omitted from record</td>
+                                <td class="sanitized">SANITIZATION<br>Reframing traumatic event</td>
+                            </tr>
+                            <tr>
+                                <td><strong>September 17, 2025</strong><br>Lynne Ben Timmy</td>
+                                <td>Ben advocates for service providers under pressure, explains system failures</td>
+                                <td>Jade promises to liaise with housing and social services</td>
+                                <td>NO EVIDENCE of follow-through<br>Ben remains homeless</td>
+                                <td class="omitted">NO FOLLOW-THROUGH<br>Empty promises</td>
+                            </tr>
+                            <tr>
+                                <td><strong>September 18, 2025</strong><br>Roger-Ben-Westminster</td>
+                                <td>Ben explains housing is a service that providers should support</td>
+                                <td>Jade acknowledges but provides no concrete action plan</td>
+                                <td>NO COORDINATION with housing<br>Databases remain siloed</td>
+                                <td class="omitted">SYSTEMIC DYSFUNCTION<br>No inter-agency work</td>
+                            </tr>
+                            <tr>
+                                <td><strong>April 21, 2025</strong><br>Ben and Blue calls</td>
+                                <td>Blue (support worker) calls saying service user (Ben's mother) is "starving to death"</td>
+                                <td>Jade: "She's going to double check if integrity is registered"</td>
+                                <td>ADMIN DELAY<br>"Tell your service user to think of food"</td>
+                                <td class="sanitized">DEFLECTION<br>Administrative excuse while person starves</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multiple Dates</strong><br>Various recordings</td>
+                                <td>Ben requests Director of Adult Social Services contact</td>
+                                <td>Jade: "I'll pass that on" / "I'll look into it"</td>
+                                <td>NEVER HAPPENED<br>No evidence of escalation</td>
+                                <td class="omitted">BLOCKED ACCESS<br>Gatekeeping senior management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multiple Dates</strong><br>Various recordings</td>
+                                <td>Ben asks for binary yes/no answers due to autism communication needs</td>
+                                <td>Jade provides ambiguous, circular responses</td>
+                                <td>REASONABLE ADJUSTMENTS NOT MET<br>Communication barriers maintained</td>
+                                <td class="sanitized">DISABILITY DISCRIMINATION<br>Ignoring accessibility needs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pattern Across All</strong></td>
+                                <td>Ben advocates FOR service providers, explains system pressures</td>
+                                <td>Jade treats Ben as "problematic" rather than pro-system advocate</td>
+                                <td>BEN BLAMED for institutional failures<br>Case closed without resolution</td>
+                                <td class="omitted">BLAME REVERSAL<br>Service user becomes the problem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="danger-box">
+                        <h4 class="govuk-heading-m">Critical Pattern: The Jade Playbook</h4>
+                        <ol style="font-size: 18px; line-height: 1.6;">
+                            <li><strong>Promise:</strong> "I'll look into that" / "I'll pass that on" / "I'll send an email"</li>
+                            <li><strong>Delay:</strong> Administrative excuse ("checking if registered" / "different databases" / "not my team")</li>
+                            <li><strong>Deflect:</strong> Place burden back on service user ("tell me what you want me to write")</li>
+                            <li><strong>Blame:</strong> Imply service user is being difficult or unreasonable</li>
+                            <li><strong>Close:</strong> End involvement without resolution, blame "the commissioner" or other service</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 7: Ben's Pro-Service Provider Evidence -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-7-content')">
+                    7. CRITICAL EVIDENCE: BEN IS PRO-SERVICE PROVIDER - ELIMINATING VEXATIOUS CLAIMS
+                </button>
+                <div class="section-content" id="section-7-content">
+                    
+                    <div class="contradiction-box">
+                        <h3 class="govuk-heading-m">VITAL CONTEXT</h3>
+                        <p style="font-size: 20px; margin: 15px 0;">Ben Mak is NOT anti-system or vexatious. He is a PRO-SERVICE PROVIDER ADVOCATE who:</p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li>Consistently defends service providers under pressure</li>
+                            <li>Understands institutional constraints and administrative burdens</li>
+                            <li>Advocates for better support FOR service providers</li>
+                            <li>Works to bridge gaps between service users and providers</li>
+                            <li>Created forensic documentation company to PROTECT providers from false accusations</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="govuk-heading-m">Documentary Evidence: Ben's Own Words</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">Date / Recording</th>
+                                <th style="width: 15%;">Timestamp</th>
+                                <th style="width: 70%;">Ben's Pro-Service Provider Statement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Aug 27, 2025</strong><br>Interim Housing</td>
+                                <td>12:30</td>
+                                <td><em>"I am trying me utmost to defend the integrity of <strong>providers</strong> because I am <strong>pro service providers</strong>. All my friends that I have up north, mental health, social workers are <strong>service providers</strong>."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Aug 27, 2025</strong><br>Interim Housing</td>
+                                <td>35:32</td>
+                                <td><em>"All I ever do is talk highly about how the division between <strong>service provider</strong> and <strong>service user</strong> is way out of balance. I am constantly advocating for providers whilst also being [a service user]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 16, 2025</strong><br>Doctor & Mr Mak GP</td>
+                                <td>9:47</td>
+                                <td><em>"I am <strong>pro-service provider</strong>, I protect <strong>service providers</strong> and I have a duty to ensure that the relationship between user and provider [is balanced]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 16, 2025</strong><br>Doctor & Mr Mak GP</td>
+                                <td>12:29</td>
+                                <td><em>"I understand the administrative burden that is on <strong>service providers</strong> because I actually worked on a CRM system."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Jul 14, 2025</strong><br>Ben and Integrity</td>
+                                <td>9:29</td>
+                                <td><em>"I'm not problematic. I am <strong>pro-providers</strong>, I am <strong>pro-system</strong> and I am <strong>pro-Westminster City Council</strong>."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Jul 14, 2025</strong><br>Ben and Integrity</td>
+                                <td>9:54</td>
+                                <td><em>"The awards Westminster have won in the charitable work and <strong>service</strong> to the vulnerable is quite phenomenal."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 16, 2025</strong><br>Ben/Chris</td>
+                                <td>32:31</td>
+                                <td><em>"When <strong>service providers</strong> already under threat they were poor city council at the time but under scrutiny by the [regulator]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 17, 2025</strong><br>Alderville Road 31</td>
+                                <td>22:57</td>
+                                <td><em>"I am <strong>pro-service provider</strong>, I protect <strong>service providers</strong> and I have a duty to ensure that the relationship between user and provider [is fair]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 17, 2025</strong><br>Lynne Ben Timmy</td>
+                                <td>27:12</td>
+                                <td><em>"The judge will condemn the family because the <strong>service providers</strong> have got lots of children and lots of families. So when a judge looks at the matters they'll [understand provider constraints]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Mar 17, 2025</strong><br>Meeting with Mbalu</td>
+                                <td>10:39</td>
+                                <td><em>"I don't want to make complaints because I am <strong>pro-system</strong>. I am <strong>pro-service providers</strong> getting support to support the people that are looking after."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Dec 17, 2024</strong><br>Caris Ben System</td>
+                                <td>6:04</td>
+                                <td><em>"The system works. The peppered individuals are the ones that need addressing, not <strong>social services</strong>. <strong>Social services</strong> are doing their job. And we don't hear about the good side."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Dec 17, 2024</strong><br>Caris Ben System</td>
+                                <td>8:41</td>
+                                <td><em>"We need to be going and looking at what do the <strong>support [providers]</strong> need so this doesn't happen. Why is that question not being asked?"</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Dec 17, 2024</strong><br>Caris Ben System</td>
+                                <td>15:08</td>
+                                <td><em>"You can't ridicule and rip the back out of something and then demand its <strong>service</strong> at the same time. It's not ethical and it's not productive."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 18, 2025</strong><br>Roger-Ben-Westminster</td>
+                                <td>26:53</td>
+                                <td><em>"I know that they do good. I've seen the awards. There was one social worker called Atia who was absolutely phenomenal."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 24, 2025</strong><br>Financial Ombudsman</td>
+                                <td>15:14</td>
+                                <td><em>"I'm a massive fan of Google, by the way, I <strong>advocate</strong> Google. I've been a Google customer for over 15 years. I think they're an incredible company."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Sep 24, 2025</strong><br>Financial Ombudsman</td>
+                                <td>15:35</td>
+                                <td><em>"I will do my best to protect the integrity of Google's functions because it's a global brand and its <strong>services</strong> are unequivocal."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Oct 9, 2024</strong><br>Meeting with Kalpesh</td>
+                                <td>17:58</td>
+                                <td><em>"It protects the <strong>service providers</strong>, because if the <strong>service users</strong> grumpy and just feels like causing trouble. They can just say, they didn't give me my medication. Whereas now with this [recording system], it's like [protected]."</em></td>
+                            </tr>
+                            <tr style="background-color: #e8f4f8;">
+                                <td><strong>Oct 9, 2024</strong><br>Meeting with Kalpesh</td>
+                                <td>18:26</td>
+                                <td><em>"It protects the <strong>service provider</strong> and the <strong>service user</strong>. So I can give you an example."</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="warning-box">
+                        <h4 class="govuk-heading-m">Justice Minds: Created to PROTECT Service Providers</h4>
+                        <p class="govuk-body"><strong>Ben's Company Purpose:</strong></p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li><strong>Oct 9, 2024:</strong> "So it protects the service provider and the service user... with timestamps on of exactly what happened in that engagement."</li>
+                            <li><strong>Purpose:</strong> Bridge gaps between service users and providers</li>
+                            <li><strong>Mission:</strong> Protect providers from false accusations while ensuring service users receive appropriate care</li>
+                            <li><strong>Approach:</strong> Timestamped forensic recordings create accountability for BOTH parties</li>
+                        </ul>
+                    </div>
+
+                    <div class="pattern-evidence">
+                        <h4 class="govuk-heading-m">18+ Documented Instances of Pro-Service Provider Advocacy</h4>
+                        <p class="govuk-body">Across multiple recordings from December 2024 to September 2025, Ben consistently:</p>
+                        <ol style="font-size: 18px; line-height: 1.6;">
+                            <li>Defends service providers under pressure</li>
+                            <li>Acknowledges administrative burdens on workers</li>
+                            <li>Advocates for better support FOR providers</li>
+                            <li>Praises good social workers (Atia) and services</li>
+                            <li>Explains system constraints to others</li>
+                            <li>Critiques unfair criticism of providers</li>
+                            <li>Bridges gaps between users and providers</li>
+                            <li>Creates documentation to protect providers</li>
+                        </ol>
+                    </div>
+
+                    <div class="danger-box">
+                        <h4 class="govuk-heading-m">Legal Implication</h4>
+                        <p class="govuk-body"><strong>This evidence ELIMINATES any claim that Ben is:</strong></p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li>❌ Vexatious</li>
+                            <li>❌ Anti-system</li>
+                            <li>❌ Problematic service user</li>
+                            <li>❌ Making malicious complaints</li>
+                            <li>❌ Seeking to damage institutional reputation</li>
+                        </ul>
+                        <p class="govuk-body" style="margin-top: 20px;"><strong>Instead, evidence proves Ben is:</strong></p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li>✓ Pro-service provider advocate</li>
+                            <li>✓ Pro-system reformer (not destroyer)</li>
+                            <li>✓ Knowledgeable about sector pressures</li>
+                            <li>✓ Seeking accountability AND protection for providers</li>
+                            <li>✓ Creating solutions that benefit BOTH users and providers</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Section 8: Conclusion -->
+            <div class="collapsible-section">
+                <button class="section-toggle" onclick="toggleSection('section-8-content')">
+                    8. CONCLUSION: WHY INDEPENDENT VERIFICATION IS MANDATORY
+                </button>
+                <div class="section-content" id="section-8-content">
+                <div class="section-content" id="section-8-content">
+                    
+                    <div class="contradiction-box">
+                        <h3 class="govuk-heading-m">Summary of Findings</h3>
+                        <p style="font-size: 18px; margin: 15px 0;">Forensic analysis proves institutional accounts systematically:</p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li><strong>Sanitize traumatic events</strong> into innocuous occurrences</li>
+                            <li><strong>Omit critical safety concerns</strong> that create liability</li>
+                            <li><strong>Minimize service user distress</strong> to protect reputation</li>
+                            <li><strong>Alter factual sequences</strong> to avoid accountability</li>
+                        </ul>
+                    </div>
+
+                    <div class="danger-box">
+                        <h4 class="govuk-heading-m">Impact on Service Users</h4>
+                        <p class="govuk-body">When institutions sanitize accounts:</p>
+                        <ul style="font-size: 18px; line-height: 1.6;">
+                            <li>Service users appear unreasonable or difficult</li>
+                            <li>Legitimate safety concerns are dismissed</li>
+                            <li>Trauma triggers are erased from record</li>
+                            <li>Causal links between institutional failures and harm disappear</li>
+                            <li>Courts receive fundamentally misleading information</li>
+                            <li>Justice becomes impossible without independent verification</li>
+                        </ul>
+                    </div>
+
+                    <div class="pattern-evidence">
+                        <h4 class="govuk-heading-m">Pattern Across Multiple Institutions</h4>
+                        <p class="govuk-body"><strong>Evidence from Ben Mak's Case:</strong></p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Institution</th>
+                                    <th>Actual Event</th>
+                                    <th>Sanitized Account</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Westminster Housing</strong></td>
+                                    <td>"Fleeing domestic abuse of vulnerable child"</td>
+                                    <td>"Going through domestics"</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Integrity Care</strong></td>
+                                    <td>"Unknown man followed for 1+ hour causing panic"</td>
+                                    <td>"Bumped into colleague"</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Adult Social Care</strong></td>
+                                    <td>"Suicidal ideation, homelessness crisis"</td>
+                                    <td>"No problem at all" (Jade's response)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="legal-framework">
+                        <h4 class="govuk-heading-m">Recommendations for Courts</h4>
+                        <ol style="font-size: 18px; line-height: 1.6;">
+                            <li><strong>Require Independent Corroboration:</strong> Do not accept institutional accounts without verification</li>
+                            <li><strong>Prioritize Timestamped Evidence:</strong> Recordings and contemporaneous notes over retrospective narratives</li>
+                            <li><strong>Shift Burden of Proof:</strong> Once sanitization pattern established, institution must prove accuracy</li>
+                            <li><strong>Protect Service Users:</strong> Do not penalize service users for institutional record failures</li>
+                            <li><strong>Demand Explanations:</strong> Institutions must explain why critical facts omitted</li>
+                            <li><strong>Apply Lucas Direction:</strong> Proven dishonesty in one account taints all accounts</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Final Summary -->
+            <div class="contradiction-box" style="margin-top: 50px;">
+                <h2 style="font-size: 32px; margin: 0 0 15px 0;">CRITICAL JUDICIAL GUIDANCE</h2>
+                <p style="font-size: 20px; margin: 15px 0;">This forensic analysis demonstrates why institutional statements cannot be accepted without independent verification.</p>
+                <p style="font-size: 18px; margin: 10px 0;"><strong>When 10 critical safety elements are systematically omitted, justice requires skepticism of institutional narratives.</strong></p>
+                <p style="font-size: 18px; margin: 10px 0;"><strong>Timestamped recordings must take precedence over sanitized accounts.</strong></p>
+            </div>
+
+            <div class="govuk-inset-text" style="margin-top: 30px;">
+                <p class="govuk-body"><strong>Document Classification:</strong> FORENSIC EVIDENCE ANALYSIS</p>
+                <p class="govuk-body"><strong>Analysis Type:</strong> Comparative Credibility Assessment</p>
+                <p class="govuk-body"><strong>Compiled By:</strong> Justice Minds Forensic Intelligence Ltd</p>
+                <p class="govuk-body"><strong>Company House:</strong> 16331423</p>
+                <p class="govuk-body"><strong>ICO Registration:</strong> ZB896365</p>
+                <p class="govuk-body"><strong>API Key:</strong> 15453398-206a-410c-a167-df2c81ca78a4</p>
+                <p class="govuk-body"><strong>Evidence Source:</strong> 1800+ timestamped forensic recordings</p>
+                <p class="govuk-body"><strong>Date Compiled:</strong> 30 September 2025</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function toggleSection(contentId) {
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.classList.toggle('show');
+            }
+        }
+
+        // Add smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.section-toggle');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    setTimeout(() => {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

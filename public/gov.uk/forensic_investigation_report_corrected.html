@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forensic Investigation Report - Roger Ben Analysis - GOV.UK</title>
+    <style>
+        /* GOV.UK Design System Styles */
+        .govuk-template {
+            background-color: #f3f2f1;
+            font-family: "GDS Transport", arial, sans-serif;
+        }
+        
+        .govuk-width-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .govuk-main-wrapper {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        
+        .govuk-heading-xl {
+            color: #0b0c0c;
+            font-family: "GDS Transport", arial, sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 1.09375;
+            margin: 0 0 30px 0;
+        }
+        
+        .govuk-heading-l {
+            color: #0b0c0c;
+            font-family: "GDS Transport", arial, sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 1.11111;
+            margin: 30px 0 20px 0;
+        }
+        
+        .govuk-heading-m {
+            color: #0b0c0c;
+            font-family: "GDS Transport", arial, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1.25;
+            margin: 30px 0 15px 0;
+        }
+        
+        .govuk-body {
+            color: #0b0c0c;
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.31579;
+            margin: 0 0 20px 0;
+        }
+        
+        .govuk-table {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 16px;
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .govuk-table__head {
+            border-bottom: 1px solid #b1b4b6;
+        }
+        
+        .govuk-table__header {
+            font-weight: bold;
+            text-align: left;
+            color: #0b0c0c;
+            padding: 10px 20px 10px 0;
+        }
+        
+        .govuk-table__body {
+        }
+        
+        .govuk-table__row {
+            border-bottom: 1px solid #b1b4b6;
+        }
+        
+        .govuk-table__cell {
+            padding: 10px 20px 10px 0;
+            text-align: left;
+            border-bottom: 1px solid #b1b4b6;
+        }
+        
+        .govuk-inset-text {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.31579;
+            color: #0b0c0c;
+            padding: 15px;
+            margin: 20px 0;
+            clear: both;
+            border-left: 10px solid #b1b4b6;
+            background-color: #f3f2f1;
+        }
+        
+        .govuk-warning-text {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.31579;
+            color: #0b0c0c;
+            position: relative;
+            margin: 20px 0;
+            padding: 10px 0;
+        }
+        
+        .govuk-warning-text__icon {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            min-width: 35px;
+            min-height: 35px;
+            margin-top: -7px;
+            padding-top: 3px;
+            border: 3px solid #0b0c0c;
+            border-radius: 50%;
+            color: #ffffff;
+            background: #0b0c0c;
+            font-size: 30px;
+            line-height: 29px;
+            text-align: center;
+            speak: none;
+        }
+        
+        .govuk-warning-text__text {
+            display: block;
+            margin-left: 50px;
+        }
+        
+        .govuk-warning-text__assistive {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            margin: -1px !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            clip: rect(0 0 0 0) !important;
+            -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+            border: 0 !important;
+            white-space: nowrap !important;
+        }
+        
+        .govuk-tag {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1;
+            display: inline-block;
+            padding: 5px 8px 4px 8px;
+            outline: 2px solid transparent;
+            outline-offset: -2px;
+            color: #ffffff;
+            background-color: #1d70b8;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .govuk-tag--red {
+            color: #ffffff;
+            background-color: #d4351c;
+        }
+        
+        .govuk-tag--orange {
+            color: #ffffff;
+            background-color: #f47738;
+        }
+        
+        .govuk-link {
+            font-family: "GDS Transport", arial, sans-serif;
+            color: #1d70b8;
+            text-decoration: underline;
+        }
+        
+        .govuk-list {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.31579;
+            color: #0b0c0c;
+            margin: 0 0 20px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .govuk-list--number {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        
+        .govuk-list--bullet {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .govuk-section-break {
+            margin: 0;
+            border: 0;
+        }
+        
+        .govuk-section-break--visible {
+            border-bottom: 1px solid #b1b4b6;
+        }
+        
+        .govuk-section-break--xl {
+            margin-bottom: 50px;
+        }
+        
+        .govuk-section-break--l {
+            margin-bottom: 30px;
+        }
+        
+        .govuk-section-break--m {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="govuk-template__body">
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper">
+            
+            <h1 class="govuk-heading-xl">Forensic Investigation Report</h1>
+            
+            <div class="govuk-inset-text">
+                <strong>Case Reference:</strong> Roger Ben - Multi-Agency Institutional Failures<br>
+                <strong>Classification:</strong> Public Interest Disclosure<br>
+                <strong>Date:</strong> 29 September 2025
+            </div>
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Transparency Notice: This document outlines our proposed regulatory and media engagement strategy to protect Mr Ben's rights and serve public interest duties. This is not a threat but a commitment to full transparency in our approach to seeking justice and accountability.
+                </strong>
+            </div>
+
+            <h2 class="govuk-heading-l">Regulatory Oversight Bodies</h2>
+            
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Regulatory Body</th>
+                        <th scope="col" class="govuk-table__header">Contact</th>
+                        <th scope="col" class="govuk-table__header">Jurisdiction</th>
+                        <th scope="col" class="govuk-table__header">Proposed Referral</th>
+                        <th scope="col" class="govuk-table__header">Impact</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Equality & Human Rights Commission (EHRC)</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:correspondence@equalityhumanrights.com" class="govuk-link">correspondence@equalityhumanrights.com</a><br>
+                            0300 123 1150
+                        </td>
+                        <td class="govuk-table__cell">Equality Act enforcement</td>
+                        <td class="govuk-table__cell">
+                            <strong>"SYSTEMIC MULTI-AGENCY DISCRIMINATION"</strong><br><br>
+                            Westminster CC, Smart Hostels & Astor Institutional Failures Against Disabled Individual
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">FORMAL INVESTIGATION, ENFORCEMENT ACTION, PRECEDENT-SETTING</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Information Commissioner's Office (ICO)</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:casework@ico.org.uk" class="govuk-link">casework@ico.org.uk</a><br>
+                            0303 123 1113
+                        </td>
+                        <td class="govuk-table__cell">Data protection in discrimination</td>
+                        <td class="govuk-table__cell">
+                            <strong>"DATA MISUSE IN DISCRIMINATION"</strong><br><br>
+                            Westminster CC, Smart Hostels & Astor GDPR Violations During Disability Discrimination
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--orange">REGULATORY ACTION, DATA PROTECTION AUDIT</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Local Government & Social Care Ombudsman</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:advice@lgo.org.uk" class="govuk-link">advice@lgo.org.uk</a><br>
+                            0300 061 0614
+                        </td>
+                        <td class="govuk-table__cell">Local authority maladministration</td>
+                        <td class="govuk-table__cell">
+                            <strong>"WESTMINSTER CC HOUSING ACT FAILURES"</strong><br><br>
+                            <strong>286+</strong> Documented Breaches Causing Vulnerable Adult Homelessness
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">FORMAL INVESTIGATION, COMPENSATION ORDER</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Care Quality Commission (CQC)</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:enquiries@cqc.org.uk" class="govuk-link">enquiries@cqc.org.uk</a><br>
+                            03000 616161
+                        </td>
+                        <td class="govuk-table__cell">Adult social care standards</td>
+                        <td class="govuk-table__cell">
+                            <strong>"WESTMINSTER CC & CONTRACTORS"</strong><br><br>
+                            Safeguarding Failures for Autistic Adult in Crisis
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--orange">SERVICE INSPECTION, IMPROVEMENT NOTICES</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Housing Ombudsman Service</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:info@housing-ombudsman.org.uk" class="govuk-link">info@housing-ombudsman.org.uk</a><br>
+                            0300 111 3000
+                        </td>
+                        <td class="govuk-table__cell">Housing provider failures</td>
+                        <td class="govuk-table__cell">
+                            <strong>"Westminster CC Section 188 Systemic Failures"</strong><br><br>
+                            <strong>10+ Month Statutory Duty Breach</strong>
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">MALADMINISTRATION FINDING, COMPENSATION ORDER</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Social Work England</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:info@socialworkengland.org.uk" class="govuk-link">info@socialworkengland.org.uk</a><br>
+                            0808 196 2274
+                        </td>
+                        <td class="govuk-table__cell">Social worker professional standards</td>
+                        <td class="govuk-table__cell">
+                            <strong>"PROFESSIONAL MISCONDUCT IN DISABILITY CASE"</strong><br><br>
+                            <strong>Roger Ben Social Worker Failures in Multi-Agency Discrimination</strong>
+                        </td>
+                        <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">FITNESS TO PRACTISE INVESTIGATION, REGULATORY SANCTIONS</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <h2 class="govuk-heading-l">Targeted Media Contacts</h2>
+            
+            <p class="govuk-body">This is not a threat. This is to be totally and openly transparent with our proposed plan to help protect Mr Ben's rights and ensure public interest duties.</p>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Media Outlet</th>
+                        <th scope="col" class="govuk-table__header">Journalist/Editor</th>
+                        <th scope="col" class="govuk-table__header">Contact</th>
+                        <th scope="col" class="govuk-table__header">Story Angle</th>
+                        <th scope="col" class="govuk-table__header">Proposed Headlines</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">The Guardian</th>
+                        <td class="govuk-table__cell">
+                            <strong>Disability Rights Correspondent</strong><br>
+                            Sarah Marsh
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:sarah.marsh@guardian.com" class="govuk-link">sarah.marsh@guardian.com</a><br>
+                            020 3353 2000
+                        </td>
+                        <td class="govuk-table__cell">Institutional discrimination investigation</td>
+                        <td class="govuk-table__cell">
+                            <strong>"'THAT'S YOUR PROBLEM'"</strong><br><br>
+                            <strong>How Westminster CC, Smart Hostels & Astor Failed Disabled Expert for 10 Months</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">BBC News</th>
+                        <td class="govuk-table__cell">
+                            <strong>Disability Affairs Reporter</strong><br>
+                            Nikki Fox
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:nikki.fox@bbc.co.uk" class="govuk-link">nikki.fox@bbc.co.uk</a><br>
+                            020 8743 8000
+                        </td>
+                        <td class="govuk-table__cell">Public interest discrimination</td>
+                        <td class="govuk-table__cell">
+                            <strong>"286 CALLS IGNORED"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Leave Autistic Expert Homeless Despite Legal Duty</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">The Independent</th>
+                        <td class="govuk-table__cell">
+                            <strong>Social Affairs Editor</strong><br>
+                            May Bulman
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:may.bulman@independent.co.uk" class="govuk-link">may.bulman@independent.co.uk</a><br>
+                            020 7005 2000
+                        </td>
+                        <td class="govuk-table__cell">Systemic failures exposé</td>
+                        <td class="govuk-table__cell">
+                            <strong>"AUDIO REVEALS"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor's Shocking Response to Disabled Man's Crisis</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Channel 4 News</th>
+                        <td class="govuk-table__cell">
+                            <strong>Social Affairs Correspondent</strong><br>
+                            Jackie Long
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:jackie.long@itn.co.uk" class="govuk-link">jackie.long@itn.co.uk</a><br>
+                            020 7833 3000
+                        </td>
+                        <td class="govuk-table__cell">Documentary investigation</td>
+                        <td class="govuk-table__cell">
+                            <strong>"INSTITUTIONAL FAILURE"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Caught on Tape Discriminating</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Sky News</th>
+                        <td class="govuk-table__cell">
+                            <strong>UK Editor</strong><br>
+                            Sam Coates
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:sam.coates@sky.uk" class="govuk-link">sam.coates@sky.uk</a><br>
+                            020 7705 3000
+                        </td>
+                        <td class="govuk-table__cell">Breaking news investigation</td>
+                        <td class="govuk-table__cell">
+                            <strong>"£285K SETTLEMENT"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Pay for Systemic Disability Discrimination</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Liverpool Echo</th>
+                        <td class="govuk-table__cell">
+                            <strong>Crime Reporter</strong><br>
+                            Luke Traynor
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:luke.traynor@reachplc.com" class="govuk-link">luke.traynor@reachplc.com</a><br>
+                            0151 227 2000
+                        </td>
+                        <td class="govuk-table__cell">Local angle (Ben's profile)</td>
+                        <td class="govuk-table__cell">
+                            <strong>"Liverpool Forensic Expert Wins Record Payout: Westminster CC, Smart Hostels & Astor Disability Discrimination Exposed"</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Inside Housing</th>
+                        <td class="govuk-table__cell">
+                            <strong>News Editor</strong><br>
+                            Peter Apps
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:peter.apps@insidehousing.co.uk" class="govuk-link">peter.apps@insidehousing.co.uk</a><br>
+                            020 8269 7837
+                        </td>
+                        <td class="govuk-table__cell">Housing sector impact</td>
+                        <td class="govuk-table__cell">
+                            <strong>"HOUSING ACT HORROR"</strong><br><br>
+                            <strong>How Westminster CC, Smart Hostels & Astor Created 10-Month Homelessness Crisis</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Third Sector</th>
+                        <td class="govuk-table__cell">
+                            <strong>News Editor</strong><br>
+                            Benjamin Weiser
+                        </td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:benjamin.weiser@haymarket.com" class="govuk-link">benjamin.weiser@haymarket.com</a><br>
+                            020 8267 4429
+                        </td>
+                        <td class="govuk-table__cell">Social care sector</td>
+                        <td class="govuk-table__cell">
+                            <strong>"SAFEGUARDING SCANDAL"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Fail Vulnerable Adult with 286 Ignored Calls</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Specialist Publications</h3>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Publication</th>
+                        <th scope="col" class="govuk-table__header">Contact</th>
+                        <th scope="col" class="govuk-table__header">Story Focus</th>
+                        <th scope="col" class="govuk-table__header">Sector Impact Headlines</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Legal Action</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:editor@lag.org.uk" class="govuk-link">editor@lag.org.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">DISCRIMINATION LAW PRECEDENT</td>
+                        <td class="govuk-table__cell">
+                            <strong>"MULTI-AGENCY LIABILITY DISASTER"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Create £285K Legal Earthquake - Discrimination Law Revolution</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Housing Law Reports</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:housing@lexisnexis.co.uk" class="govuk-link">housing@lexisnexis.co.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">Housing Act enforcement</td>
+                        <td class="govuk-table__cell">
+                            <strong>"SECTION 188 CATASTROPHE"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor £285K Bombshell - Housing Act Enforcement Nightmare Exposed</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Community Care</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:communitycare@rbi.co.uk" class="govuk-link">communitycare@rbi.co.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">ADULT SOCIAL CARE</td>
+                        <td class="govuk-table__cell">
+                            <strong>"ADULT SAFEGUARDING APOCALYPSE"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor 286-Call Catastrophe - Social Care System Failure That Nearly Killed</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Disability News Service</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:editor@disabilitynewsservice.com" class="govuk-link">editor@disabilitynewsservice.com</a>
+                        </td>
+                        <td class="govuk-table__cell">DISABILITY RIGHTS</td>
+                        <td class="govuk-table__cell">
+                            <strong>"'DISABILITY? THAT'S YOUR DEATH SENTENCE'"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Audio Death Threats - Institutional Murder of Disabled Rights</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Disability Rights UK</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:enquiries@disabilityrightsuk.org" class="govuk-link">enquiries@disabilityrightsuk.org</a>
+                        </td>
+                        <td class="govuk-table__cell">DISABILITY JUSTICE MOVEMENT</td>
+                        <td class="govuk-table__cell">
+                            <strong>"INSTITUTIONAL DISABILITY GENOCIDE"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor 10-Month Extermination Plot - Disabled People's Lives Don't Matter</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Inclusion London</th>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:info@inclusionlondon.org.uk" class="govuk-link">info@inclusionlondon.org.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">DEAF & DISABLED PEOPLE'S RIGHTS</td>
+                        <td class="govuk-table__cell">
+                            <strong>"DEAF/DEATH BY BUREAUCRACY"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Silent Killer - How Systems Murder Disabled Londoners</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Parliamentary & Political Contacts</h3>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Contact</th>
+                        <th scope="col" class="govuk-table__header">Position</th>
+                        <th scope="col" class="govuk-table__header">Email</th>
+                        <th scope="col" class="govuk-table__header">Focus Area</th>
+                        <th scope="col" class="govuk-table__header">Briefing Angle</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Marsha De Cordova MP</th>
+                        <td class="govuk-table__cell">Shadow Minister for Disabled People</td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:marsha.decorova.mp@parliament.uk" class="govuk-link">marsha.decorova.mp@parliament.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">DISABILITY RIGHTS</td>
+                        <td class="govuk-table__cell">
+                            <strong>"WESTMINSTER CC, SMART HOSTELS & ASTOR"</strong><br><br>
+                            <strong>Parliamentary Question on Multi-Agency Discrimination Failures</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Nickie Aiken MP</th>
+                        <td class="govuk-table__cell">Cities of London & Westminster</td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:nickie.aiken.mp@parliament.uk" class="govuk-link">nickie.aiken.mp@parliament.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">LOCAL CONSTITUENCY</td>
+                        <td class="govuk-table__cell">
+                            <strong>"CONSTITUENT HOMELESSNESS CRISIS"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor 286-Call Failure in Your Constituency</strong>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Dame Andrea Leadsom MP</th>
+                        <td class="govuk-table__cell">Chair, Public Accounts Committee</td>
+                        <td class="govuk-table__cell">
+                            <a href="mailto:andrea.leadsom.mp@parliament.uk" class="govuk-link">andrea.leadsom.mp@parliament.uk</a>
+                        </td>
+                        <td class="govuk-table__cell">PUBLIC ADMINISTRATION</td>
+                        <td class="govuk-table__cell">
+                            <strong>"PUBLIC MONEY WASTE"</strong><br><br>
+                            <strong>Westminster CC, Smart Hostels & Astor Legal Costs from Discrimination Failures</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="govuk-heading-m">Social Media Escalation Strategy</h3>
+
+            <table class="govuk-table">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Platform</th>
+                        <th scope="col" class="govuk-table__header">Approach</th>
+                        <th scope="col" class="govuk-table__header">Target Audience</th>
+                        <th scope="col" class="govuk-table__header">Hashtag Strategy</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Twitter/X</th>
+                        <td class="govuk-table__cell">Thread documentation with audio clips</td>
+                        <td class="govuk-table__cell">Disability rights activists, journalists</td>
+                        <td class="govuk-table__cell">
+                            #DisabilityDiscrimination #WestminsterFails #SmartHostelsExposed #AstorAccountability
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">LinkedIn</th>
+                        <td class="govuk-table__cell">Professional network exposure</td>
+                        <td class="govuk-table__cell">Legal professionals, social care sector</td>
+                        <td class="govuk-table__cell">
+                            #EqualityAct #HousingAct #ProfessionalAccountability
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">TikTok</th>
+                        <td class="govuk-table__cell">Audio evidence snippets</td>
+                        <td class="govuk-table__cell">Younger audience, viral potential</td>
+                        <td class="govuk-table__cell">
+                            #DisabledTikTok #JusticeForBen #InstitutionalDiscrimination
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <div class="govuk-inset-text">
+                <h3 class="govuk-heading-m">Report Summary</h3>
+                <ul class="govuk-list">
+                    <li><strong>Total Documented Violations:</strong> 286+ recorded incidents</li>
+                    <li><strong>Duration of Institutional Failure:</strong> 10+ months of continuous homelessness</li>
+                    <li><strong>Projected Settlement Value:</strong> £285,000</li>
+                    <li><strong>Legal Precedent Impact:</strong> Multi-agency liability for discrimination</li>
+                    <li><strong>Public Interest Rating:</strong> HIGH - Systematic institutional failures affecting vulnerable adults</li>
+                </ul>
+            </div>
+
+            <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                    Next Steps
+                </strong>
+            </div>
+
+            <ol class="govuk-list govuk-list--number">
+                <li><strong>Regulatory Submissions:</strong> File complaints with EHRC, ICO, and relevant ombudsmen within 30 days</li>
+                <li><strong>Media Briefings:</strong> Schedule interviews with key journalists within 14 days</li>
+                <li><strong>Parliamentary Engagement:</strong> Submit briefing documents to relevant MPs within 21 days</li>
+                <li><strong>Social Media Campaign:</strong> Launch coordinated awareness campaign within 7 days</li>
+                <li><strong>Legal Action:</strong> Prepare formal legal proceedings as backup enforcement mechanism</li>
+            </ol>
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <p class="govuk-body"><em>Report compiled: 29 September 2025</em></p>
+            <p class="govuk-body"><em>Classification: Public Interest Disclosure</em></p>
+            <p class="govuk-body"><em>Distribution: Legal team, advocacy groups, regulatory bodies, media contacts</em></p>
+
+        </main>
+    </div>
+</body>
+</html>

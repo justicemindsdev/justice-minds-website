@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuart Love - Complete Evidence Pack - Westminster City Council Failures</title>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 2cm;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "GDS Transport", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #0b0c0c;
+            background: #ffffff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+        }
+
+        .govuk-header {
+            background-color: #0b0c0c;
+            padding: 20px;
+            margin: -20mm -20mm 20mm -20mm;
+            color: white;
+        }
+
+        .govuk-header__title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .govuk-header__subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            background-color: #1d70b8;
+            color: white;
+            padding: 15px 20px;
+            margin: 30px -20mm 20px -20mm;
+            font-size: 22px;
+            font-weight: bold;
+            border-left: 5px solid #003078;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #f47738;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box h3 {
+            color: #d4351c;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .important-box {
+            background-color: #d4351c;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background-color: #f3f2f1;
+            border-left: 5px solid #1d70b8;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .evidence-list {
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #b1b4b6;
+        }
+
+        .evidence-list h3 {
+            color: #0b0c0c;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .evidence-list ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        .evidence-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-left: 3px solid #1d70b8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th {
+            background-color: #1d70b8;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #b1b4b6;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f3f2f1;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 20px 0;
+            color: #0b0c0c;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin: 25px 0 15px 0;
+            color: #0b0c0c;
+            font-weight: bold;
+            border-bottom: 3px solid #1d70b8;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin: 20px 0 10px 0;
+            color: #0b0c0c;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 19px;
+            margin: 15px 0 10px 0;
+            color: #0b0c0c;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        .date {
+            color: #505a5f;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .reference {
+            background-color: #f3f2f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #005ea5;
+        }
+
+        .recipient-details {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border: 2px solid #b1b4b6;
+        }
+
+        .signature-block {
+            margin: 40px 0 20px 0;
+            padding: 20px;
+            background-color: #f3f2f1;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #b1b4b6;
+            font-size: 14px;
+            color: #505a5f;
+            text-align: center;
+        }
+
+        .statistics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: white;
+            border: 2px solid #1d70b8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d4351c;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #505a5f;
+            margin-top: 5px;
+        }
+
+        .timeline {
+            border-left: 4px solid #1d70b8;
+            padding-left: 30px;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #d4351c;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #1d70b8;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #1d70b8;
+            margin-bottom: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #0b0c0c;
+        }
+
+        .without-prejudice {
+            background-color: #d4351c;
+            color: white;
+            padding: 10px 20px;
+            margin: 20px -20mm;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="govuk-header">
+    <div class="govuk-header__title">JUSTICE MINDS FORENSIC INTELLIGENCE LTD</div>
+    <div class="govuk-header__subtitle">Forensic Investigation & Legal Intelligence Services</div>
+</div>
+
+<div class="without-prejudice">WITHOUT PREJUDICE</div>
+
+<h1>COMPLETE EVIDENCE PACK</h1>
+
+<div class="reference">
+    <strong>Case Reference:</strong> Westminster City Council - Multi-Agency Institutional Failures<br>
+    <strong>Subject:</strong> Roger Ben (referred to as Stuart Love in correspondence)<br>
+    <strong>Date Compiled:</strong> 30 September 2025<br>
+    <strong>Classification:</strong> Pre-Action Disclosure Notice
+</div>
+
+<div class="important-box">
+    <h3>URGENT: PRE-ACTION DISCLOSURE NOTICE</h3>
+    <p>This evidence pack documents systematic institutional failures by Westminster City Council, Smart Hostels Ltd, and Astor Hostels, resulting in 20+ months of unlawful homelessness for a disabled individual.</p>
+</div>
+
+<div class="statistics-grid">
+    <div class="stat-box">
+        <div class="stat-number">286+</div>
+        <div class="stat-label">Documented Breaches</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Months of Failures</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">£285K</div>
+        <div class="stat-label">Projected Settlement</div>
+    </div>
+</div>
+
+<div class="evidence-list">
+    <h3>Evidence Pack Contents</h3>
+    <ul>
+        <li><strong>Section 1:</strong> Formal Pre-Action Letter to Stuart Love (Westminster CC)</li>
+        <li><strong>Section 2:</strong> Forensic Insurer Report (December 18, 2024)</li>
+        <li><strong>Section 3:</strong> Complete Forensic Investigation Report</li>
+        <li><strong>Section 4:</strong> Institutional Standing & Credibility Analysis</li>
+        <li><strong>Section 5:</strong> Evidence Dossier & Timeline</li>
+        <li><strong>Section 6:</strong> Westminster Audit Statistics (286 Breaches)</li>
+    </ul>
+</div>
+
+<div class="warning-box">
+    <h3>Legal Notice</h3>
+    <p>This document is provided WITHOUT PREJUDICE and contains privileged legal communications. The contents are protected under legal professional privilege and settlement negotiations privilege.</p>
+    <p><strong>Distribution:</strong> Stuart Love (Westminster CC), Bernie Flaherty (Westminster CC), Protector Insurance Claims, Sedgwick Claims Management</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SECTION 1: FORMAL LETTER -->
+<div class="section-header">SECTION 1: FORMAL PRE-ACTION LETTER</div>
+
+<div class="recipient-details">
+    <strong>TO:</strong> Stuart Love<br>
+    Senior Manager - Housing Solutions & Homelessness Prevention<br>
+    Westminster City Council<br>
+    City Hall, 64 Victoria Street<br>
+    London SW1E 6QP<br>
+    Email: slove@westminster.gov.uk<br><br>
+
+    <strong>CC:</strong><br>
+    Bernie Flaherty (Deputy Director - Housing) - bflaherty@westminster.gov.uk<br>
+    Protector Insurance (Claims Department) - claims@protectorinsurance.co.uk<br>
+    Sedgwick Claims Management - protectorclaims@uk.sedgwick.com
+</div>
+
+<p class="date"><strong>Date:</strong> 30 September 2025</p>
+
+<div class="reference">
+    <strong>Reference:</strong> Pre-Action Protocol for Housing and Homelessness Cases<br>
+    <strong>Matter:</strong> Roger Ben - Unlawful Homelessness & Multi-Agency Discrimination<br>
+    <strong>Property:</strong> Westminster City Council Temporary Accommodation Portfolio<br>
+    <strong>Period:</strong> January 2024 - Present (20+ months continuous failures)
+</div>
+
+<h2>1. PURPOSE OF THIS LETTER</h2>
+
+<p>This letter constitutes formal pre-action disclosure notice pursuant to the Pre-Action Protocol for Housing Matters and serves as notification of Westminster City Council's systematic and continuing breaches of statutory duties under:</p>
+
+<ul style="margin-left: 30px; margin-top: 10px;">
+    <li>Housing Act 1996 Part VII (as amended)</li>
+    <li>Equality Act 2010</li>
+    <li>Human Rights Act 1998 (Articles 8 and 14)</li>
+    <li>Care Act 2014</li>
+    <li>Autism Act 2009</li>
+</ul>
+
+<h2>2. BACKGROUND - INSTITUTIONAL FAILURES</h2>
+
+<p>Our client, Roger Ben (referred to in correspondence as "Stuart Love"), is a 41-year-old autistic forensic intelligence professional who has experienced catastrophic institutional failures across multiple agencies since January 2024.</p>
+
+<div class="warning-box">
+    <h3>Critical Timeline</h3>
+    <p><strong>January 2024:</strong> Initial homelessness application to Westminster CC</p>
+    <p><strong>January 2024 - September 2025:</strong> 20+ months of continuous unlawful homelessness</p>
+    <p><strong>286+ documented incidents:</strong> Recorded breaches of statutory duties</p>
+    <p><strong>September 2025:</strong> Formal pre-action notice served</p>
+</div>
+
+<h3>2.1 Primary Responding Parties</h3>
+
+<div class="info-box">
+    <h4>Westminster City Council</h4>
+    <p><strong>Key Contact:</strong> Stuart Love (Senior Manager)<br>
+    <strong>Failures:</strong> Section 188 duty breaches, failure to assess, discrimination<br>
+    <strong>Duration:</strong> 20+ months continuous breach</p>
+</div>
+
+<div class="info-box">
+    <h4>Smart Hostels Ltd & Astor Hostels</h4>
+    <p><strong>Role:</strong> Westminster CC temporary accommodation contractors<br>
+    <strong>Failures:</strong> Discriminatory treatment, accessibility failures, duty of care breaches<br>
+    <strong>Evidence:</strong> Audio recordings, witness statements, correspondence</p>
+</div>
+
+<div class="info-box">
+    <h4>Protector Insurance & Sedgwick Claims</h4>
+    <p><strong>Role:</strong> Public liability insurers for council contractors<br>
+    <strong>Notification:</strong> Formal claims notice for contractor discrimination<br>
+    <strong>Potential Exposure:</strong> Joint and several liability</p>
+</div>
+
+<h2>3. DOCUMENTED EVIDENCE OF SYSTEMATIC FAILURES</h2>
+
+<h3>3.1 Section 188 Housing Act 1996 - Interim Accommodation Duty</h3>
+
+<div class="evidence-list">
+    <h4>Westminster City Council's Failures:</h4>
+    <ul>
+        <li><strong>286+ documented attempts</strong> to secure interim accommodation (January 2024 - September 2025)</li>
+        <li><strong>Zero appropriate accommodation</strong> provided despite continuous duty</li>
+        <li><strong>Systematic refusal</strong> to conduct proper assessments of housing needs</li>
+        <li><strong>"That's your problem"</strong> - audio evidence of duty abdication</li>
+        <li><strong>20+ months continuous breach</strong> of interim duty pending full inquiries</li>
+    </ul>
+</div>
+
+<h3>3.2 Equality Act 2010 - Disability Discrimination</h3>
+
+<div class="evidence-list">
+    <h4>Protected Characteristic: Autism Spectrum Disorder</h4>
+    <ul>
+        <li><strong>Direct discrimination:</strong> Explicit rejection based on autism diagnosis</li>
+        <li><strong>Failure to make reasonable adjustments:</strong> No accessibility accommodations</li>
+        <li><strong>Audio evidence:</strong> "Disability? That's your problem, not ours"</li>
+        <li><strong>Discrimination by association:</strong> Contractors acting on council's behalf</li>
+        <li><strong>Institutional pattern:</strong> Systematic disability-based exclusion</li>
+    </ul>
+</div>
+
+<h3>3.3 Human Rights Act 1998 - Articles 8 & 14</h3>
+
+<p><strong>Article 8 (Right to Private and Family Life):</strong> 20+ months of homelessness constitutes interference with fundamental rights to home, privacy, and dignity.</p>
+
+<p><strong>Article 14 (Prohibition of Discrimination):</strong> Treatment directly linked to protected characteristic of disability, evidencing discriminatory denial of Article 8 rights.</p>
+
+<h2>4. AUDIO EVIDENCE - INSTITUTIONAL DISCRIMINATION</h2>
+
+<div class="warning-box">
+    <h3>Critical Audio Recordings</h3>
+    <p>We possess multiple audio recordings documenting explicit discrimination and duty abdication:</p>
+    <ul style="margin-left: 20px; margin-top: 10px;">
+        <li><strong>Smart Hostels representative:</strong> "Disability? That's your problem, not ours"</li>
+        <li><strong>Westminster CC officer:</strong> Refusal to process assessment despite statutory duty</li>
+        <li><strong>Astor Hostels staff:</strong> Direct rejection based on autism diagnosis</li>
+        <li><strong>Multiple contractors:</strong> Pattern of coordinated institutional discrimination</li>
+    </ul>
+    <p style="margin-top: 10px;"><strong>Legal Status:</strong> These recordings are admissible evidence under s.78 Police and Criminal Evidence Act 1984 and will be submitted in any proceedings.</p>
+</div>
+
+<h2>5. FINANCIAL CONSEQUENCES</h2>
+
+<div class="statistics-grid">
+    <div class="stat-box">
+        <div class="stat-number">£285,000</div>
+        <div class="stat-label">Projected Settlement Value</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">£150K</div>
+        <div class="stat-label">Discrimination Damages</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-number">£85K</div>
+        <div class="stat-label">Housing Act Breaches</div>
+    </div>
+</div>
+
+<h3>5.1 Settlement Breakdown</h3>
+
+<table>
+    <tr>
+        <th>Claim Component</th>
+        <th>Legal Basis</th>
+        <th>Value Range</th>
+    </tr>
+    <tr>
+        <td>Disability Discrimination</td>
+        <td>Equality Act 2010 (Serious injury to feelings - Vento top band)</td>
+        <td>£75,000 - £100,000</td>
+    </tr>
+    <tr>
+        <td>Housing Act Breaches</td>
+        <td>S.188 & S.189B failures (20+ months)</td>
+        <td>£60,000 - £85,000</td>
+    </tr>
+    <tr>
+        <td>Human Rights Violations</td>
+        <td>Articles 8 & 14 HRA 1998</td>
+        <td>£40,000 - £60,000</td>
+    </tr>
+    <tr>
+        <td>Aggravated Damages</td>
+        <td>Institutional bad faith, audio evidence</td>
+        <td>£30,000 - £40,000</td>
+    </tr>
+    <tr>
+        <td><strong>TOTAL SETTLEMENT VALUE</strong></td>
+        <td><strong>Combined claims</strong></td>
+        <td><strong>£205,000 - £285,000</strong></td>
+    </tr>
+</table>
+
+<h2>6. REGULATORY REFERRALS - ESCALATION STRATEGY</h2>
+
+<div class="info-box">
+    <h3>Confirmed Regulatory Actions</h3>
+    <p>Concurrent with these legal proceedings, formal complaints will be submitted to:</p>
+</div>
+
+<table>
+    <tr>
+        <th>Regulatory Body</th>
+        <th>Jurisdiction</th>
+        <th>Expected Outcome</th>
+    </tr>
+    <tr>
+        <td>Equality & Human Rights Commission</td>
+        <td>Systemic discrimination investigation</td>
+        <td>Formal investigation, enforcement action</td>
+    </tr>
+    <tr>
+        <td>Local Government Ombudsman</td>
+        <td>Westminster CC maladministration</td>
+        <td>Compensation order, service improvements</td>
+    </tr>
+    <tr>
+        <td>Housing Ombudsman Service</td>
+        <td>Housing provider failures</td>
+        <td>Maladministration finding, redress order</td>
+    </tr>
+    <tr>
+        <td>Information Commissioner's Office</td>
+        <td>Data misuse in discrimination</td>
+        <td>Regulatory action, data protection audit</td>
+    </tr>
+    <tr>
+        <td>Care Quality Commission</td>
+        <td>Adult safeguarding failures</td>
+        <td>Service inspection, improvement notices</td>
+    </tr>
+</table>
+
+<h2>7. PRE-ACTION PROTOCOL COMPLIANCE</h2>
+
+<p>This letter satisfies the requirements of the Pre-Action Protocol for Housing Matters by providing:</p>
+
+<div class="evidence-list">
+    <ul>
+        <li><strong>Clear identification</strong> of parties and legal basis for claims</li>
+        <li><strong>Detailed chronology</strong> of events and statutory breaches</li>
+        <li><strong>Summary of facts</strong> supporting alleged wrongdoing</li>
+        <li><strong>Details of losses</strong> and basis for damages calculation</li>
+        <li><strong>Opportunity for settlement</strong> before proceedings commence</li>
+        <li><strong>Specification of documents</strong> required for disclosure</li>
+    </ul>
+</div>
+
+<h2>8. REQUIRED DISCLOSURE - 14 DAYS</h2>
+
+<div class="important-box">
+    <h3>URGENT: Disclosure Requirements</h3>
+    <p>You are required to provide the following documents within 14 days of this letter:</p>
+</div>
+
+<div class="evidence-list">
+    <h4>Category 1: Housing Files</h4>
+    <ul>
+        <li>Complete homelessness application file (January 2024 - present)</li>
+        <li>All assessments, reviews, and decision notices</li>
+        <li>Internal communications regarding Mr. Ben's case</li>
+        <li>Contractor communications (Smart Hostels, Astor Hostels)</li>
+    </ul>
+</div>
+
+<div class="evidence-list">
+    <h4>Category 2: Policy Documents</h4>
+    <ul>
+        <li>Equality and diversity policies (2024-2025)</li>
+        <li>Reasonable adjustments procedures</li>
+        <li>Contractor selection and monitoring procedures</li>
+        <li>Staff training records (disability awareness)</li>
+    </ul>
+</div>
+
+<div class="evidence-list">

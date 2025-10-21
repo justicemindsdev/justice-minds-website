@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta charset="utf-8">
+    <title>FORENSIC INVESTIGATION: ROGER'S STATUTORY VIOLATIONS AND RISK ESCALATION - GOV.UK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+    <style>
+        body {
+            font-family: "GDS Transport", arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.25;
+            color: #0b0c0c;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .govuk-header {
+            background-color: #0b0c0c;
+            border-bottom: 10px solid #ffdd00;
+            padding: 0;
+        }
+        .govuk-header__container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .govuk-header__logotype {
+            display: inline-block;
+            margin-bottom: -1px;
+            margin-right: 1px;
+            border: 0;
+            vertical-align: baseline;
+        }
+        .govuk-header__logotype-text {
+            color: #ffffff;
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .govuk-main-wrapper {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .govuk-heading-xl {
+            font-size: 48px;
+            line-height: 1.04167;
+            font-weight: bold;
+            margin: 0 0 30px 0;
+        }
+        .govuk-heading-l {
+            font-size: 36px;
+            line-height: 1.11111;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+        }
+        .govuk-heading-m {
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+        }
+        .govuk-body {
+            font-size: 19px;
+            line-height: 1.31579;
+            margin: 0 0 20px 0;
+        }
+        .govuk-body-s {
+            font-size: 16px;
+            line-height: 1.25;
+            margin: 0 0 15px 0;
+        }
+        .govuk-inset-text {
+            border-left: 10px solid #b1b4b6;
+            padding: 15px;
+            margin: 0 0 20px 0;
+        }
+        .govuk-details {
+            font-size: 19px;
+            line-height: 1.31579;
+            margin: 0 0 20px 0;
+        }
+        .govuk-details__summary {
+            color: #1d70b8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .evidence-block {
+            background-color: #f8f8f8;
+            border: 1px solid #b1b4b6;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .evidence-timestamp {
+            font-weight: bold;
+            color: #505a5f;
+            font-size: 16px;
+        }
+        .evidence-quote {
+            font-family: "Courier New", monospace;
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 10px 0;
+        }
+        .forensic-conclusion {
+            background-color: #fff2d3;
+            border: 2px solid #ffdd00;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .risk-highlight {
+            background-color: #ffe6e6;
+            border-left: 5px solid #d4351c;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .section-number {
+            display: block;
+            font-size: 48px;
+            line-height: 1;
+            color: #0b0c0c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .executive-summary {
+            background-color: #e8f4f8;
+            border: 2px solid #1d70b8;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .navigation {
+            background-color: #f8f8f8;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .navigation a {
+            color: #1d70b8;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1d70b8 0%, #0b0c0c 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+            border-bottom: 5px solid #ffdd00;
+        }
+        .hero-content {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .company-header {
+            text-align: center;
+        }
+        .company-name {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        .company-details {
+            font-size: 16px;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        .separator {
+            margin: 0 10px;
+            color: #ffdd00;
+        }
+        .department {
+            font-size: 18px;
+            font-style: italic;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .index-section {
+            background-color: #f8f8f8;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #b1b4b6;
+        }
+        .index-link {
+            color: #1d70b8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .index-link:hover {
+            color: #003078;
+            text-decoration: underline;
+        }
+        .collapsible-section {
+            margin: 30px 0;
+        }
+        .section-toggle {
+            background-color: #005ea5;
+            color: white;
+            padding: 20px;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .section-toggle:hover {
+            background-color: #003078;
+        }
+        .section-content {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid #b1b4b6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .section-content.show {
+            display: block;
+        }
+        .justice-minds-header {
+            background: linear-gradient(135deg, #1d70b8 0%, #0b0c0c 100%);
+            color: white;
+            padding: 30px 0;
+            border-bottom: 5px solid #ffdd00;
+        }
+        .company-branding {
+            text-align: center;
+        }
+        .company-main-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        .company-credentials {
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        .credential {
+            color: #ffffff;
+        }
+        .department-title {
+            font-size: 20px;
+            font-style: italic;
+            margin: 15px 0 0 0;
+            opacity: 0.9;
+        }
+        .footer-clean {
+            background-color: #f8f8f8;
+            border-top: 3px solid #ffdd00;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        .footer-support-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-support-links h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #0b0c0c;
+        }
+        .footer-links-horizontal {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .footer-links-horizontal a {
+            color: #1d70b8;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+        .footer-links-horizontal a:hover {
+            background-color: #1d70b8;
+            color: white;
+        }
+        .footer-copyright {
+            text-align: center;
+            font-size: 16px;
+            color: #505a5f;
+            border-top: 1px solid #b1b4b6;
+            padding-top: 20px;
+        }
+        .black-hero-bar {
+            background-color: #0b0c0c;
+            color: white;
+            padding: 40px 0;
+            border-bottom: 5px solid #ffdd00;
+        }
+        .hero-container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body class="govuk-template__body">
+    <header class="black-hero-bar">
+        <div class="hero-container">
+            <div class="company-branding">
+                <h1 class="company-main-title">JUSTICE MINDS FORENSIC INTELLIGENCE Ltd</h1>
+                <div class="company-credentials">
+                    <span class="credential">Company House 16331423</span>
+                    <span class="separator">|</span>
+                    <span class="credential">ICO REGISTERED</span>
+                    <span class="separator">|</span>
+                    <span class="credential">ZB896365</span>
+                </div>
+                <p class="department-title">Department for Forensic Intelligence</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="govuk-main-wrapper">
+        <div class="govuk-width-container">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <h1 class="govuk-heading-xl">FORENSIC INVESTIGATION: ROGER'S STATUTORY VIOLATIONS AND RISK ESCALATION</h1>
+
+                    <!-- Clean Index List -->
+                    <div class="index-section">
+                        <h2 class="govuk-heading-m">INVESTIGATION INDEX</h2>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a href="#executive-summary" class="index-link">EXECUTIVE SUMMARY</a></li>
+                            <li><a href="#section-1" class="index-link">1: Documentation Refusal Section</a></li>
+                            <li><a href="#section-2" class="index-link">2: Housing Knowledge Contradictions Section</a></li>
+                            <li><a href="#section-3" class="index-link">3: Suicidal Ideation Failures Section</a></li>
+                            <li><a href="#section-4" class="index-link">4: Application Closure Concealment Section</a></li>
+                            <li><a href="#section-5" class="index-link">5: Departmental Defense Strategy</a></li>
+                            <li><a href="#expert-summary" class="index-link">6: Expert Summary</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="executive-summary" class="executive-summary">
+                        <h2 class="govuk-heading-l">EXECUTIVE SUMMARY</h2>
+                        <p class="govuk-body">
+                            This forensic analysis examines three recorded conversations between Ben Mak and Roger Westminster Social Services, spanning Sept 18-26, 2025. The evidence reveals a disturbing pattern where Roger's contradictory statements, strategic omissions, and failure to fulfill statutory obligations actively increased Ben's vulnerability and risk of harm.
+                        </p>
+                        <p class="govuk-body">
+                            The investigation identifies multiple instances where Roger acknowledges statutory duties in one conversation but subsequently fails to act on them in later interactions. This systematic approach created foreseeable harm where a vulnerable service user with disclosed autism, homelessness, and suicidal ideation was denied access to statutory protections through administrative obstruction and duty avoidance.
+                        </p>
+                    </div>
+
+                    <div class="collapsible-section" id="section-1">
+                        <button class="section-toggle" onclick="toggleSection('section-1-content')">
+                            <span class="section-number">1</span>
+                            REFUSAL TO PROVIDE DOCUMENTATION WHILE UNILATERALLY REMOVING SUPPORT
+                        </button>
+                        <div class="section-content" id="section-1-content">
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">REQUEST FOR HOMELESSNESS CONFIRMATION DENIED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (25:10-25:29):</div>
+                                <div class="evidence-quote">
+                                    BEN: "All you need I'll do with this. Roger, A letter please that you have reason to believe I am homeless and I am at risk of harm to just disclose TFA ideations that I'm having and I need you to send me a letter in support of that. That's what you can do in your remit."
+                                    <br><br>
+                                    ROGER: "And you're. You're to say you're. You're homeless?"
+                                    <br>
+                                    BEN: "Yeah. Yeah. Right."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">BUREAUCRATIC DELAY TACTIC DEPLOYED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (28:26-28:42):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "I'll have a word with my manager first."
+                                    <br><br>
+                                    BEN: "About what? The letter. What do you ask them for? Why sort of step. Be creative where there's any role, authority that you have that you can do. You only write a mail letter."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">DOCUMENTATION REQUEST IGNORED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (52:40-52:58):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "No. Yeah, you asked for an. An email to whom it may concern be concerned and I. I hadn't got round to it. I did speak with my manager about it. My manager was saying to try and ascertain who you intended to give this letter to."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">UNILATERAL CARE REMOVAL ADMITTED</div>
+                                <div class="evidence-timestamp">SEPT 26 TRANSCRIPT (1:37-1:54):</div>
+                                <div class="evidence-quote">
+                                    BEN: "So did you offer my consent for that?"
+                                    <br>
+                                    ROGER: "No, I did. I didn't get your consent to suspend."
+                                    <br><br>
+                                    BEN: "Okay, so just to just confirm, you can remove support without continuity of care without my consent, is that correct?"
+                                    <br>
+                                    ROGER: "Well, we, we can, yeah. If you're out. If you're out of London, then we can't."
+                                </div>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FORENSIC CONCLUSION:</h3>
+                                <p class="govuk-body">
+                                    Roger possesses immediate authority to terminate a vulnerable person's care package without consent or due process (executed within hours as evidenced in Sept 26 transcript). Yet when asked to provide basic documentation confirming Ben's homelessness - which would facilitate emergency housing under Section 188 - Roger creates bureaucratic obstacles, claiming he lacks authority without managerial approval (Sept 18) and then admits to not "getting around to it" despite knowing it was needed (Sept 22).
+                                </p>
+                                <p class="govuk-body">
+                                    This asymmetry of power (swift to remove support, paralyzed when asked to provide it) demonstrates a systemic failure designed to obstruct access to statutory entitlements while expediting removal of essential services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-section" id="section-2">
+                        <button class="section-toggle" onclick="toggleSection('section-2-content')">
+                            <span class="section-number">2</span>
+                            CONTRADICTORY STATEMENTS ABOUT HOUSING KNOWLEDGE AND RESPONSIBILITY
+                        </button>
+                        <div class="section-content" id="section-2-content">
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">LIMITED KNOWLEDGE CLAIMED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (4:21-4:33):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "I mean, I, I, I don't fully know how Ben, how housing work, but they do, I know they are quite strict on having all the right information, but haven't."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">DETAILED KNOWLEDGE DEMONSTRATED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (29:37-29:54):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "And because normally, my understanding with housing is when they're going to make people homeless or they threaten them with eviction, that they. They may put them up in some sort of temporary accommodation, like. Should tell while they review the situation."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">STATUTORY OBLIGATION ACKNOWLEDGED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (37:09-37:32):</div>
+                                <div class="evidence-quote">
+                                    BEN: "I am telling you under section 188 of the Housing act, if you've been through, if there is reason to believe interim emergency housing must be provided, what more expert does one need to be by just following that basic one principle?"
+                                    <br>
+                                    [Roger does not dispute this legal obligation]
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">FALSE IMPRESSION OF ACTION</div>
+                                <div class="evidence-timestamp">SEPT 26 TRANSCRIPT (2:53-2:58):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "Well, Ben, this is what I said. I'm trying to. I'm going to try and find the right people to help."
+                                </div>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FORENSIC CONCLUSION:</h3>
+                                <p class="govuk-body">
+                                    Roger exhibits contradictory knowledge of housing procedures across conversations. On Sept 18, he claims limited knowledge ("I don't fully know how housing works"). Yet on Sept 22, he demonstrates detailed understanding of temporary accommodation procedures. When Ben cites Section 188 statutory obligations, Roger does not dispute this legal duty.
+                                </p>
+                                <p class="govuk-body">
+                                    By Sept 26, despite this acknowledged legal obligation, Roger creates an impression of actively seeking help without disclosing that he knew the application was closed. This pattern reveals a strategic deployment of institutional knowledge - claiming ignorance when it avoids responsibility, demonstrating expertise when it creates an impression of competence, and concealing critical information when it might create accountability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-section" id="section-3">
+                        <button class="section-toggle" onclick="toggleSection('section-3-content')">
+                            <span class="section-number">3</span>
+                            FAILURE TO ACT ON SUICIDAL IDEATION DESPITE CLEAR KNOWLEDGE
+                        </button>
+                        <div class="section-content" id="section-3-content">
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">SUICIDE RISK DEFLECTED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (22:37-22:44):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "Well, you know about different organizations that you can go to if you feel like you're in distress, right?"
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">PREVENTION DUTY ACKNOWLEDGED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (40:23-40:31):</div>
+                                <div class="evidence-quote">
+                                    BEN: "No, it is because social care were fully informed of what was to come with the housing and they had a duty to prevent under the homelessness act which didn't prevent social care have a duty to prevent homelessness."
+                                    <br>
+                                    [Roger does not deny this duty exists]
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">NO ACTION DESPITE SUICIDE RISK</div>
+                                <div class="evidence-timestamp">SEPT 26 TRANSCRIPT (2:45-2:53):</div>
+                                <div class="evidence-quote">
+                                    BEN: "So why is it agency housing have not been provided when I'm desperate and I'm suicidal?"
+                                    <br>
+                                    ROGER: "Well, Ben, this is what I said. I'm trying to. I'm going to try and find the right people to help."
+                                </div>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FORENSIC CONCLUSION:</h3>
+                                <p class="govuk-body">
+                                    Across all three conversations, Ben explicitly references suicidal ideation and risk. Roger's responses demonstrate a pattern of deflection rather than appropriate safeguarding action. When confronted with suicidal ideation on Sept 18, Roger deflects to "different organizations." On Sept 22, he does not dispute the statutory duty to prevent harm. By Sept 26, despite two prior conversations where suicide risk was disclosed, Roger's response remains vague with no evidence of concrete safeguarding actions taken.
+                                </p>
+                                <p class="govuk-body">
+                                    This constitutes a severe breach of safeguarding protocols. When a vulnerable service user discloses suicidal ideation, social services have an immediate duty to implement suicide prevention protocols. Roger's consistent failure to act on this information over an eight-day period represents a categorical failure in safeguarding.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-section" id="section-4">
+                        <button class="section-toggle" onclick="toggleSection('section-4-content')">
+                            <span class="section-number">4</span>
+                            KNOWLEDGE OF HOUSING APPLICATION CLOSURE CONCEALMENT
+                        </button>
+                        <div class="section-content" id="section-4-content">
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">APPLICATION CLOSURE ACKNOWLEDGED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (0:06-0:17):</div>
+                                <div class="evidence-quote">
+                                    BEN: "I'm not good. Really. Not really. Heard from anyone still in the same situation? Not in progress with your housing? The housing application got closed."
+                                    <br>
+                                    ROGER: "Oh, gosh. Because they emailed me a couple of weeks ago saying something that I needed id."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">CLOSURE STATUS CONFIRMED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (21:37-21:46):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "So what is. What have they said about this most recent application?"
+                                    <br>
+                                    BEN: "They've closed it."
+                                    <br>
+                                    ROGER: "And did they say why?"
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">CRITICAL INFORMATION WITHHELD</div>
+                                <div class="evidence-timestamp">SEPT 26 TRANSCRIPT: [No mention of application closure despite knowledge from both previous conversations]</div>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FORENSIC CONCLUSION:</h3>
+                                <p class="govuk-body">
+                                    Roger demonstrates consistent knowledge of Ben's housing application status across the first two conversations. On Sept 18, he acknowledges receiving emails about the ID requirements. On Sept 22, he inquires about the closure reason, confirming ongoing knowledge of the situation.
+                                </p>
+                                <p class="govuk-body">
+                                    Yet by Sept 26, despite this established knowledge, Roger creates the impression of actively working on Ben's housing situation without mentioning the application closure. This calculated omission left Ben with false hope while maintaining him in a dangerous situation - a clear dereliction of duty and potentially deliberately misleading conduct that increased risk.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-section" id="section-5">
+                        <button class="section-toggle" onclick="toggleSection('section-5-content')">
+                            <span class="section-number">5</span>
+                            STRATEGIC DEPLOYMENT OF "NOT MY DEPARTMENT" DEFENSE
+                        </button>
+                        <div class="section-content" id="section-5-content">
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">DEPARTMENTAL BOUNDARY ASSERTED</div>
+                                <div class="evidence-timestamp">SEPT 18 TRANSCRIPT (11:06-11:14):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "Well, I mean, integrity and social services won't know how much a debt is."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">RESPONSIBILITY DEFLECTED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (2:26-2:38):</div>
+                                <div class="evidence-quote">
+                                    BEN: "Will you tell me who should be in the know?"
+                                    <br>
+                                    ROGER: "These are questions that housing can answer better than me, Ben. I'm not a housing officer. They. They don't necessarily tell social services anything about somebody."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">JURISDICTIONAL LIMITATION CLAIMED</div>
+                                <div class="evidence-timestamp">SEPT 22 TRANSCRIPT (40:23-40:31):</div>
+                                <div class="evidence-quote">
+                                    ROGER: "But also I mean this is mainly about housing. So it's not so much about the director of adult social care."
+                                </div>
+                            </div>
+
+                            <div class="evidence-block">
+                                <div class="evidence-timestamp">["["SELECTIVE DEPARTMENTAL DEFEN"]SE"]</div>
+                                <div class="evidence-timestamp">SEPT 26 TRANSCRIPT: [No reference to departmental limitations despite failing to act on prior knowledge]</div>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FORENSIC CONCLUSION:</h3>
+                                <p class="govuk-body">
+                                    Roger consistently deploys departmental boundaries as a defense mechanism when confronted with his failure to fulfill statutory obligations. This "siloed" approach directly contradicts Section 6 of the Care Act's duty to cooperate across agencies for vulnerable adults.
+                                </p>
+                                <p class="govuk-body">
+                                    This defense is selectively applied - abandoned when claiming to be "trying to find the right people to help" (Sept 26), yet reinforced when attempting to deflect responsibility. This inconsistent deployment of departmental boundaries demonstrates a pattern of strategic institutional defense rather than genuine procedural limitation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-section" id="expert-summary">
+                        <button class="section-toggle" onclick="toggleSection('expert-summary-content')">
+                            <span class="section-number">6</span>
+                            EXPERT SUMMARY OF FORESEEABLE HARM
+                        </button>
+                        <div class="section-content" id="expert-summary-content">
+
+                            <div class="risk-highlight">
+                                <p class="govuk-body">
+                                    The forensic analysis of these three conversations reveals a disturbing pattern that systematically increased Ben's vulnerability and risk:
+                                </p>
+                                <ol class="govuk-list govuk-list--number">
+                                    <li><strong>Power Asymmetry</strong> - Roger demonstrated immediate power to remove support but claimed bureaucratic limitations when asked to provide documentation that would facilitate statutory entitlements.</li>
+                                    <li><strong>Strategic Knowledge Deployment</strong> - Roger alternated between claiming ignorance and demonstrating expertise depending on which position avoided accountability.</li>
+                                    <li><strong>Safeguarding Failures</strong> - Despite multiple disclosures of suicidal ideation across an eight-day period, Roger failed to implement appropriate safeguarding protocols.</li>
+                                    <li><strong>Information Concealment</strong> - Roger withheld critical information about the housing application closure during the Sept 26 conversation, creating false hope.</li>
+                                    <li><strong>Statutory Duty Avoidance</strong> - Roger acknowledged but failed to act upon his statutory duties under Section 188 of the Housing Act and Section 6 of the Care Act.</li>
+                                </ol>
+                            </div>
+
+                            <div class="forensic-conclusion">
+                                <h3 class="govuk-heading-m">FINAL ASSESSMENT</h3>
+                                <p class="govuk-body">
+                                    These actions and inactions constitute a pattern of foreseeable harm where a vulnerable service user with disclosed autism, homelessness, and suicidal ideation was systematically denied access to statutory protections through a combination of administrative obstruction, information concealment, and duty avoidance. This pattern created a dangerous situation where Ben was left homeless, without support, and at significant risk of self-harm – risks that were both foreseeable and preventable had proper procedures been followed.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navigation" style="margin-top: 50px; padding-top: 20px; border-top: 2px solid #b1b4b6;">
+                        <a href="#executive-summary">Back to Executive Summary</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-clean">
+        <div class="govuk-width-container">
+            <div class="footer-support-links">
+                <h3>Support links</h3>
+                <nav class="footer-links-horizontal">
+                    <a href="#">Help</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Accessibility statement</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Terms and conditions</a>
+                </nav>
+            </div>
+            <div class="footer-copyright">
+                <p>All content is available upon request except where otherwise stated © copyright</p>
+            </div>
+        </div>
+    <script>
+        function toggleSection(contentId) {
+            const content = document.getElementById(contentId);
+            if (content) {
+                content.classList.toggle('show');
+            }
+        }
+
+        // Optional: Close other sections when opening a new one
+        function toggleSectionExclusive(contentId) {
+            // Close all other sections first
+            const allSections = document.querySelectorAll('.section-content');
+            allSections.forEach(section => {
+                if (section.id !== contentId) {
+                    section.classList.remove('show');
+                }
+            });
+
+            // Toggle the clicked section
+            toggleSection(contentId);
+        }
+
+        // Add smooth scrolling for index links
+        document.addEventListener('DOMContentLoaded', function() {
+            const indexLinks = document.querySelectorAll('.index-link');
+            indexLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    </footer>
+</body>
+</html>
