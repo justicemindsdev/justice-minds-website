@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+<head>
+    <meta name="x-poe-datastore-behavior" content="local_only">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department for Forensic Intelligence - GOV.UK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Justice Minds Header Styles */
+        :root {
+            --primary-blue: #052962;
+            --accent-red: #c70000;
+            --text-dark: #121212;
+            --text-grey: #767676;
+            --border-grey: #dcdcdc;
+            --bg-light: #f6f6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Justice Minds Header */
+        .justice-minds-header {
+            background: var(--primary-blue);
+            border-bottom: 4px solid var(--accent-red);
+        }
+
+        .justice-minds-header__container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        .justice-minds-header__logo {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background: var(--primary-blue);
+        }
+
+        /* Password Protection Overlay */
+        .password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(5, 41, 98, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            backdrop-filter: blur(5px);
+        }
+
+        .password-modal {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border-top: 4px solid var(--accent-red);
+        }
+
+        .password-modal h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .password-modal p {
+            color: var(--text-grey);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-grey);
+            border-radius: 4px;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(5, 41, 98, 0.1);
+        }
+
+        .password-submit {
+            background: var(--accent-red);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .password-submit:hover {
+            background: #a00000;
+        }
+
+        .password-error {
+            color: var(--accent-red);
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        /* Main GOV.UK Content (Initially Hidden) */
+        .govuk-content {
+            display: none;
+        }
+
+        /* GOV.UK Design System Inspired Styles */
+        :root {
+            --govuk-blue: #1d70b8;
+            --govuk-dark-blue: #003078;
+            --govuk-text: #0b0c0c;
+            --govuk-secondary-text: #505a5f;
+            --govuk-light-grey: #f3f2f1;
+            --govuk-border-grey: #b1b4b6;
+            --govuk-focus-yellow: #ffdd00;
+            --govuk-green: #00703c;
+            --govuk-red: #d4351c;
+        }
+
+        /* GOV.UK Header */
+        .govuk-header {
+            background-color: var(--govuk-text);
+            border-bottom: 10px solid var(--govuk-blue);
+        }
+
+        .govuk-header__container {
+            max-width: 100%;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .govuk-header__logo {
+            margin-right: 10px;
+        }
+
+        .govuk-header__logotype {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .govuk-header__logotype-crown {
+            margin-right: 5px;
+            width: 36px;
+            height: 32px;
+            fill: #ffffff;
+        }
+
+        .govuk-header__service-name {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Main Container */
+        .govuk-width-container {
+            flex: 1;
+            display: flex;
+            max-width: 100%;
+            height: calc(100vh - 110px);
+            overflow: hidden;
+        }
+
+        /* Left Sidebar - 20% (ChatGPT style) */
+        .sidebar {
+            width: 20%;
+            min-width: 260px;
+            max-width: 280px;
+            background-color: #171717;
+            border-right: 1px solid #2d2d2d;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 12px 10px;
+            background-color: #171717;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .sidebar-header h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ececec;
+        }
+
+        .govuk-button {
+            background-color: var(--govuk-green);
+            color: #ffffff;
+            border: 2px solid transparent;
+            padding: 6px 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 0 #002d18;
+            transition: background-color 0.2s;
+        }
+
+        .govuk-button:hover {
+            background-color: #005a30;
+        }
+
+        .govuk-button:focus {
+            outline: 3px solid var(--govuk-focus-yellow);
+            outline-offset: 0;
+            box-shadow: inset 0 0 0 1px var(--govuk-focus-yellow);
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        /* File List */
+        .file-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 4px 0;
+        }
+
+        .file-item {
+            padding: 8px 10px;
+            margin: 2px 6px;
+            background-color: transparent;
+            border-radius: 6px;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.15s;
+            word-wrap: break-word;
+        }
+
+        .file-item:hover {
+            background-color: #2d2d2d;
+            border-left-color: var(--govuk-blue);
+        }
+
+        .file-item.active {
+            background-color: var(--govuk-blue);
+            color: #ffffff;
+            border-left-color: #ffffff;
+        }
+
+        .file-item-name {
+            font-size: 12px;
+            margin-bottom: 3px;
+            word-break: break-word;
+            color: #ececec;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+
+        .file-item.active .file-item-name {
+            color: #ffffff;
+        }
+
+        .file-item-meta {
+            font-size: 10px;
+            color: #8e8e8e;
+            margin-bottom: 1px;
+        }
+
+        .file-item.active .file-item-meta {
+            color: #ffffff;
+            opacity: 0.85;
+        }
+
+        .file-item-actions {
+            margin-top: 4px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .file-item-action {
+            font-size: 10px;
+            color: #5D5CDE;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .file-item-action:hover {
+            text-decoration: underline;
+        }
+
+        .file-item.active .file-item-action {
+            color: #ffffff;
+        }
+
+        /* Main Content - 80% */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .content-header {
+            padding: 20px 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--govuk-border-grey);
+        }
+
+        .content-header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--govuk-text);
+        }
+
+        .govuk-caption {
+            font-size: 16px;
+            color: var(--govuk-secondary-text);
+            margin-bottom: 5px;
+        }
+
+        .content-viewer {
+            flex: 1;
+            overflow: auto;
+            padding: 30px;
+        }
+
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--govuk-secondary-text);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .empty-state h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--govuk-text);
+        }
+
+        .empty-state p {
+            font-size: 16px;
+        }
+
+        /* HTML Content Frame */
+        .html-preview {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #ffffff;
+        }
+
+        .html-preview-container {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #ffffff;
+        }
+
+        /* Footer */
+        .govuk-footer {
+            background-color: var(--govuk-light-grey);
+            border-top: 1px solid var(--govuk-border-grey);
+            padding: 15px;
+            font-size: 14px;
+            color: var(--govuk-secondary-text);
+            text-align: center;
+        }
+
+        /* Audit Trail */
+        .audit-info {
+            font-size: 10px;
+            color: #8e8e8e;
+            padding: 8px 10px;
+            background-color: #0d0d0d;
+            border-top: 1px solid #2d2d2d;
+        }
+
+        .audit-info-item {
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+
+        .audit-info strong {
+            color: #ececec;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .govuk-width-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                max-height: 300px;
+            }
+
+            .main-content {
+                width: 100%;
+                flex: 1;
+            }
+
+            .password-modal {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .password-modal h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #181818;
+            }
+
+            .govuk-header {
+                background-color: #000000;
+            }
+
+            .main-content {
+                background-color: #181818;
+            }
+
+            .content-header {
+                background-color: #2a2a2a;
+                border-bottom-color: #444;
+            }
+
+            .content-header h1,
+            .empty-state h2 {
+                color: #f3f2f1;
+            }
+
+            .html-preview-container {
+                background-color: #2a2a2a;
+            }
+
+            .govuk-footer {
+                background-color: #1f1f1f;
+                border-top-color: #444;
+            }
+        }
+
+        /* Clear files button */
+        .govuk-button--warning {
+            background-color: var(--govuk-red);
+            box-shadow: 0 2px 0 #7a1f0f;
+            margin-top: 6px;
+        }
+
+        .govuk-button--warning:hover {
+            background-color: #942514;
+        }
+
+        /* Custom modal for confirmations */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--govuk-text);
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--govuk-secondary-text);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-actions button {
+            width: auto;
+            min-width: 100px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .modal-content {
+                background-color: #2a2a2a;
+            }
+
+            .modal-content h2 {
+                color: #f3f2f1;
+            }
+
+            .modal-content p {
+                color: #b1b4b6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Justice Minds Header with Hero Image -->
+    <header class="justice-minds-header">
+        <div class="justice-minds-header__container">
+            <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/caseworks/JUSTICE%20MINDS%20FORENSIC%20INTELLIGENCE%20(Website).svg"
+                 alt="Justice Minds Forensic Intelligence"
+                 class="justice-minds-header__logo">
+        </div>
+    </header>
+
+    <!-- Password Protection Overlay -->
+    <div class="password-overlay" id="passwordOverlay">
+        <div class="password-modal">
+            <h1>Department for Forensic Intelligence</h1>
+            <p>Company Number 16331423 | ICO Certified ZB896365</p>
+            <p>Please enter the access password to continue to the Parliamentary Evidence Viewer.</p>
+
+            <input type="password" class="password-input" id="accessPassword" placeholder="Enter access password">
+            <button class="password-submit" onclick="checkPassword()">Access Evidence Viewer</button>
+            <div class="password-error" id="passwordError"></div>
+        </div>
+    </div>
+
+    <!-- Main GOV.UK Content (Initially Hidden) -->
+    <div class="govuk-content">
+        <!-- GOV.UK Header -->
+        <header class="govuk-header" role="banner">
+            <div class="govuk-header__container">
+                <div class="govuk-header__logo">
+                    <a href="#" class="govuk-header__logotype">
+                        <svg class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="32" width="36">
+                            <path fill="currentColor" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+                        </svg>
+                        <span>GOV.UK</span>
+                    </a>
+                </div>
+                <a href="#" class="govuk-header__service-name">
+                    Parliamentary Evidence Viewer
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Container -->
+        <div class="govuk-width-container">
+            <!-- Left Sidebar (20%) -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Evidence Documents</h2>
+                    <div class="file-input-wrapper">
+                        <button class="govuk-button" onclick="document.getElementById('fileInput').click()">
+                            Upload HTML File
+                        </button>
+                        <input type="file" id="fileInput" accept=".html,.htm" multiple="">
+                    </div>
+                    <button class="govuk-button govuk-button--warning" onclick="clearAllFiles()">
+                        Clear All Files
+                    </button>
+                </div>
+                <div class="file-list" id="fileList">
+                    <!-- File items will be inserted here -->
+                </div>
+                <div class="audit-info">
+                    <div class="audit-info-item">
+                        <strong>Audit Trail:</strong> All uploads logged
+                    </div>
+                    <div class="audit-info-item">
+                        Session: <span id="sessionId"></span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content (80%) -->
+            <main class="main-content">
+                <div class="content-header">
+                    <span class="govuk-caption">Document Preview</span>
+                    <h1 id="documentTitle">Select a document to view</h1>
+                </div>
+                <div class="content-viewer" id="contentViewer">
+                    <div class="empty-state">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <h2>No document selected</h2>
+                        <p>Upload HTML evidence files and select one from the left to view its contents.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="govuk-footer">
+            <div class="govuk-footer__meta">
+                Department for Forensic Intelligence Company Number 16331423 | ICO Certified ZB896365 | Department of Forensic Intelligence • All uploads are logged and auditable • Crown copyright
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Password check function
+        function checkPassword() {
+            const password = document.getElementById('accessPassword').value;
+            const errorElement = document.getElementById('passwordError');
+
+            // Simple password check - you can change this
+            if (password === 'justice2025') {
+                document.getElementById('passwordOverlay').style.display = 'none';
+                document.querySelector('.govuk-content').style.display = 'block';
+                errorElement.textContent = '';
+            } else {
+                errorElement.textContent = 'Invalid password. Please try again.';
+                document.getElementById('accessPassword').value = '';
+                document.getElementById('accessPassword').focus();
+            }
+        }
+
+        // Allow Enter key to submit password
+        document.getElementById('accessPassword').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        // Initialize session ID
+        function generateSessionId() {
+            return 'SESSION-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+        }
+
+        const sessionId = generateSessionId();
+        document.getElementById('sessionId').textContent = sessionId;
+
+        // In-memory storage (persists during session)
+        let filesStorage = [];
+        let auditLog = [];
+
+        // Load files from storage
+        function loadFiles() {
+            return filesStorage;
+        }
+
+        // Save files to storage
+        function saveFiles(files) {
+            filesStorage = files;
+        }
+
+        // Audit logging
+        function logAudit(action, fileName) {
+            auditLog.push({
+                timestamp: new Date().toISOString(),
+                sessionId: sessionId,
+                action: action,
+                fileName: fileName
+            });
+            console.log('Audit Log:', JSON.stringify(auditLog));
+        }
+
+        // Render file list
+        function renderFileList() {
+            const files = loadFiles();
+            const fileList = document.getElementById('fileList');
+
+            if (files.length === 0) {
+                fileList.innerHTML = '<div style="padding: 20px 10px; text-align: center; color: #8e8e8e; font-size: 12px;">No files uploaded yet</div>';
+                return;
+            }
+
+            fileList.innerHTML = files.map((file, index) => `
+                <div class="file-item" onclick="viewFile(${index})" id="file-${index}">
+                    <div class="file-item-name">${escapeHtml(file.name)}</div>
+                    <div class="file-item-meta">
+                        Uploaded: ${new Date(file.uploadedAt).toLocaleString('en-GB')}
+                    </div>
+                    <div class="file-item-meta">
+                        Size: ${formatFileSize(file.size)}
+                    </div>
+                    <div class="file-item-actions">
+                        <span class="file-item-action" onclick="event.stopPropagation(); deleteFile(${index})">Delete</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // View file
+        function viewFile(index) {
+            const files = loadFiles();
+            const file = files[index];
+
+            if (!file) return;
+
+            // Update active state
+            document.querySelectorAll('.file-item').forEach(item => item.classList.remove('active'));
+            const fileItem = document.getElementById(`file-${index}`);
+            if (fileItem) fileItem.classList.add('active');
+
+            // Update title
+            document.getElementById('documentTitle').textContent = file.name;
+
+            // Display content in an iframe for proper isolation and scrolling
+            const contentViewer = document.getElementById('contentViewer');
+            contentViewer.innerHTML = '';
+
+            const iframe = document.createElement('iframe');
+            iframe.className = 'html-preview';
+            iframe.sandbox = 'allow-same-origin allow-scripts';
+
+            // Create blob URL for the content
+            const blob = new Blob([file.content], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            iframe.src = url;
+
+            // Clean up blob URL after iframe loads
+            iframe.onload = function() {
+                URL.revokeObjectURL(url);
+            };
+
+            contentViewer.appendChild(iframe);
+
+            // Log viewing
+            logAudit('VIEW', file.name);
+        }
+
+        // Delete file with custom confirmation
+        function deleteFile(index) {
+            const files = loadFiles();
+            const file = files[index];
+
+            showConfirmDialog(
+                `Are you sure you want to delete "${file.name}"?`,
+                'This action cannot be undone.',
+                () => {
+                    files.splice(index, 1);
+                    saveFiles(files);
+                    logAudit('DELETE', file.name);
+                    renderFileList();
+
+                    // Clear content viewer if this was the active file
+                    const contentViewer = document.getElementById('contentViewer');
+                    if (document.getElementById('documentTitle').textContent === file.name) {
+                        contentViewer.innerHTML = `
+                            <div class="empty-state">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <h2>No document selected</h2>
+                                <p>Upload HTML evidence files and select one from the left to view its contents.</p>
+                            </div>
+                        `;
+                        document.getElementById('documentTitle').textContent = 'Select a document to view';
+                    }
+                }
+            );
+        }
+
+        // Clear all files
+        function clearAllFiles() {
+            const files = loadFiles();
+            if (files.length === 0) {
+                showAlert('No files to clear', 'There are no files currently stored.');
+                return;
+            }
+
+            showConfirmDialog(
+                'Clear all files?',
+                `This will permanently delete all ${files.length} uploaded file(s). This action cannot be undone.`,
+                () => {
+                    filesStorage = [];
+                    logAudit('CLEAR_ALL', `${files.length} files`);
+                    renderFileList();
+
+                    const contentViewer = document.getElementById('contentViewer');
+                    contentViewer.innerHTML = `
+                        <div class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            <h2>No document selected</h2>
+                            <p>Upload HTML evidence files and select one from the left to view its contents.</p>
+                        </div>
+                    `;
+                    document.getElementById('documentTitle').textContent = 'Select a document to view';
+                }
+            );
+        }
+
+        // File upload handler
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const uploadedFiles = Array.from(e.target.files);
+            const files = loadFiles();
+
+            let processed = 0;
+            uploadedFiles.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    files.push({
+                        name: file.name,
+                        content: event.target.result,
+                        size: file.size,
+                        uploadedAt: new Date().toISOString(),
+                        sessionId: sessionId
+                    });
+
+                    logAudit('UPLOAD', file.name);
+                    processed++;
+
+                    if (processed === uploadedFiles.length) {
+                        saveFiles(files);
+                        renderFileList();
+
+                        // Auto-select the first uploaded file
+                        if (uploadedFiles.length === 1) {
+                            setTimeout(() => viewFile(files.length - 1), 100);
+                        }
+                    }
+                };
+                reader.readAsText(file);
+            });
+
+            // Reset file input
+            e.target.value = '';
+        });
+
+        // Utility functions
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        // Custom modal dialogs
+        function showConfirmDialog(title, message, onConfirm) {
+            const modal = document.createElement('div');
+            modal.className = 'modal-overlay';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h2>${escapeHtml(title)}</h2>
+                    <p>${escapeHtml(message)}</p>
+                    <div class="modal-actions">
+                        <button class="govuk-button" style="background-color: var(--govuk-border-grey); box-shadow: 0 2px 0 #6f7274;" onclick="this.closest('.modal-overlay').remove()">
+                            Cancel
+                        </button>
+                        <button class="govuk-button govuk-button--warning" onclick="this.closest('.modal-overlay').remove(); (${onConfirm})()">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        function showAlert(title, message) {
+            const modal = document.createElement('div');
+            modal.className = 'modal-overlay';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h2>${escapeHtml(title)}</h2>
+                    <p>${escapeHtml(message)}</p>
+                    <div class="modal-actions">
+                        <button class="govuk-button" onclick="this.closest('.modal-overlay').remove()">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Dark mode support
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Initialize
+        renderFileList();
+    </script>
+</body>
+</html>
