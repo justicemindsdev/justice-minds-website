@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Forensic Investigation Report (Corrected)",
+    "filename": "forensic_investigation_report_corrected.html",
+    "category": "Investigation Reports"
+  },
+  {
+    "name": "Forensic Investigation Report (GOV.UK)",
+    "filename": "forensic_investigation_report_GOVUK.html",
+    "category": "Investigation Reports"
+  },
+  {
+    "name": "Forensic Investigation Report",
+    "filename": "forensic_investigation_report.html",
+    "category": "Investigation Reports"
+  },
+  {
+    "name": "GOV.UK Gaslighting Framework",
+    "filename": "GOV-UK-Gaslighting-Framework.html",
+    "category": "Framework Analysis"
+  },
+  {
+    "name": "Institutional Credibility Forensic Analysis",
+    "filename": "institutional_credibility_forensic_analysis.html",
+    "category": "Institutional Analysis"
+  },
+  {
+    "name": "Institutional Standing Addendum",
+    "filename": "institutional_standing_addendum.html",
+    "category": "Institutional Analysis"
+  },
+  {
+    "name": "Jade Dual Role Evidence with Videos",
+    "filename": "jade_dual_role_evidence_with_videos.html",
+    "category": "Evidence Packages"
+  },
+  {
+    "name": "Journal - Universal Credit",
+    "filename": "Journal - Universal Credit.html",
+    "category": "Journals"
+  },
+  {
+    "name": "N244 Completed Form",
+    "filename": "N244_COMPLETED_FORM.html",
+    "category": "Legal Forms"
+  },
+  {
+    "name": "Sophie Wander Care Act Refusal Evidence",
+    "filename": "sophie_wander_care_act_refusal_evidence.html",
+    "category": "Evidence Packages"
+  },
+  {
+    "name": "Stuart Love Complete Evidence Pack",
+    "filename": "stuart_love_complete_evidence_pack.html",
+    "category": "Evidence Packages"
+  },
+  {
+    "name": "Stuart Love Evidence Dossier",
+    "filename": "stuart_love_evidence_dossier.html",
+    "category": "Evidence Packages"
+  },
+  {
+    "name": "Stuart Love Formal Letter",
+    "filename": "stuart_love_formal_letter.html",
+    "category": "Letters"
+  }
+]

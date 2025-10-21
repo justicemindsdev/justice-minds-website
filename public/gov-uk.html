@@ -705,9 +705,42 @@
         const sessionId = generateSessionId();
         document.getElementById('sessionId').textContent = sessionId;
 
-        // In-memory storage (persists during session)
+        // File storage from gov.uk folder
         let filesStorage = [];
         let auditLog = [];
+
+        // Load files from manifest
+        async function loadFilesFromManifest() {
+            try {
+                const response = await fetch('/gov.uk/manifest.json');
+                const manifest = await response.json();
+                
+                // Load each file from the manifest
+                for (const item of manifest) {
+                    try {
+                        const fileResponse = await fetch(`/gov.uk/${item.filename}`);
+                        const content = await fileResponse.text();
+                        
+                        filesStorage.push({
+                            name: item.name,
+                            filename: item.filename,
+                            category: item.category,
+                            content: content,
+                            size: content.length,
+                            uploadedAt: new Date().toISOString(),
+                            sessionId: sessionId
+                        });
+                    } catch (error) {
+                        console.error(`Failed to load ${item.filename}:`, error);
+                    }
+                }
+                
+                renderFileList();
+                logAudit('AUTO_LOAD', `${filesStorage.length} files loaded from manifest`);
+            } catch (error) {
+                console.error('Failed to load manifest:', error);
+            }
+        }
 
         // Load files from storage
         function loadFiles() {
@@ -858,7 +891,7 @@
             );
         }
 
-        // File upload handler
+        // Manual file upload handler (kept for additional uploads if needed)
         document.getElementById('fileInput').addEventListener('change', function(e) {
             const uploadedFiles = Array.from(e.target.files);
             const files = loadFiles();
@@ -869,13 +902,15 @@
                 reader.onload = function(event) {
                     files.push({
                         name: file.name,
+                        filename: file.name,
+                        category: 'Uploaded',
                         content: event.target.result,
                         size: file.size,
                         uploadedAt: new Date().toISOString(),
                         sessionId: sessionId
                     });
 
-                    logAudit('UPLOAD', file.name);
+                    logAudit('MANUAL_UPLOAD', file.name);
                     processed++;
 
                     if (processed === uploadedFiles.length) {
@@ -958,8 +993,8 @@
             }
         });
 
-        // Initialize
-        renderFileList();
+        // Initialize - Load files from manifest on page load
+        loadFilesFromManifest();
     </script>
 </body>
 </html>
